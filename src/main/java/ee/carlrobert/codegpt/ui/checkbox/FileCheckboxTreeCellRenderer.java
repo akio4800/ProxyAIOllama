@@ -1,8 +1,9 @@
 package ee.carlrobert.codegpt.ui.checkbox;
 
+import javax.swing.*;
+
 import com.intellij.ui.CheckboxTree;
 import com.intellij.ui.CheckedTreeNode;
-import javax.swing.JTree;
 
 public abstract class FileCheckboxTreeCellRenderer extends CheckboxTree.CheckboxTreeCellRenderer {
 

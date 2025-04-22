@@ -1,7 +1,10 @@
 package ee.carlrobert.codegpt.toolwindow.chat.editor.actions;
 
-import static com.intellij.openapi.ui.DialogWrapper.OK_EXIT_CODE;
-import static java.util.Objects.requireNonNull;
+import java.awt.event.ActionEvent;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.intellij.icons.AllIcons.Actions;
 import com.intellij.ide.util.EditorHelper;
@@ -15,10 +18,11 @@ import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.psi.PsiManager;
 import com.intellij.ui.components.JBTextField;
 import com.intellij.util.ui.FormBuilder;
+
 import ee.carlrobert.codegpt.util.file.FileUtil;
-import java.awt.event.ActionEvent;
-import javax.swing.AbstractAction;
-import org.jetbrains.annotations.NotNull;
+
+import static com.intellij.openapi.ui.DialogWrapper.OK_EXIT_CODE;
+import static java.util.Objects.requireNonNull;
 
 public class NewFileAction extends AbstractAction {
 

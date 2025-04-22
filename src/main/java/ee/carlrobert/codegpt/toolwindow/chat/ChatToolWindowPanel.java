@@ -1,5 +1,11 @@
 package ee.carlrobert.codegpt.toolwindow.chat;
 
+import java.nio.file.Path;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.ide.BrowserUtil;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.actionSystem.ActionManager;
@@ -18,6 +24,7 @@ import com.intellij.ui.components.ActionLink;
 import com.intellij.util.ui.JBUI;
 import com.intellij.util.ui.JBUI.CurrentTheme.Link;
 import com.intellij.util.ui.components.BorderLayoutPanel;
+
 import ee.carlrobert.codegpt.CodeGPTKeys;
 import ee.carlrobert.codegpt.actions.toolwindow.ClearChatWindowAction;
 import ee.carlrobert.codegpt.actions.toolwindow.CreateNewConversationAction;
@@ -25,19 +32,14 @@ import ee.carlrobert.codegpt.actions.toolwindow.OpenInEditorAction;
 import ee.carlrobert.codegpt.conversations.Conversation;
 import ee.carlrobert.codegpt.conversations.ConversationService;
 import ee.carlrobert.codegpt.conversations.ConversationsState;
-import ee.carlrobert.codegpt.settings.GeneralSettings;
 import ee.carlrobert.codegpt.settings.prompts.PersonaPromptDetailsState;
 import ee.carlrobert.codegpt.settings.prompts.PromptsConfigurable;
 import ee.carlrobert.codegpt.settings.prompts.PromptsSettings;
 import ee.carlrobert.codegpt.settings.service.ProviderChangeNotifier;
 import ee.carlrobert.codegpt.settings.service.ServiceType;
-import ee.carlrobert.codegpt.settings.service.codegpt.CodeGPTUserDetailsNotifier;
 import ee.carlrobert.codegpt.toolwindow.chat.ui.ToolWindowFooterNotification;
 import ee.carlrobert.codegpt.toolwindow.chat.ui.textarea.AttachImageNotifier;
 import ee.carlrobert.llm.client.codegpt.PricingPlan;
-import java.nio.file.Path;
-import javax.swing.JComponent;
-import org.jetbrains.annotations.NotNull;
 
 public class ChatToolWindowPanel extends SimpleToolWindowPanel {
 
@@ -90,16 +92,6 @@ public class ChatToolWindowPanel extends SimpleToolWindowPanel {
                 userDetails != null && userDetails.getPricingPlan() != PricingPlan.INDIVIDUAL);
           } else {
             upgradePlanLink.setVisible(false);
-          }
-        });
-    messageBusConnection.subscribe(CodeGPTUserDetailsNotifier.getCODEGPT_USER_DETAILS_TOPIC(),
-        (CodeGPTUserDetailsNotifier) userDetails -> {
-          if (userDetails != null) {
-            var provider = ApplicationManager.getApplication().getService(GeneralSettings.class)
-                .getState()
-                .getSelectedService();
-            upgradePlanLink.setVisible(provider == ServiceType.CODEGPT
-                && userDetails.getPricingPlan() != PricingPlan.INDIVIDUAL);
           }
         });
   }

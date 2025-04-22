@@ -1,7 +1,7 @@
 <idea-plugin>
-    <id>ee.carlrobert.chatgpt</id>
-    <name>Proxy AI</name>
-    <vendor email="carlrobertoh@gmail.com" url="https://carlrobert.ee">Carl-Robert Linnupuu</vendor>
+    <id>at.s2gplus</id>
+    <name>Proxy AI Ollama</name>
+    <vendor email="philipp.krainer@s2g.at">Philipp Krainer</vendor>
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
     <depends optional="true" config-file="plugin-kotlin.xml">org.jetbrains.kotlin</depends>
@@ -32,20 +32,6 @@
             instance="ee.carlrobert.codegpt.settings.GeneralSettingsConfigurable"/>
         <applicationConfigurable id="settings.codegpt.services" parentId="settings.codegpt" displayName="Providers"
           instance="ee.carlrobert.codegpt.settings.service.ServiceConfigurable"/>
-        <applicationConfigurable id="settings.codegpt.services.codegpt" parentId="settings.codegpt.services" displayName="ProxyAI"
-          instance="ee.carlrobert.codegpt.settings.service.codegpt.CodeGPTServiceConfigurable"/>
-        <applicationConfigurable id="settings.codegpt.services.openai" parentId="settings.codegpt.services" displayName="OpenAI"
-          instance="ee.carlrobert.codegpt.settings.service.OpenAIServiceConfigurable"/>
-        <applicationConfigurable id="settings.codegpt.services.custom" parentId="settings.codegpt.services" displayName="Custom OpenAI"
-          instance="ee.carlrobert.codegpt.settings.service.custom.CustomServiceConfigurable"/>
-        <applicationConfigurable id="settings.codegpt.services.azure" parentId="settings.codegpt.services" displayName="Azure"
-          instance="ee.carlrobert.codegpt.settings.service.AzureServiceConfigurable"/>
-        <applicationConfigurable id="settings.codegpt.services.anthropic" parentId="settings.codegpt.services" displayName="Anthropic"
-          instance="ee.carlrobert.codegpt.settings.service.AnthropicServiceConfigurable"/>
-        <applicationConfigurable id="settings.codegpt.services.google" parentId="settings.codegpt.services" displayName="Google"
-          instance="ee.carlrobert.codegpt.settings.service.google.GoogleSettingsConfigurable"/>
-        <applicationConfigurable id="settings.codegpt.services.llama_cpp" parentId="settings.codegpt.services" displayName="LLaMA C/C++ (Local)"
-          instance="ee.carlrobert.codegpt.settings.service.LlamaServiceConfigurable"/>
         <applicationConfigurable id="settings.codegpt.services.ollama" parentId="settings.codegpt.services" displayName="Ollama (Local)"
           instance="ee.carlrobert.codegpt.settings.service.ollama.OllamaSettingsConfigurable"/>
         <applicationConfigurable id="settings.codegpt.prompts" parentId="settings.codegpt" displayName="Prompts"
@@ -56,20 +42,11 @@
             instance="ee.carlrobert.codegpt.settings.configuration.ConfigurationConfigurable"/>
         <applicationConfigurable id="settings.codegpt.advanced" parentId="settings.codegpt" displayName="Advanced Settings"
             instance="ee.carlrobert.codegpt.settings.advanced.AdvancedSettingsConfigurable"/>
-        <applicationConfigurable
-          parentId="settings.codegpt"
-          instance="ee.carlrobert.codegpt.telemetry.ui.preferences.TelemetryConfigurable"
-          id="tools.preferences.codegpt.telemetry"
-          displayName="Telemetry"/>
         <actionPromoter implementation="ee.carlrobert.codegpt.actions.InlayActionPromoter"/>
         <applicationService
           serviceImplementation="ee.carlrobert.codegpt.telemetry.core.service.TelemetryServiceFactory"/>
         <applicationService serviceImplementation="ee.carlrobert.codegpt.settings.GeneralSettings"/>
-        <applicationService serviceImplementation="ee.carlrobert.codegpt.settings.service.azure.AzureSettings"/>
-        <applicationService serviceImplementation="ee.carlrobert.codegpt.settings.service.anthropic.AnthropicSettings"/>
-        <applicationService serviceImplementation="ee.carlrobert.codegpt.settings.service.openai.OpenAISettings"/>
         <applicationService serviceImplementation="ee.carlrobert.codegpt.settings.service.you.YouSettings"/>
-        <applicationService serviceImplementation="ee.carlrobert.codegpt.settings.service.llama.LlamaSettings"/>
         <applicationService serviceImplementation="ee.carlrobert.codegpt.settings.service.ollama.OllamaSettings"/>
         <applicationService serviceImplementation="ee.carlrobert.codegpt.settings.IncludedFilesSettings"/>
         <applicationService serviceImplementation="ee.carlrobert.codegpt.settings.advanced.AdvancedSettings"/>
@@ -263,28 +240,10 @@
             <override-text place="MainMenu"/>
             <override-text place="popup" use-text-of-place="MainMenu"/>
         </action>
-        <action
-          id="statusbar.startServer"
-          class="ee.carlrobert.codegpt.actions.StartServerAction">
-            <keyboard-shortcut first-keystroke="ctrl shift alt s" keymap="$default"/>
-
-            <override-text place="MainMenu"/>
-            <override-text place="popup" use-text-of-place="MainMenu"/>
-        </action>
-        <action
-          id="statusbar.stopServer"
-          class="ee.carlrobert.codegpt.actions.StopServerAction">
-            <keyboard-shortcut first-keystroke="ctrl shift alt s" keymap="$default"/>
-
-            <override-text place="MainMenu"/>
-            <override-text place="popup" use-text-of-place="MainMenu"/>
-        </action>
 
         <group id="codegpt.statusBarPopup">
             <reference id="codegpt.openSettings" />
             <separator/>
-            <reference id="statusbar.stopServer" />
-            <reference id="statusbar.startServer" />
             <reference id="statusbar.disableNextEdits" />
             <reference id="statusbar.enableNextEdits" />
             <reference id="statusbar.disableCompletions" />

@@ -1,8 +1,9 @@
 package ee.carlrobert.codegpt;
 
-import com.intellij.DynamicBundle;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.PropertyKey;
+
+import com.intellij.DynamicBundle;
 
 public class CodeGPTBundle extends DynamicBundle {
 

@@ -1,15 +1,17 @@
 package ee.carlrobert.codegpt.actions.toolwindow;
 
-import static java.util.Objects.requireNonNull;
+import org.jetbrains.annotations.NotNull;
 
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.ActionUpdateThread;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
+
 import ee.carlrobert.codegpt.actions.editor.EditorActionsUtil;
 import ee.carlrobert.codegpt.util.EditorUtil;
-import org.jetbrains.annotations.NotNull;
+
+import static java.util.Objects.requireNonNull;
 
 public class ReplaceCodeInMainEditorAction extends AnAction {
 

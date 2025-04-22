@@ -1,11 +1,12 @@
 package ee.carlrobert.codegpt.ui;
 
-import static com.intellij.notification.NotificationType.INFORMATION;
-import static com.intellij.openapi.ui.Messages.CANCEL;
-import static com.intellij.openapi.ui.Messages.OK;
-import static ee.carlrobert.codegpt.Icons.Default;
-import static java.lang.String.format;
-import static java.util.Objects.requireNonNull;
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.util.Arrays;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.intellij.execution.ExecutionBundle;
 import com.intellij.notification.Notification;
@@ -23,15 +24,18 @@ import com.intellij.openapi.ui.popup.Balloon;
 import com.intellij.openapi.ui.popup.Balloon.Position;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.ui.awt.RelativePoint;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.conversations.ConversationsState;
 import ee.carlrobert.codegpt.settings.configuration.ConfigurationSettings;
 import ee.carlrobert.codegpt.util.EditorUtil;
-import java.awt.Point;
-import java.awt.event.MouseEvent;
-import java.util.Arrays;
-import javax.swing.JComponent;
-import org.jetbrains.annotations.NotNull;
+
+import static com.intellij.notification.NotificationType.INFORMATION;
+import static com.intellij.openapi.ui.Messages.CANCEL;
+import static com.intellij.openapi.ui.Messages.OK;
+import static ee.carlrobert.codegpt.Icons.Default;
+import static java.lang.String.format;
+import static java.util.Objects.requireNonNull;
 
 public class OverlayUtil {
 

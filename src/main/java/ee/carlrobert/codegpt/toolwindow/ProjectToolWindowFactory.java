@@ -1,15 +1,18 @@
 package ee.carlrobert.codegpt.toolwindow;
 
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowFactory;
 import com.intellij.ui.content.ContentManagerEvent;
 import com.intellij.ui.content.ContentManagerListener;
+
 import ee.carlrobert.codegpt.toolwindow.chat.ChatToolWindowPanel;
 import ee.carlrobert.codegpt.toolwindow.conversations.ConversationsToolWindow;
-import javax.swing.JComponent;
-import org.jetbrains.annotations.NotNull;
 
 public class ProjectToolWindowFactory implements ToolWindowFactory, DumbAware {
 

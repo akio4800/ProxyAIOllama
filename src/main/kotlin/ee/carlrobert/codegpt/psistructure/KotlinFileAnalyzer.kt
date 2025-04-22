@@ -7,29 +7,10 @@ import com.intellij.psi.PsiManager
 import com.intellij.psi.search.GlobalSearchScope
 import com.intellij.psi.search.PsiShortNamesCache
 import com.intellij.psi.util.PsiTreeUtil
-import ee.carlrobert.codegpt.psistructure.models.ClassName
-import ee.carlrobert.codegpt.psistructure.models.ClassStructure
-import ee.carlrobert.codegpt.psistructure.models.ClassType
-import ee.carlrobert.codegpt.psistructure.models.ConstructorStructure
-import ee.carlrobert.codegpt.psistructure.models.EnumEntryName
-import ee.carlrobert.codegpt.psistructure.models.FieldStructure
-import ee.carlrobert.codegpt.psistructure.models.MethodStructure
-import ee.carlrobert.codegpt.psistructure.models.ParameterInfo
+import ee.carlrobert.codegpt.psistructure.models.*
 import org.jetbrains.kotlin.asJava.classes.KtLightClass
 import org.jetbrains.kotlin.lexer.KtTokens
-import org.jetbrains.kotlin.psi.KtClass
-import org.jetbrains.kotlin.psi.KtClassBody
-import org.jetbrains.kotlin.psi.KtClassOrObject
-import org.jetbrains.kotlin.psi.KtConstructor
-import org.jetbrains.kotlin.psi.KtEnumEntry
-import org.jetbrains.kotlin.psi.KtFile
-import org.jetbrains.kotlin.psi.KtFunction
-import org.jetbrains.kotlin.psi.KtModifierListOwner
-import org.jetbrains.kotlin.psi.KtNamedFunction
-import org.jetbrains.kotlin.psi.KtObjectDeclaration
-import org.jetbrains.kotlin.psi.KtParameter
-import org.jetbrains.kotlin.psi.KtProperty
-import org.jetbrains.kotlin.psi.KtVariableDeclaration
+import org.jetbrains.kotlin.psi.*
 
 class KotlinFileAnalyzer(
     private val psiFileQueue: PsiFileQueue,

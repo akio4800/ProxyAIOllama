@@ -1,7 +1,10 @@
 package ee.carlrobert.codegpt.toolwindow.chat.editor;
 
-import static ee.carlrobert.codegpt.util.file.FileUtil.findLanguageExtensionMapping;
-import static java.lang.String.format;
+import java.awt.*;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.intellij.icons.AllIcons.General;
 import com.intellij.openapi.Disposable;
@@ -25,6 +28,7 @@ import com.intellij.ui.ColorUtil;
 import com.intellij.ui.IdeBorderFactory;
 import com.intellij.ui.components.ActionLink;
 import com.intellij.util.ui.JBUI;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.actions.toolwindow.ReplaceCodeInMainEditorAction;
 import ee.carlrobert.codegpt.toolwindow.chat.editor.actions.AutoApplyAction;
@@ -35,9 +39,9 @@ import ee.carlrobert.codegpt.toolwindow.chat.editor.actions.InsertAtCaretAction;
 import ee.carlrobert.codegpt.toolwindow.chat.editor.actions.NewFileAction;
 import ee.carlrobert.codegpt.toolwindow.chat.editor.actions.ReplaceSelectionAction;
 import ee.carlrobert.codegpt.util.EditorUtil;
-import java.awt.BorderLayout;
-import javax.swing.JPanel;
-import org.jetbrains.annotations.NotNull;
+
+import static ee.carlrobert.codegpt.util.file.FileUtil.findLanguageExtensionMapping;
+import static java.lang.String.format;
 
 public class ResponseEditorPanel extends JPanel implements Disposable {
 
@@ -193,7 +197,6 @@ public class ResponseEditorPanel extends JPanel implements Disposable {
         }
       }
     });
-    toolbar.setLayoutPolicy(ActionToolbar.NOWRAP_LAYOUT_POLICY);
     toolbar.setTargetComponent(editorEx.getComponent());
     toolbar.getComponent().setBorder(JBUI.Borders.empty());
     return toolbar;

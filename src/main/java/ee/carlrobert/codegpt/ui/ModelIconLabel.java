@@ -1,11 +1,14 @@
 package ee.carlrobert.codegpt.ui;
 
+import java.util.NoSuchElementException;
+
+import javax.swing.*;
+
 import com.intellij.ui.components.JBLabel;
 import com.intellij.util.ui.JBFont;
+
 import ee.carlrobert.codegpt.Icons;
 import ee.carlrobert.llm.client.openai.completion.OpenAIChatCompletionModel;
-import java.util.NoSuchElementException;
-import javax.swing.SwingConstants;
 
 public class ModelIconLabel extends JBLabel {
 

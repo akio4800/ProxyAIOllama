@@ -27,8 +27,6 @@ import ee.carlrobert.codegpt.conversations.Conversation
 import ee.carlrobert.codegpt.conversations.ConversationService
 import ee.carlrobert.codegpt.settings.GeneralSettings
 import ee.carlrobert.codegpt.settings.service.ServiceType
-import ee.carlrobert.codegpt.settings.service.codegpt.CodeGPTServiceSettings
-import ee.carlrobert.codegpt.settings.service.openai.OpenAISettings
 import ee.carlrobert.codegpt.toolwindow.chat.ChatToolWindowContentManager
 import ee.carlrobert.codegpt.toolwindow.chat.ui.textarea.ModelComboBoxAction
 import ee.carlrobert.codegpt.toolwindow.chat.ui.textarea.TotalTokensPanel
@@ -38,7 +36,6 @@ import ee.carlrobert.codegpt.ui.textarea.header.tag.*
 import ee.carlrobert.codegpt.ui.textarea.lookup.LookupActionItem
 import ee.carlrobert.codegpt.util.EditorUtil
 import ee.carlrobert.codegpt.util.coroutines.DisposableCoroutineScope
-import ee.carlrobert.llm.client.openai.completion.OpenAIChatCompletionModel
 import git4idea.GitCommit
 import java.awt.*
 import java.awt.geom.Area
@@ -275,36 +272,7 @@ class UserInputPanel(
 
     private fun isImageActionSupported(): Boolean {
         return when (service<GeneralSettings>().state.selectedService) {
-            ServiceType.CUSTOM_OPENAI,
-            ServiceType.ANTHROPIC,
-            ServiceType.GOOGLE,
-            ServiceType.AZURE,
             ServiceType.OLLAMA -> true
-
-            ServiceType.CODEGPT -> {
-                listOf(
-                    "gpt-4.1",
-                    "gpt-4.1-mini",
-                    "gemini-pro-2.5",
-                    "claude-3-opus",
-                    "claude-3.5-sonnet",
-                    "claude-3.7-sonnet"
-                ).contains(
-                    service<CodeGPTServiceSettings>()
-                        .state
-                        .chatCompletionSettings
-                        .model
-                )
-            }
-
-            ServiceType.OPENAI -> {
-                listOf(
-                    OpenAIChatCompletionModel.GPT_4_VISION_PREVIEW.code,
-                    OpenAIChatCompletionModel.GPT_4_O.code,
-                    OpenAIChatCompletionModel.GPT_4_O_MINI.code
-                ).contains(service<OpenAISettings>().state.model)
-            }
-
             else -> false
         }
     }

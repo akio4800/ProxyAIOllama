@@ -1,19 +1,18 @@
 package ee.carlrobert.codegpt.toolwindow.chat.ui;
 
-import static java.lang.String.format;
+import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.util.List;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.intellij.icons.AllIcons.General;
 import com.intellij.ui.components.ActionLink;
 import com.intellij.util.ui.JBUI;
-import java.awt.BorderLayout;
-import java.awt.event.ItemEvent;
-import java.util.List;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JPanel;
-import javax.swing.JToggleButton;
-import javax.swing.SwingConstants;
-import org.jetbrains.annotations.NotNull;
+
+import static java.lang.String.format;
 
 public class SelectedFilesAccordion extends JPanel {
 

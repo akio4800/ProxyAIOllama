@@ -1,10 +1,11 @@
 package ee.carlrobert.codegpt.conversations;
 
-import ee.carlrobert.codegpt.conversations.message.Message;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import ee.carlrobert.codegpt.conversations.message.Message;
 
 public class Conversation {
 

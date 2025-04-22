@@ -1,12 +1,14 @@
 package ee.carlrobert.codegpt.statusbar;
 
-import com.intellij.openapi.project.Project;
-import com.intellij.openapi.wm.StatusBarWidget;
-import com.intellij.openapi.wm.impl.status.widget.StatusBarEditorBasedWidgetFactory;
-import ee.carlrobert.codegpt.CodeGPTBundle;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
+
+import com.intellij.openapi.project.Project;
+import com.intellij.openapi.wm.StatusBarWidget;
+import com.intellij.openapi.wm.impl.status.widget.StatusBarEditorBasedWidgetFactory;
+
+import ee.carlrobert.codegpt.CodeGPTBundle;
 
 public class CodeGPTStatusBarWidgetFactory extends StatusBarEditorBasedWidgetFactory {
 

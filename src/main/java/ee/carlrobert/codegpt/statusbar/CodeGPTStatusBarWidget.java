@@ -1,6 +1,8 @@
 package ee.carlrobert.codegpt.statusbar;
 
-import static ee.carlrobert.codegpt.CodeGPTKeys.COMPLETION_IN_PROGRESS;
+import org.jetbrains.annotations.NonNls;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import com.intellij.openapi.actionSystem.ActionGroup;
 import com.intellij.openapi.actionSystem.ActionManager;
@@ -14,12 +16,12 @@ import com.intellij.openapi.wm.StatusBar;
 import com.intellij.openapi.wm.StatusBarWidget;
 import com.intellij.openapi.wm.WindowManager;
 import com.intellij.openapi.wm.impl.status.EditorBasedStatusBarPopup;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.Icons;
 import ee.carlrobert.codegpt.codecompletions.CompletionProgressNotifier;
-import org.jetbrains.annotations.NonNls;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+
+import static ee.carlrobert.codegpt.CodeGPTKeys.COMPLETION_IN_PROGRESS;
 
 public class CodeGPTStatusBarWidget extends EditorBasedStatusBarPopup {
 

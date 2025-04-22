@@ -1,15 +1,17 @@
 package ee.carlrobert.codegpt;
 
+import java.io.File;
+import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.util.Computable;
 import com.intellij.openapi.vfs.VirtualFile;
+
 import ee.carlrobert.codegpt.util.file.FileUtil;
-import java.io.File;
-import java.util.Objects;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public record ReferencedFile(String fileName, String filePath, String fileContent,
                              boolean directory) {

@@ -1,10 +1,13 @@
 package ee.carlrobert.codegpt.settings;
 
-import com.intellij.openapi.options.Configurable;
-import ee.carlrobert.codegpt.CodeGPTBundle;
-import javax.swing.JComponent;
+import javax.swing.*;
+
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.Nullable;
+
+import com.intellij.openapi.options.Configurable;
+
+import ee.carlrobert.codegpt.CodeGPTBundle;
 
 public class GeneralSettingsConfigurable implements Configurable {
 

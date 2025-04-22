@@ -1,5 +1,9 @@
 package ee.carlrobert.codegpt.toolwindow.conversations;
 
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.project.Project;
@@ -8,17 +12,11 @@ import com.intellij.openapi.ui.SimpleToolWindowPanel;
 import com.intellij.ui.components.JBScrollPane;
 import com.intellij.util.ui.JBFont;
 import com.intellij.util.ui.JBUI;
+
 import ee.carlrobert.codegpt.actions.toolwindow.DeleteAllConversationsAction;
 import ee.carlrobert.codegpt.actions.toolwindow.MoveDownAction;
 import ee.carlrobert.codegpt.actions.toolwindow.MoveUpAction;
 import ee.carlrobert.codegpt.conversations.ConversationService;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.ScrollPaneConstants;
-import org.jetbrains.annotations.NotNull;
 
 public class ConversationsToolWindow extends JPanel {
 

@@ -1,7 +1,9 @@
 package ee.carlrobert.codegpt.actions.toolwindow;
 
-import static java.lang.String.format;
-import static java.util.Objects.requireNonNull;
+import java.time.format.DateTimeFormatter;
+import java.util.stream.Collectors;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.ActionUpdateThread;
@@ -11,13 +13,12 @@ import com.intellij.openapi.fileEditor.FileEditorManager;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.testFramework.LightVirtualFile;
-import ee.carlrobert.codegpt.actions.ActionType;
+
 import ee.carlrobert.codegpt.actions.editor.EditorActionsUtil;
 import ee.carlrobert.codegpt.conversations.ConversationsState;
-import ee.carlrobert.codegpt.telemetry.TelemetryAction;
-import java.time.format.DateTimeFormatter;
-import java.util.stream.Collectors;
-import org.jetbrains.annotations.NotNull;
+
+import static java.lang.String.format;
+import static java.util.Objects.requireNonNull;
 
 public class OpenInEditorAction extends AnAction {
 
@@ -36,7 +37,6 @@ public class OpenInEditorAction extends AnAction {
 
   @Override
   public void actionPerformed(@NotNull AnActionEvent e) {
-    try {
       var project = e.getProject();
       var currentConversation = ConversationsState.getCurrentConversation();
       if (project != null && currentConversation != null) {
@@ -55,11 +55,6 @@ public class OpenInEditorAction extends AnAction {
             ToolWindowManager.getInstance(project).getToolWindow("ProxyAI"));
         toolWindow.hide();
       }
-    } finally {
-      TelemetryAction.IDE_ACTION.createActionMessage()
-          .property("action", ActionType.OPEN_CONVERSATION_IN_EDITOR.name())
-          .send();
-    }
   }
 
   @Override

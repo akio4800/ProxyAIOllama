@@ -1,13 +1,17 @@
 package ee.carlrobert.codegpt.toolwindow.chat.editor.actions;
 
+import java.awt.event.ActionEvent;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.icons.AllIcons.Actions;
 import com.intellij.icons.AllIcons.Diff;
 import com.intellij.openapi.editor.ex.EditorEx;
 import com.intellij.openapi.ui.JBMenuItem;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
-import java.awt.event.ActionEvent;
-import javax.swing.AbstractAction;
-import org.jetbrains.annotations.NotNull;
 
 public class EditAction extends AbstractAction {
 

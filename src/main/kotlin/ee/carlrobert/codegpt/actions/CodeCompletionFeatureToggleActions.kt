@@ -6,32 +6,17 @@ import com.intellij.openapi.components.service
 import com.intellij.openapi.project.DumbAwareAction
 import ee.carlrobert.codegpt.codecompletions.CodeCompletionService
 import ee.carlrobert.codegpt.settings.GeneralSettings
-import ee.carlrobert.codegpt.settings.service.ServiceType.*
-import ee.carlrobert.codegpt.settings.service.codegpt.CodeGPTServiceSettings
-import ee.carlrobert.codegpt.settings.service.custom.CustomServicesSettings
-import ee.carlrobert.codegpt.settings.service.llama.LlamaSettings
+import ee.carlrobert.codegpt.settings.service.ServiceType.OLLAMA
 import ee.carlrobert.codegpt.settings.service.ollama.OllamaSettings
-import ee.carlrobert.codegpt.settings.service.openai.OpenAISettings
+
 
 abstract class CodeCompletionFeatureToggleActions(
     private val enableFeatureAction: Boolean
 ) : DumbAwareAction() {
 
     override fun actionPerformed(e: AnActionEvent) = when (GeneralSettings.getSelectedService()) {
-        CODEGPT -> service<CodeGPTServiceSettings>().state.codeCompletionSettings::codeCompletionsEnabled::set
-
-        OPENAI -> OpenAISettings.getCurrentState()::setCodeCompletionsEnabled
-
-        LLAMA_CPP -> LlamaSettings.getCurrentState()::setCodeCompletionsEnabled
-
         OLLAMA -> service<OllamaSettings>().state::codeCompletionsEnabled::set
-
-        CUSTOM_OPENAI -> service<CustomServicesSettings>().state.active.codeCompletionSettings::codeCompletionsEnabled::set
-
-        ANTHROPIC,
-        AZURE,
-        GOOGLE,
-        null -> { _: Boolean -> Unit } // no-op for these services
+        else -> { _: Boolean -> Unit } // no-op for these services
     }(enableFeatureAction)
 
     override fun update(e: AnActionEvent) {
@@ -41,16 +26,8 @@ abstract class CodeCompletionFeatureToggleActions(
                 ?: false
         e.presentation.isVisible = codeCompletionEnabled != enableFeatureAction
         e.presentation.isEnabled = when (selectedService) {
-            CODEGPT,
-            OPENAI,
-            CUSTOM_OPENAI,
-            LLAMA_CPP,
             OLLAMA -> true
-
-            ANTHROPIC,
-            AZURE,
-            GOOGLE,
-            null -> false
+            else -> false
         }
     }
 

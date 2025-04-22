@@ -1,7 +1,18 @@
 package ee.carlrobert.codegpt.toolwindow.chat;
 
-import static ee.carlrobert.codegpt.ui.UIUtil.createScrollPaneWithSmartScroller;
-import static java.lang.String.format;
+import java.awt.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Set;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.application.ApplicationManager;
@@ -11,9 +22,9 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.ui.JBColor;
 import com.intellij.util.ui.JBUI;
+
 import ee.carlrobert.codegpt.CodeGPTKeys;
 import ee.carlrobert.codegpt.ReferencedFile;
-import ee.carlrobert.codegpt.actions.ActionType;
 import ee.carlrobert.codegpt.completions.ChatCompletionParameters;
 import ee.carlrobert.codegpt.completions.CompletionRequestService;
 import ee.carlrobert.codegpt.completions.ConversationType;
@@ -25,7 +36,6 @@ import ee.carlrobert.codegpt.psistructure.PsiStructureProvider;
 import ee.carlrobert.codegpt.psistructure.models.ClassStructure;
 import ee.carlrobert.codegpt.settings.GeneralSettings;
 import ee.carlrobert.codegpt.settings.service.ServiceType;
-import ee.carlrobert.codegpt.telemetry.TelemetryAction;
 import ee.carlrobert.codegpt.toolwindow.chat.editor.actions.CopyAction;
 import ee.carlrobert.codegpt.toolwindow.chat.structure.data.PsiStructureRepository;
 import ee.carlrobert.codegpt.toolwindow.chat.structure.data.PsiStructureState;
@@ -49,19 +59,10 @@ import ee.carlrobert.codegpt.util.EditorUtil;
 import ee.carlrobert.codegpt.util.coroutines.CoroutineDispatchers;
 import ee.carlrobert.codegpt.util.file.FileUtil;
 import git4idea.GitCommit;
-import java.awt.BorderLayout;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
-import java.util.UUID;
-import java.util.stream.Collectors;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
 import kotlin.Unit;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+
+import static ee.carlrobert.codegpt.ui.UIUtil.createScrollPaneWithSmartScroller;
+import static java.lang.String.format;
 
 public class ChatToolWindowTabPanel implements Disposable {
 
@@ -313,10 +314,6 @@ public class ChatToolWindowTabPanel implements Disposable {
       }
 
       totalTokensPanel.updateConversationTokens(conversation);
-
-      TelemetryAction.IDE_ACTION.createActionMessage()
-          .property("action", ActionType.RELOAD_MESSAGE.name())
-          .send();
     }
   }
 

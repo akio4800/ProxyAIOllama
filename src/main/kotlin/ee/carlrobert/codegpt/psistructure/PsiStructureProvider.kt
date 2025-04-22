@@ -5,11 +5,7 @@ import com.intellij.openapi.application.ReadAction
 import com.intellij.psi.PsiFile
 import com.intellij.util.io.await
 import ee.carlrobert.codegpt.psistructure.models.ClassStructure
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.asExecutor
-import kotlinx.coroutines.currentCoroutineContext
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.ensureActive
+import kotlinx.coroutines.*
 import org.jetbrains.kotlin.psi.KtFile
 import kotlin.coroutines.cancellation.CancellationException
 

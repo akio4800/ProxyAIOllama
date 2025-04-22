@@ -1,8 +1,8 @@
 package ee.carlrobert.codegpt.util;
 
-import static java.lang.String.format;
-
 import ee.carlrobert.codegpt.util.file.FileUtil;
+
+import static java.lang.String.format;
 
 public class DownloadingUtil {
 

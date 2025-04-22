@@ -1,17 +1,21 @@
 package ee.carlrobert.codegpt.toolwindow.chat.editor.actions;
 
-import static java.util.Objects.requireNonNull;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import com.intellij.icons.AllIcons.Actions;
 import com.intellij.openapi.editor.ex.EditorEx;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.ui.OverlayUtil;
 import ee.carlrobert.codegpt.util.EditorUtil;
-import java.awt.Point;
-import java.awt.event.ActionEvent;
-import javax.swing.AbstractAction;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+
+import static java.util.Objects.requireNonNull;
 
 public class ReplaceSelectionAction extends AbstractAction {
 

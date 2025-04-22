@@ -1,14 +1,16 @@
 package ee.carlrobert.codegpt;
 
-import static java.io.File.separator;
-import static java.util.Objects.requireNonNull;
+import java.nio.file.Path;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.intellij.ide.plugins.PluginManagerCore;
 import com.intellij.openapi.application.PathManager;
 import com.intellij.openapi.extensions.PluginId;
 import com.intellij.openapi.project.Project;
-import java.nio.file.Path;
-import org.jetbrains.annotations.NotNull;
+
+import static java.io.File.separator;
+import static java.util.Objects.requireNonNull;
 
 public final class CodeGPTPlugin {
 

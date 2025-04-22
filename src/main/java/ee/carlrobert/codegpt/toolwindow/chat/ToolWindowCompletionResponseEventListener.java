@@ -1,10 +1,13 @@
 package ee.carlrobert.codegpt.toolwindow.chat;
 
-import static com.intellij.openapi.ui.Messages.OK;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+import javax.swing.*;
 
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
+
 import ee.carlrobert.codegpt.EncodingManager;
 import ee.carlrobert.codegpt.codecompletions.CompletionProgressNotifier;
 import ee.carlrobert.codegpt.completions.ChatCompletionParameters;
@@ -13,7 +16,6 @@ import ee.carlrobert.codegpt.conversations.Conversation;
 import ee.carlrobert.codegpt.conversations.ConversationService;
 import ee.carlrobert.codegpt.conversations.message.Message;
 import ee.carlrobert.codegpt.events.CodeGPTEvent;
-import ee.carlrobert.codegpt.telemetry.TelemetryAction;
 import ee.carlrobert.codegpt.toolwindow.chat.ui.ChatMessageResponseBody;
 import ee.carlrobert.codegpt.toolwindow.chat.ui.textarea.TotalTokensPanel;
 import ee.carlrobert.codegpt.toolwindow.ui.ResponseMessagePanel;
@@ -21,8 +23,8 @@ import ee.carlrobert.codegpt.toolwindow.ui.UserMessagePanel;
 import ee.carlrobert.codegpt.ui.OverlayUtil;
 import ee.carlrobert.codegpt.ui.textarea.UserInputPanel;
 import ee.carlrobert.llm.client.openai.completion.ErrorDetails;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import javax.swing.Timer;
+
+import static com.intellij.openapi.ui.Messages.OK;
 
 abstract class ToolWindowCompletionResponseEventListener implements
     CompletionResponseEventListener {
@@ -104,11 +106,6 @@ abstract class ToolWindowCompletionResponseEventListener implements
     ApplicationManager.getApplication().invokeLater(() -> {
       var answer = OverlayUtil.showTokenLimitExceededDialog();
       if (answer == OK) {
-        TelemetryAction.IDE_ACTION.createActionMessage()
-            .property("action", "DISCARD_TOKEN_LIMIT")
-            .property("model", conversation.getModel())
-            .send();
-
         ConversationService.getInstance().discardTokenLimits(conversation);
         handleTokensExceededPolicyAccepted();
       } else {

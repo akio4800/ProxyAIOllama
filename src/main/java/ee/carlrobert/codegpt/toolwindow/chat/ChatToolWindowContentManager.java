@@ -1,6 +1,10 @@
 package ee.carlrobert.codegpt.toolwindow.chat;
 
-import static java.util.Objects.requireNonNull;
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.Optional;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.Service;
@@ -11,6 +15,7 @@ import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowAnchor;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.ui.content.Content;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.Icons;
 import ee.carlrobert.codegpt.completions.ConversationType;
@@ -19,10 +24,8 @@ import ee.carlrobert.codegpt.conversations.ConversationService;
 import ee.carlrobert.codegpt.conversations.ConversationsState;
 import ee.carlrobert.codegpt.conversations.message.Message;
 import ee.carlrobert.codegpt.settings.prompts.PromptsSettings;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Optional;
-import org.jetbrains.annotations.NotNull;
+
+import static java.util.Objects.requireNonNull;
 
 @Service(Service.Level.PROJECT)
 public final class ChatToolWindowContentManager {

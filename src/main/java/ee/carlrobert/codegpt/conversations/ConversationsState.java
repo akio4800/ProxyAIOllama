@@ -1,17 +1,20 @@
 package ee.carlrobert.codegpt.conversations;
 
+import java.util.List;
+import java.util.Map;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.util.xmlb.XmlSerializerUtil;
 import com.intellij.util.xmlb.annotations.OptionTag;
+
 import ee.carlrobert.codegpt.conversations.converter.ConversationConverter;
 import ee.carlrobert.codegpt.conversations.converter.ConversationsConverter;
-import java.util.List;
-import java.util.Map;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 @State(
     name = "ee.carlrobert.codegpt.state.conversations.ConversationsState",

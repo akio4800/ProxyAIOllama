@@ -1,13 +1,16 @@
 package ee.carlrobert.codegpt.conversations.message;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import ee.carlrobert.codegpt.ui.DocumentationDetails;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
+
 import org.jetbrains.annotations.Nullable;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import ee.carlrobert.codegpt.ui.DocumentationDetails;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Message {

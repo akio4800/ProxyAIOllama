@@ -1,5 +1,10 @@
 package ee.carlrobert.codegpt.settings.advanced;
 
+import java.awt.event.ItemEvent;
+import java.net.Proxy;
+
+import javax.swing.*;
+
 import com.intellij.openapi.ui.ComboBox;
 import com.intellij.ui.PortField;
 import com.intellij.ui.TitledSeparator;
@@ -9,13 +14,9 @@ import com.intellij.ui.components.JBTextField;
 import com.intellij.util.ui.FormBuilder;
 import com.intellij.util.ui.JBUI;
 import com.intellij.util.ui.UI;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.ui.UIUtil;
-import java.awt.event.ItemEvent;
-import java.net.Proxy;
-import javax.swing.BoxLayout;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
 
 public class AdvancedSettingsComponent {
 

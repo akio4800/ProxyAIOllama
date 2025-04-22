@@ -1,14 +1,8 @@
 package ee.carlrobert.codegpt.completions
 
 import com.intellij.openapi.components.service
-import ee.carlrobert.codegpt.completions.factory.AzureRequestFactory
-import ee.carlrobert.codegpt.completions.factory.ClaudeRequestFactory
 import ee.carlrobert.codegpt.completions.factory.CodeGPTRequestFactory
-import ee.carlrobert.codegpt.completions.factory.CustomOpenAIRequestFactory
-import ee.carlrobert.codegpt.completions.factory.GoogleRequestFactory
-import ee.carlrobert.codegpt.completions.factory.LlamaRequestFactory
 import ee.carlrobert.codegpt.completions.factory.OllamaRequestFactory
-import ee.carlrobert.codegpt.completions.factory.OpenAIRequestFactory
 import ee.carlrobert.codegpt.psistructure.ClassStructureSerializer
 import ee.carlrobert.codegpt.settings.prompts.CoreActionsState
 import ee.carlrobert.codegpt.settings.prompts.PromptsSettings
@@ -26,13 +20,7 @@ interface CompletionRequestFactory {
         fun getFactory(serviceType: ServiceType): CompletionRequestFactory {
             return when (serviceType) {
                 ServiceType.CODEGPT -> CodeGPTRequestFactory(ClassStructureSerializer)
-                ServiceType.OPENAI -> OpenAIRequestFactory()
-                ServiceType.CUSTOM_OPENAI -> CustomOpenAIRequestFactory()
-                ServiceType.AZURE -> AzureRequestFactory()
-                ServiceType.ANTHROPIC -> ClaudeRequestFactory()
-                ServiceType.GOOGLE -> GoogleRequestFactory()
                 ServiceType.OLLAMA -> OllamaRequestFactory()
-                ServiceType.LLAMA_CPP -> LlamaRequestFactory()
             }
         }
     }

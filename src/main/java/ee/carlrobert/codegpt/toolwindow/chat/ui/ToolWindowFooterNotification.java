@@ -1,14 +1,15 @@
 package ee.carlrobert.codegpt.toolwindow.chat.ui;
 
+import java.awt.*;
+
+import javax.swing.*;
+
 import com.intellij.icons.AllIcons.General;
 import com.intellij.ui.JBColor;
 import com.intellij.ui.components.ActionLink;
 import com.intellij.ui.components.JBLabel;
 import com.intellij.util.ui.JBUI;
 import com.intellij.util.ui.JBUI.CurrentTheme.NotificationInfo;
-import java.awt.BorderLayout;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
 
 public class ToolWindowFooterNotification extends JPanel {
 

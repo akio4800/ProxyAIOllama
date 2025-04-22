@@ -1,19 +1,22 @@
 package ee.carlrobert.codegpt.toolwindow.chat.editor.actions;
 
-import static com.intellij.openapi.application.ActionsKt.runUndoTransparentWriteAction;
+import java.awt.*;
+import java.util.Optional;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.fileEditor.FileEditorManager;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.Icons;
 import ee.carlrobert.codegpt.actions.ActionType;
 import ee.carlrobert.codegpt.actions.TrackableAction;
 import ee.carlrobert.codegpt.ui.OverlayUtil;
-import java.awt.Point;
-import java.util.Optional;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+
+import static com.intellij.openapi.application.ActionsKt.runUndoTransparentWriteAction;
 
 public class InsertAtCaretAction extends TrackableAction {
 

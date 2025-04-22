@@ -1,17 +1,18 @@
 package ee.carlrobert.codegpt.ui.checkbox;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.icons.AllIcons;
 import com.intellij.notification.NotificationType;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.ui.CheckedTreeNode;
 import com.intellij.util.PlatformIcons;
-import ee.carlrobert.codegpt.ReferencedFile;
+
 import ee.carlrobert.codegpt.ui.OverlayUtil;
-import java.io.File;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import org.jetbrains.annotations.NotNull;
 
 public class VirtualFileCheckboxTree extends FileCheckboxTree {
 

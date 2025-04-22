@@ -1,10 +1,20 @@
 package ee.carlrobert.codegpt.toolwindow.conversations;
 
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.time.format.DateTimeFormatter;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.openapi.project.Project;
 import com.intellij.ui.JBColor;
 import com.intellij.ui.components.JBLabel;
 import com.intellij.util.ui.JBFont;
 import com.intellij.util.ui.JBUI;
+
 import ee.carlrobert.codegpt.actions.toolwindow.DeleteConversationAction;
 import ee.carlrobert.codegpt.conversations.Conversation;
 import ee.carlrobert.codegpt.conversations.ConversationsState;
@@ -12,16 +22,6 @@ import ee.carlrobert.codegpt.settings.GeneralSettings;
 import ee.carlrobert.codegpt.toolwindow.chat.ChatToolWindowContentManager;
 import ee.carlrobert.codegpt.ui.IconActionButton;
 import ee.carlrobert.codegpt.ui.ModelIconLabel;
-import java.awt.BorderLayout;
-import java.awt.Cursor;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.time.format.DateTimeFormatter;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import org.jetbrains.annotations.NotNull;
 
 class ConversationPanel extends JPanel {
 

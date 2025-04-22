@@ -1,10 +1,15 @@
 package ee.carlrobert.codegpt.actions;
 
-import static com.intellij.openapi.actionSystem.CommonDataKeys.VIRTUAL_FILE_ARRAY;
-import static com.intellij.openapi.ui.DialogWrapper.OK_EXIT_CODE;
-import static ee.carlrobert.codegpt.settings.IncludedFilesSettingsState.DEFAULT_PROMPT_TEMPLATE;
-import static ee.carlrobert.codegpt.settings.IncludedFilesSettingsState.DEFAULT_REPEATABLE_CONTEXT;
-import static java.lang.String.format;
+import java.awt.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -22,6 +27,7 @@ import com.intellij.ui.components.JBTextArea;
 import com.intellij.util.ui.FormBuilder;
 import com.intellij.util.ui.JBUI;
 import com.intellij.util.ui.UI.PanelFactory;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.EncodingManager;
 import ee.carlrobert.codegpt.Icons;
@@ -31,16 +37,12 @@ import ee.carlrobert.codegpt.ui.UIUtil;
 import ee.carlrobert.codegpt.ui.checkbox.FileCheckboxTree;
 import ee.carlrobert.codegpt.ui.checkbox.VirtualFileCheckboxTree;
 import ee.carlrobert.codegpt.util.file.FileUtil;
-import java.awt.Dimension;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
-import javax.swing.JButton;
-import javax.swing.JComponent;
-import javax.swing.SwingUtilities;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+
+import static com.intellij.openapi.actionSystem.CommonDataKeys.VIRTUAL_FILE_ARRAY;
+import static com.intellij.openapi.ui.DialogWrapper.OK_EXIT_CODE;
+import static ee.carlrobert.codegpt.settings.IncludedFilesSettingsState.DEFAULT_PROMPT_TEMPLATE;
+import static ee.carlrobert.codegpt.settings.IncludedFilesSettingsState.DEFAULT_REPEATABLE_CONTEXT;
+import static java.lang.String.format;
 
 public class IncludeFilesInContextAction extends AnAction {
 

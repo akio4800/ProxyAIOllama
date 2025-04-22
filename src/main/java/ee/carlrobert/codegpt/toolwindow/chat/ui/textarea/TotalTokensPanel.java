@@ -1,7 +1,17 @@
 package ee.carlrobert.codegpt.toolwindow.chat.ui.textarea;
 
-import static com.intellij.openapi.editor.EditorKind.MAIN_EDITOR;
-import static java.lang.String.format;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import com.intellij.icons.AllIcons.General;
 import com.intellij.openapi.Disposable;
@@ -11,10 +21,10 @@ import com.intellij.openapi.editor.event.EditorFactoryEvent;
 import com.intellij.openapi.editor.event.EditorFactoryListener;
 import com.intellij.openapi.editor.event.SelectionEvent;
 import com.intellij.openapi.editor.event.SelectionListener;
-import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.text.Strings;
 import com.intellij.ui.components.JBLabel;
 import com.intellij.util.ui.JBUI;
+
 import ee.carlrobert.codegpt.EncodingManager;
 import ee.carlrobert.codegpt.conversations.Conversation;
 import ee.carlrobert.codegpt.psistructure.ClassStructureSerializer;
@@ -24,18 +34,10 @@ import ee.carlrobert.codegpt.settings.prompts.PromptsSettings;
 import ee.carlrobert.codegpt.settings.service.ServiceType;
 import ee.carlrobert.codegpt.toolwindow.chat.structure.data.PsiStructureRepository;
 import ee.carlrobert.codegpt.util.coroutines.CoroutineDispatchers;
-import java.awt.FlowLayout;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import javax.swing.Box;
-import javax.swing.JPanel;
 import kotlin.Unit;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+
+import static com.intellij.openapi.editor.EditorKind.MAIN_EDITOR;
+import static java.lang.String.format;
 
 public class TotalTokensPanel extends JPanel {
 
@@ -180,7 +182,6 @@ public class TotalTokensPanel extends JPanel {
   }
 
   private String getIconToolTipText(String html) {
-    if (!GeneralSettings.isSelected(ServiceType.OPENAI)) {
       return """
           <html>
           <body style="margin: 0; padding: 0;">
@@ -193,8 +194,6 @@ public class TotalTokensPanel extends JPanel {
           </p>
           </body>
           </html>""".formatted(html);
-    }
-    return "<html" + html + "</html>";
   }
 
   private String getLabelHtml(int total) {

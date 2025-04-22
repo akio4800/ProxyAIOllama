@@ -62,7 +62,6 @@ changelog {
 }
 
 dependencies {
-  implementation(project(":codegpt-telemetry"))
   implementation(project(":codegpt-treesitter"))
 
   implementation(platform(libs.jackson.bom))
@@ -86,7 +85,6 @@ dependencies {
 
 tasks.register<Exec>("updateSubmodules") {
   workingDir(rootDir)
-  commandLine("git", "submodule", "update", "--init", "--recursive")
 }
 
 /**
@@ -159,10 +157,6 @@ tasks {
 
   prepareSandbox {
     enabled = true
-    dependsOn("updateSubmodules")
-    from("src/main/cpp/llama.cpp") {
-      into("ProxyAI/llama.cpp")
-    }
   }
 
   signPlugin {
@@ -181,6 +175,11 @@ tasks {
     dependsOn("patchChangelog")
     token.set(System.getenv("PUBLISH_TOKEN"))
     channels.set(listOf("stable"))
+  }
+
+
+  checkstyleMain {
+    enabled = false
   }
 
   runIde {

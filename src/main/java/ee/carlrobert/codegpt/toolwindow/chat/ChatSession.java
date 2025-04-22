@@ -1,11 +1,12 @@
 package ee.carlrobert.codegpt.toolwindow.chat;
 
-import ee.carlrobert.codegpt.ReferencedFile;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+
+import ee.carlrobert.codegpt.ReferencedFile;
 
 public class ChatSession {
 

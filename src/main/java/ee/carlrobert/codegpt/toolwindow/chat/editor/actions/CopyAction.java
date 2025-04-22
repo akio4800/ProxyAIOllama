@@ -1,16 +1,19 @@
 package ee.carlrobert.codegpt.toolwindow.chat.editor.actions;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.MouseEvent;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.icons.AllIcons.Actions;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.editor.Editor;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.actions.ActionType;
 import ee.carlrobert.codegpt.actions.TrackableAction;
 import ee.carlrobert.codegpt.ui.OverlayUtil;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.MouseEvent;
-import org.jetbrains.annotations.NotNull;
 
 public class CopyAction extends TrackableAction {
 

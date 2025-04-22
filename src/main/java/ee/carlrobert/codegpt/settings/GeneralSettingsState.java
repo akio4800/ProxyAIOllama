@@ -1,6 +1,7 @@
 package ee.carlrobert.codegpt.settings;
 
 import com.intellij.openapi.application.ApplicationManager;
+
 import ee.carlrobert.codegpt.settings.service.ProviderChangeNotifier;
 import ee.carlrobert.codegpt.settings.service.ServiceType;
 

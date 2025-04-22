@@ -1,14 +1,18 @@
 package ee.carlrobert.codegpt.actions.toolwindow;
 
+import java.util.Optional;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.openapi.actionSystem.ActionUpdateThread;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
+
 import ee.carlrobert.codegpt.conversations.Conversation;
 import ee.carlrobert.codegpt.conversations.ConversationsState;
-import java.util.Optional;
-import javax.swing.Icon;
-import org.jetbrains.annotations.NotNull;
 
 public abstract class MoveAction extends AnAction {
 

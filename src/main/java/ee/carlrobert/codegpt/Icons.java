@@ -1,8 +1,9 @@
 package ee.carlrobert.codegpt;
 
+import javax.swing.*;
+
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.ui.AnimatedIcon;
-import javax.swing.Icon;
 
 public final class Icons {
 

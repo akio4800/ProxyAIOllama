@@ -1,6 +1,10 @@
 package ee.carlrobert.codegpt.actions.editor;
 
-import static java.lang.String.format;
+import java.awt.event.ActionEvent;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.Nullable;
 
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
@@ -8,17 +12,14 @@ import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.util.ui.FormBuilder;
 import com.intellij.util.ui.JBUI;
 import com.intellij.util.ui.UI;
+
 import ee.carlrobert.codegpt.Icons;
 import ee.carlrobert.codegpt.conversations.message.Message;
 import ee.carlrobert.codegpt.toolwindow.chat.ChatToolWindowContentManager;
 import ee.carlrobert.codegpt.ui.UIUtil;
 import ee.carlrobert.codegpt.util.file.FileUtil;
-import java.awt.event.ActionEvent;
-import javax.swing.AbstractAction;
-import javax.swing.JComponent;
-import javax.swing.JTextArea;
-import javax.swing.SwingUtilities;
-import org.jetbrains.annotations.Nullable;
+
+import static java.lang.String.format;
 
 public class AskQuestionAction extends BaseEditorAction {
 

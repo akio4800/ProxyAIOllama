@@ -1,27 +1,28 @@
 package ee.carlrobert.codegpt.toolwindow.chat.ui;
 
-import static javax.swing.event.HyperlinkEvent.EventType.ACTIVATED;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import javax.swing.*;
 
 import com.intellij.openapi.options.ShowSettingsUtil;
 import com.intellij.openapi.roots.ui.componentsList.components.ScrollablePanel;
 import com.intellij.openapi.roots.ui.componentsList.layout.VerticalStackLayout;
 import com.intellij.ui.JBColor;
 import com.intellij.util.ui.JBUI;
+
 import ee.carlrobert.codegpt.credentials.CredentialsStore;
 import ee.carlrobert.codegpt.credentials.CredentialsStore.CredentialKey;
 import ee.carlrobert.codegpt.settings.GeneralSettings;
 import ee.carlrobert.codegpt.settings.service.ServiceType;
-import ee.carlrobert.codegpt.settings.service.codegpt.CodeGPTServiceConfigurable;
+import ee.carlrobert.codegpt.settings.service.ollama.OllamaSettingsConfigurable;
 import ee.carlrobert.codegpt.toolwindow.ui.ResponseMessagePanel;
 import ee.carlrobert.codegpt.ui.UIUtil;
 import ee.carlrobert.codegpt.util.ApplicationUtil;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-import javax.swing.BoxLayout;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
+
+import static javax.swing.event.HyperlinkEvent.EventType.ACTIVATED;
 
 public class ChatToolWindowScrollablePanel extends ScrollablePanel {
 
@@ -41,10 +42,7 @@ public class ChatToolWindowScrollablePanel extends ScrollablePanel {
       panel.addContent(UIUtil.createTextPane("""
               <html>
               <p style="margin-top: 4px; margin-bottom: 4px;">
-                It looks like you haven't configured your API key yet. Visit <a href="#OPEN_SETTINGS">ProxyAI settings</a> to do so.
-              </p>
-              <p style="margin-top: 4px; margin-bottom: 4px;">
-                Don't have an account? <a href="https://tryproxy.io/signin">Sign up</a> to get the most out of ProxyAI.
+                Pls configure Ollama settings:. Visit <a href="#OPEN_SETTINGS">Ollama Settings</a> to do so.
               </p>
               </html>""",
           false,
@@ -53,7 +51,7 @@ public class ChatToolWindowScrollablePanel extends ScrollablePanel {
                 && "#OPEN_SETTINGS".equals(event.getDescription())) {
               ShowSettingsUtil.getInstance().showSettingsDialog(
                   ApplicationUtil.findCurrentProject(),
-                  CodeGPTServiceConfigurable.class);
+                  OllamaSettingsConfigurable.class);
             } else {
               UIUtil.handleHyperlinkClicked(event);
             }

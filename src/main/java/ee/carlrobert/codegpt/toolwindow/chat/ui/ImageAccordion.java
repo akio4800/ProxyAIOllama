@@ -1,24 +1,21 @@
 package ee.carlrobert.codegpt.toolwindow.chat.ui;
 
-import static com.intellij.util.ui.JBUI.Panels.simplePanel;
-
-import com.intellij.icons.AllIcons.General;
-import com.intellij.ui.components.JBLabel;
-import com.intellij.util.ui.JBUI;
-import ee.carlrobert.codegpt.CodeGPTBundle;
-import java.awt.BorderLayout;
-import java.awt.Graphics2D;
-import java.awt.Image;
+import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+
 import javax.imageio.ImageIO;
-import javax.swing.BoxLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
-import javax.swing.JToggleButton;
-import javax.swing.SwingConstants;
+import javax.swing.*;
+
+import com.intellij.icons.AllIcons.General;
+import com.intellij.ui.components.JBLabel;
+import com.intellij.util.ui.JBUI;
+
+import ee.carlrobert.codegpt.CodeGPTBundle;
+
+import static com.intellij.util.ui.JBUI.Panels.simplePanel;
 
 public class ImageAccordion extends JPanel {
 

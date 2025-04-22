@@ -1,11 +1,12 @@
 package ee.carlrobert.codegpt.util;
 
+import java.util.List;
+import java.util.Objects;
+
 import com.intellij.openapi.vcs.FilePath;
 import com.intellij.openapi.vcs.changes.Change;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.vcs.commit.CommitWorkflowUi;
-import java.util.List;
-import java.util.Objects;
 
 public class CommitWorkflowChanges {
 

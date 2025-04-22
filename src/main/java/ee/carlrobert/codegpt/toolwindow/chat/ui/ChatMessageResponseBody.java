@@ -1,9 +1,12 @@
 package ee.carlrobert.codegpt.toolwindow.chat.ui;
 
-import static ee.carlrobert.codegpt.toolwindow.chat.StreamResponseType.CODE;
-import static ee.carlrobert.codegpt.util.MarkdownUtil.convertMdToHtml;
-import static java.lang.String.format;
-import static javax.swing.event.HyperlinkEvent.EventType.ACTIVATED;
+import java.awt.*;
+import java.util.Objects;
+import java.util.stream.Stream;
+
+import javax.swing.*;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.intellij.icons.AllIcons;
 import com.intellij.icons.AllIcons.General;
@@ -26,9 +29,9 @@ import com.intellij.ui.components.JBLabel;
 import com.intellij.util.ui.JBUI;
 import com.vladsch.flexmark.ast.FencedCodeBlock;
 import com.vladsch.flexmark.parser.Parser;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.Icons;
-import ee.carlrobert.codegpt.actions.ActionType;
 import ee.carlrobert.codegpt.events.AnalysisCompletedEventDetails;
 import ee.carlrobert.codegpt.events.AnalysisFailedEventDetails;
 import ee.carlrobert.codegpt.events.CodeGPTEvent;
@@ -37,7 +40,6 @@ import ee.carlrobert.codegpt.events.WebSearchEventDetails;
 import ee.carlrobert.codegpt.settings.GeneralSettings;
 import ee.carlrobert.codegpt.settings.GeneralSettingsConfigurable;
 import ee.carlrobert.codegpt.settings.service.ServiceType;
-import ee.carlrobert.codegpt.telemetry.TelemetryAction;
 import ee.carlrobert.codegpt.toolwindow.chat.StreamParser;
 import ee.carlrobert.codegpt.toolwindow.chat.ThinkingOutputParser;
 import ee.carlrobert.codegpt.toolwindow.chat.editor.ResponseEditorPanel;
@@ -48,15 +50,11 @@ import ee.carlrobert.codegpt.ui.ThoughtProcessPanel;
 import ee.carlrobert.codegpt.ui.UIUtil;
 import ee.carlrobert.codegpt.util.EditorUtil;
 import ee.carlrobert.codegpt.util.MarkdownUtil;
-import java.awt.BorderLayout;
-import java.util.Objects;
-import java.util.stream.Stream;
-import javax.swing.BoxLayout;
-import javax.swing.DefaultListModel;
-import javax.swing.JEditorPane;
-import javax.swing.JPanel;
-import javax.swing.JTextPane;
-import org.jetbrains.annotations.NotNull;
+
+import static ee.carlrobert.codegpt.toolwindow.chat.StreamResponseType.CODE;
+import static ee.carlrobert.codegpt.util.MarkdownUtil.convertMdToHtml;
+import static java.lang.String.format;
+import static javax.swing.event.HyperlinkEvent.EventType.ACTIVATED;
 
 public class ChatMessageResponseBody extends JPanel {
 
@@ -164,9 +162,6 @@ public class ChatMessageResponseBody extends JPanel {
         if (e.getEventType() == ACTIVATED) {
           ShowSettingsUtil.getInstance()
               .showSettingsDialog(project, GeneralSettingsConfigurable.class);
-          TelemetryAction.IDE_ACTION.createActionMessage()
-              .property("action", ActionType.CHANGE_PROVIDER.name())
-              .send();
         }
       });
       hideCaret();

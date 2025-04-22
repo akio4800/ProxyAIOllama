@@ -16,6 +16,7 @@ import ee.carlrobert.codegpt.settings.service.ServiceType
 import ee.carlrobert.codegpt.settings.service.codegpt.CodeGPTServiceSettings
 import ee.carlrobert.codegpt.ui.OverlayUtil
 
+
 class CodeGPTLookupListener : LookupManagerListener {
     override fun activeLookupChanged(oldLookup: Lookup?, newLookup: Lookup?) {
         if (newLookup is LookupImpl) {

@@ -1,6 +1,7 @@
 package ee.carlrobert.codegpt;
 
 import com.intellij.openapi.util.Key;
+
 import ee.carlrobert.codegpt.predictions.CodeSuggestionDiffViewer;
 import ee.carlrobert.llm.client.codegpt.CodeGPTUserDetails;
 

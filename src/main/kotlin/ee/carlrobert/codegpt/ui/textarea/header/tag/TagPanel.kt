@@ -9,11 +9,7 @@ import com.intellij.util.IconUtil
 import com.intellij.util.ui.JBUI
 import ee.carlrobert.codegpt.ui.textarea.PromptTextField
 import ee.carlrobert.codegpt.ui.textarea.header.PaintUtil
-import java.awt.Cursor
-import java.awt.Dimension
-import java.awt.Graphics
-import java.awt.GridBagConstraints
-import java.awt.GridBagLayout
+import java.awt.*
 import javax.swing.BorderFactory
 import javax.swing.Icon
 import javax.swing.JButton

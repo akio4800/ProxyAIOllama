@@ -3,7 +3,6 @@ package ee.carlrobert.codegpt.ui.textarea.header
 import com.intellij.openapi.components.service
 import com.intellij.openapi.editor.colors.EditorColorsManager
 import com.intellij.util.ui.JBUI
-import com.intellij.util.ui.UIUtil
 import java.awt.*
 import java.awt.geom.RoundRectangle2D
 import javax.swing.JComponent

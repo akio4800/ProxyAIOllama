@@ -1,5 +1,11 @@
 package ee.carlrobert.codegpt.ui.checkbox;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.util.Iconable;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -8,10 +14,6 @@ import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.impl.file.PsiDirectoryImpl;
 import com.intellij.ui.CheckedTreeNode;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import org.jetbrains.annotations.NotNull;
 
 public class PsiElementCheckboxTree extends FileCheckboxTree {
 

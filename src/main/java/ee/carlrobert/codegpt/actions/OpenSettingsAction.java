@@ -1,12 +1,14 @@
 package ee.carlrobert.codegpt.actions;
 
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.icons.AllIcons.General;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.options.ShowSettingsUtil;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
 import ee.carlrobert.codegpt.settings.service.ServiceConfigurable;
-import org.jetbrains.annotations.NotNull;
 
 public class OpenSettingsAction extends AnAction {
 

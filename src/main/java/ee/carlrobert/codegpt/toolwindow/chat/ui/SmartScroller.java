@@ -1,12 +1,10 @@
 package ee.carlrobert.codegpt.toolwindow.chat.ui;
 
-import java.awt.Component;
+import java.awt.*;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
-import javax.swing.BoundedRangeModel;
-import javax.swing.JScrollBar;
-import javax.swing.JScrollPane;
-import javax.swing.SwingUtilities;
+
+import javax.swing.*;
 import javax.swing.text.DefaultCaret;
 import javax.swing.text.JTextComponent;
 

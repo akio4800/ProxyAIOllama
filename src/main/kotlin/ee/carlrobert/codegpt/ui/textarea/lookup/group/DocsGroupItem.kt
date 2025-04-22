@@ -2,7 +2,6 @@ package ee.carlrobert.codegpt.ui.textarea.lookup.group
 
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.components.service
-import com.intellij.openapi.project.Project
 import ee.carlrobert.codegpt.CodeGPTBundle
 import ee.carlrobert.codegpt.settings.GeneralSettings
 import ee.carlrobert.codegpt.settings.documentation.DocumentationSettings

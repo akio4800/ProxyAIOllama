@@ -1,6 +1,9 @@
 package ee.carlrobert.codegpt.actions.editor;
 
-import static java.lang.String.format;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.apache.commons.text.CaseUtils;
 
 import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.AnAction;
@@ -9,13 +12,13 @@ import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.extensions.PluginId;
 import com.intellij.openapi.project.Project;
+
 import ee.carlrobert.codegpt.conversations.message.Message;
 import ee.carlrobert.codegpt.settings.prompts.PromptsSettings;
 import ee.carlrobert.codegpt.toolwindow.chat.ChatToolWindowContentManager;
 import ee.carlrobert.codegpt.util.file.FileUtil;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import org.apache.commons.text.CaseUtils;
+
+import static java.lang.String.format;
 
 public class EditorActionsUtil {
 

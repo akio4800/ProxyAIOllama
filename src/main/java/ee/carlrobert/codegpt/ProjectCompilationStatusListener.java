@@ -1,8 +1,12 @@
 package ee.carlrobert.codegpt;
 
-import static ee.carlrobert.codegpt.completions.ConversationType.FIX_COMPILE_ERRORS;
-import static java.lang.String.format;
-import static java.util.stream.Collectors.joining;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.intellij.compiler.CompilerMessageImpl;
 import com.intellij.notification.NotificationAction;
@@ -12,17 +16,16 @@ import com.intellij.openapi.compiler.CompileContext;
 import com.intellij.openapi.compiler.CompilerMessage;
 import com.intellij.openapi.compiler.CompilerMessageCategory;
 import com.intellij.openapi.project.Project;
+
 import ee.carlrobert.codegpt.completions.CompletionRequestUtil;
 import ee.carlrobert.codegpt.conversations.message.Message;
 import ee.carlrobert.codegpt.settings.configuration.ConfigurationSettings;
 import ee.carlrobert.codegpt.toolwindow.chat.ChatToolWindowContentManager;
 import ee.carlrobert.codegpt.ui.OverlayUtil;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import org.jetbrains.annotations.NotNull;
+
+import static ee.carlrobert.codegpt.completions.ConversationType.FIX_COMPILE_ERRORS;
+import static java.lang.String.format;
+import static java.util.stream.Collectors.joining;
 
 public class ProjectCompilationStatusListener implements CompilationStatusListener {
 

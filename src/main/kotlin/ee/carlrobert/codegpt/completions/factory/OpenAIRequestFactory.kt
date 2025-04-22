@@ -3,14 +3,7 @@ package ee.carlrobert.codegpt.completions.factory
 import com.intellij.openapi.components.service
 import ee.carlrobert.codegpt.EncodingManager
 import ee.carlrobert.codegpt.ReferencedFile
-import ee.carlrobert.codegpt.completions.ChatCompletionParameters
-import ee.carlrobert.codegpt.completions.CommitMessageCompletionParameters
-import ee.carlrobert.codegpt.completions.CompletionRequestFactory
-import ee.carlrobert.codegpt.completions.CompletionRequestUtil
-import ee.carlrobert.codegpt.completions.ConversationType
-import ee.carlrobert.codegpt.completions.EditCodeCompletionParameters
-import ee.carlrobert.codegpt.completions.LookupCompletionParameters
-import ee.carlrobert.codegpt.completions.TotalUsageExceededException
+import ee.carlrobert.codegpt.completions.*
 import ee.carlrobert.codegpt.conversations.ConversationsState
 import ee.carlrobert.codegpt.psistructure.models.ClassStructure
 import ee.carlrobert.codegpt.settings.configuration.ConfigurationSettings
@@ -19,17 +12,9 @@ import ee.carlrobert.codegpt.settings.prompts.CoreActionsState
 import ee.carlrobert.codegpt.settings.prompts.PromptsSettings
 import ee.carlrobert.codegpt.settings.service.openai.OpenAISettings
 import ee.carlrobert.codegpt.util.file.FileUtil.getImageMediaType
-import ee.carlrobert.llm.client.openai.completion.OpenAIChatCompletionModel.O_1_MINI
-import ee.carlrobert.llm.client.openai.completion.OpenAIChatCompletionModel.O_1_PREVIEW
-import ee.carlrobert.llm.client.openai.completion.OpenAIChatCompletionModel.O_3_MINI
-import ee.carlrobert.llm.client.openai.completion.OpenAIChatCompletionModel.findByCode
-import ee.carlrobert.llm.client.openai.completion.request.OpenAIChatCompletionDetailedMessage
-import ee.carlrobert.llm.client.openai.completion.request.OpenAIChatCompletionMessage
-import ee.carlrobert.llm.client.openai.completion.request.OpenAIChatCompletionRequest
-import ee.carlrobert.llm.client.openai.completion.request.OpenAIChatCompletionStandardMessage
-import ee.carlrobert.llm.client.openai.completion.request.OpenAIImageUrl
-import ee.carlrobert.llm.client.openai.completion.request.OpenAIMessageImageURLContent
-import ee.carlrobert.llm.client.openai.completion.request.OpenAIMessageTextContent
+import ee.carlrobert.llm.client.openai.completion.OpenAIChatCompletionModel.*
+import ee.carlrobert.llm.client.openai.completion.request.*
+import ee.carlrobert.llm.completion.CompletionRequest
 import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.Path
@@ -57,6 +42,7 @@ class OpenAIRequestFactory : CompletionRequestFactory {
         return requestBuilder.build()
     }
 
+    @Deprecated("dont use")
     override fun createEditCodeRequest(params: EditCodeCompletionParameters): OpenAIChatCompletionRequest {
         val model = service<OpenAISettings>().state.model
         val prompt = "Code to modify:\n${params.selectedText}\n\nInstructions: ${params.prompt}"
@@ -67,7 +53,7 @@ class OpenAIRequestFactory : CompletionRequestFactory {
         }
         return createBasicCompletionRequest(systemPrompt, prompt, model, true)
     }
-
+    @Deprecated("dont use")
     override fun createCommitMessageRequest(params: CommitMessageCompletionParameters): OpenAIChatCompletionRequest {
         val model = service<OpenAISettings>().state.model
         val (gitDiff, systemPrompt) = params
@@ -76,7 +62,7 @@ class OpenAIRequestFactory : CompletionRequestFactory {
         }
         return createBasicCompletionRequest(systemPrompt, gitDiff, model, true)
     }
-
+    @Deprecated("dont use")
     override fun createLookupRequest(params: LookupCompletionParameters): OpenAIChatCompletionRequest {
         val model = service<OpenAISettings>().state.model
         val (prompt) = params
@@ -93,6 +79,7 @@ class OpenAIRequestFactory : CompletionRequestFactory {
                 ?: CoreActionsState.DEFAULT_GENERATE_NAME_LOOKUPS_PROMPT, prompt, model
         )
     }
+
 
     companion object {
         fun isReasoningModel(model: String?) =

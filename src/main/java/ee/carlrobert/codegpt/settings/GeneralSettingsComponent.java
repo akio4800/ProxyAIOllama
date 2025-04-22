@@ -1,10 +1,11 @@
 package ee.carlrobert.codegpt.settings;
 
+import javax.swing.*;
+
 import com.intellij.ui.components.JBTextField;
 import com.intellij.util.ui.FormBuilder;
+
 import ee.carlrobert.codegpt.CodeGPTBundle;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
 
 public class GeneralSettingsComponent {
 

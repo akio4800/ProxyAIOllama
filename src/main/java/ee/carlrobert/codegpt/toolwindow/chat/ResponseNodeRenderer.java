@@ -1,5 +1,9 @@
 package ee.carlrobert.codegpt.toolwindow.chat;
 
+import java.util.Set;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.ui.ColorUtil;
 import com.intellij.ui.JBColor;
 import com.vladsch.flexmark.ast.BulletListItem;
@@ -14,8 +18,6 @@ import com.vladsch.flexmark.html.renderer.NodeRendererContext;
 import com.vladsch.flexmark.html.renderer.NodeRendererFactory;
 import com.vladsch.flexmark.html.renderer.NodeRenderingHandler;
 import com.vladsch.flexmark.util.data.DataHolder;
-import java.util.Set;
-import org.jetbrains.annotations.NotNull;
 
 public class ResponseNodeRenderer implements NodeRenderer {
 
