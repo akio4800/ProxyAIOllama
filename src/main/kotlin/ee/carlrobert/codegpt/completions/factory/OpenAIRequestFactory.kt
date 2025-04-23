@@ -14,7 +14,6 @@ import ee.carlrobert.codegpt.settings.service.openai.OpenAISettings
 import ee.carlrobert.codegpt.util.file.FileUtil.getImageMediaType
 import ee.carlrobert.llm.client.openai.completion.OpenAIChatCompletionModel.*
 import ee.carlrobert.llm.client.openai.completion.request.*
-import ee.carlrobert.llm.completion.CompletionRequest
 import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.Path
