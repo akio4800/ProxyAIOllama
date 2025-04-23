@@ -1,5 +1,17 @@
 package at.s2gplus.ai.ui.textarea
 
+import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.CodeGPTKeys.IS_PROMPT_TEXT_FIELD_DOCUMENT
+import at.s2gplus.ai.ui.textarea.header.tag.TagManager
+import at.s2gplus.ai.ui.textarea.lookup.DynamicLookupGroupItem
+import at.s2gplus.ai.ui.textarea.lookup.LookupActionItem
+import at.s2gplus.ai.ui.textarea.lookup.LookupGroupItem
+import at.s2gplus.ai.ui.textarea.lookup.LookupItem
+import at.s2gplus.ai.ui.textarea.lookup.action.FolderActionItem
+import at.s2gplus.ai.ui.textarea.lookup.action.WebActionItem
+import at.s2gplus.ai.ui.textarea.lookup.action.files.FileActionItem
+import at.s2gplus.ai.ui.textarea.lookup.action.git.GitCommitActionItem
+import at.s2gplus.ai.ui.textarea.lookup.group.*
 import com.intellij.codeInsight.lookup.*
 import com.intellij.codeInsight.lookup.impl.LookupImpl
 import com.intellij.codeInsight.lookup.impl.PrefixChangeListener
@@ -23,18 +35,6 @@ import com.intellij.openapi.wm.ToolWindowManager
 import com.intellij.ui.EditorTextField
 import com.intellij.ui.JBColor
 import com.intellij.util.ui.JBUI
-import at.s2gplus.ai.CodeGPTBundle
-import at.s2gplus.ai.CodeGPTKeys.IS_PROMPT_TEXT_FIELD_DOCUMENT
-import at.s2gplus.ai.ui.textarea.header.tag.TagManager
-import at.s2gplus.ai.ui.textarea.lookup.DynamicLookupGroupItem
-import at.s2gplus.ai.ui.textarea.lookup.LookupActionItem
-import at.s2gplus.ai.ui.textarea.lookup.LookupGroupItem
-import at.s2gplus.ai.ui.textarea.lookup.LookupItem
-import at.s2gplus.ai.ui.textarea.lookup.action.FolderActionItem
-import at.s2gplus.ai.ui.textarea.lookup.action.WebActionItem
-import at.s2gplus.ai.ui.textarea.lookup.action.files.FileActionItem
-import at.s2gplus.ai.ui.textarea.lookup.action.git.GitCommitActionItem
-import at.s2gplus.ai.ui.textarea.lookup.group.*
 import kotlinx.coroutines.*
 import java.awt.Dimension
 import java.util.*
