@@ -1,6 +1,6 @@
 <idea-plugin>
     <extensions defaultExtensionNs="com.intellij">
         <applicationService
-                serviceImplementation="ee.carlrobert.codegpt.psistructure.KotlinFileAnalyzer"/>
+                serviceImplementation="at.s2gplus.ai.psistructure.KotlinFileAnalyzer"/>
     </extensions>
 </idea-plugin>
