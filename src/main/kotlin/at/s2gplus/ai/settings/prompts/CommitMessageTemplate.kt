@@ -1,15 +1,15 @@
 package at.s2gplus.ai.settings.prompts
 
-import com.intellij.openapi.components.Service
-import com.intellij.openapi.components.Service.Level.PROJECT
-import com.intellij.openapi.components.service
-import com.intellij.openapi.project.Project
 import at.s2gplus.ai.settings.BranchNamePlaceholderStrategy
 import at.s2gplus.ai.settings.DatePlaceholderStrategy
 import at.s2gplus.ai.settings.Placeholder
 import at.s2gplus.ai.settings.Placeholder.BRANCH_NAME
 import at.s2gplus.ai.settings.Placeholder.DATE_ISO_8601
 import at.s2gplus.ai.settings.PlaceholderStrategy
+import com.intellij.openapi.components.Service
+import com.intellij.openapi.components.Service.Level.PROJECT
+import com.intellij.openapi.components.service
+import com.intellij.openapi.project.Project
 
 @Service(PROJECT)
 class CommitMessageTemplate private constructor(project: Project) {

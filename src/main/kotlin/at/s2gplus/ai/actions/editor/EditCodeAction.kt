@@ -1,10 +1,10 @@
 package at.s2gplus.ai.actions.editor
 
 import at.s2gplus.ai.Icons
+import at.s2gplus.ai.ui.EditCodePopover
 import com.intellij.openapi.application.runInEdt
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
-import at.s2gplus.ai.ui.EditCodePopover
 import javax.swing.Icon
 
 open class EditCodeAction(icon: Icon) : BaseEditorAction(icon) {

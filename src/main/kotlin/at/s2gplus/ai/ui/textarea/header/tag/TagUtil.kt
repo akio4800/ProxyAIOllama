@@ -1,8 +1,8 @@
 package at.s2gplus.ai.ui.textarea.header.tag
 
+import at.s2gplus.ai.toolwindow.chat.ChatToolWindowContentManager
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
-import at.s2gplus.ai.toolwindow.chat.ChatToolWindowContentManager
 
 object TagUtil {
     fun <T : TagDetails> isTagTypePresent(

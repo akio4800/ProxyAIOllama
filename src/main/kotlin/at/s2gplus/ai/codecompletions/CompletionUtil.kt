@@ -2,6 +2,9 @@ package at.s2gplus.ai.codecompletions
 
 import ai.grazie.nlp.utils.takeLastWhitespaces
 import ai.grazie.nlp.utils.takeWhitespaces
+import at.s2gplus.ai.settings.GeneralSettings
+import at.s2gplus.ai.settings.configuration.ConfigurationSettings
+import at.s2gplus.ai.settings.service.ServiceType
 import com.intellij.codeInsight.inline.completion.InlineCompletionRequest
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
@@ -12,9 +15,6 @@ import com.intellij.openapi.util.TextRange
 import com.intellij.psi.PsiFile
 import com.intellij.psi.PsiFileFactory
 import com.intellij.psi.codeStyle.CodeStyleManager
-import at.s2gplus.ai.settings.GeneralSettings
-import at.s2gplus.ai.settings.configuration.ConfigurationSettings
-import at.s2gplus.ai.settings.service.ServiceType
 import ee.carlrobert.codegpt.treesitter.CodeCompletionParserFactory
 import kotlin.math.min
 

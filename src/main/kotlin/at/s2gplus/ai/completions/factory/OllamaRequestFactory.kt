@@ -1,11 +1,11 @@
 package at.s2gplus.ai.completions.factory
 
-import com.intellij.openapi.components.service
 import at.s2gplus.ai.completions.BaseRequestFactory
 import at.s2gplus.ai.completions.ChatCompletionParameters
 import at.s2gplus.ai.completions.factory.OpenAIRequestFactory.Companion.buildOpenAIMessages
 import at.s2gplus.ai.settings.configuration.ConfigurationSettings
 import at.s2gplus.ai.settings.service.ollama.OllamaSettings
+import com.intellij.openapi.components.service
 import ee.carlrobert.llm.client.openai.completion.request.OpenAIChatCompletionRequest
 import ee.carlrobert.llm.completion.CompletionRequest
 

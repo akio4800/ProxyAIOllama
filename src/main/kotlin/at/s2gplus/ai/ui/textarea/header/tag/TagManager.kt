@@ -1,11 +1,11 @@
 package at.s2gplus.ai.ui.textarea.header.tag
 
+import at.s2gplus.ai.settings.configuration.ConfigurationSettings
+import at.s2gplus.ai.settings.configuration.ConfigurationStateListener
 import com.intellij.openapi.Disposable
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
 import com.intellij.openapi.vfs.VirtualFile
-import at.s2gplus.ai.settings.configuration.ConfigurationSettings
-import at.s2gplus.ai.settings.configuration.ConfigurationStateListener
 import java.util.concurrent.CopyOnWriteArraySet
 
 class TagManager(parentDisposable: Disposable) {

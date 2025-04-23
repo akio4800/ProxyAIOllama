@@ -1,9 +1,5 @@
 package at.s2gplus.ai.completions.factory
 
-import com.intellij.openapi.application.ApplicationInfo
-import com.intellij.openapi.components.service
-import com.intellij.openapi.vfs.LocalFileSystem
-import com.intellij.openapi.vfs.VirtualFile
 import at.s2gplus.ai.CodeGPTPlugin
 import at.s2gplus.ai.completions.BaseRequestFactory
 import at.s2gplus.ai.completions.ChatCompletionParameters
@@ -12,6 +8,10 @@ import at.s2gplus.ai.psistructure.ClassStructureSerializer
 import at.s2gplus.ai.settings.configuration.ConfigurationSettings
 import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
 import at.s2gplus.ai.util.file.FileUtil
+import com.intellij.openapi.application.ApplicationInfo
+import com.intellij.openapi.components.service
+import com.intellij.openapi.vfs.LocalFileSystem
+import com.intellij.openapi.vfs.VirtualFile
 import ee.carlrobert.llm.client.codegpt.request.chat.*
 import ee.carlrobert.llm.client.openai.completion.request.OpenAIChatCompletionStandardMessage
 

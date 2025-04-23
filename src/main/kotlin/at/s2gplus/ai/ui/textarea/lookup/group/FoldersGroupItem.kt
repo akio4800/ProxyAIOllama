@@ -1,5 +1,11 @@
 package at.s2gplus.ai.ui.textarea.lookup.group
 
+import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.ui.textarea.header.tag.TagManager
+import at.s2gplus.ai.ui.textarea.lookup.DynamicLookupGroupItem
+import at.s2gplus.ai.ui.textarea.lookup.LookupActionItem
+import at.s2gplus.ai.ui.textarea.lookup.LookupUtil
+import at.s2gplus.ai.ui.textarea.lookup.action.FolderActionItem
 import com.intellij.codeInsight.lookup.impl.LookupImpl
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.application.runInEdt
@@ -7,12 +13,6 @@ import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.roots.ProjectFileIndex
 import com.intellij.openapi.vfs.VirtualFile
-import at.s2gplus.ai.CodeGPTBundle
-import at.s2gplus.ai.ui.textarea.header.tag.TagManager
-import at.s2gplus.ai.ui.textarea.lookup.DynamicLookupGroupItem
-import at.s2gplus.ai.ui.textarea.lookup.LookupActionItem
-import at.s2gplus.ai.ui.textarea.lookup.LookupUtil
-import at.s2gplus.ai.ui.textarea.lookup.action.FolderActionItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

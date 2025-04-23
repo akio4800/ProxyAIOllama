@@ -1,8 +1,8 @@
 package at.s2gplus.ai.settings.prompts
 
-import com.intellij.openapi.options.Configurable
 import at.s2gplus.ai.actions.editor.EditorActionsUtil
 import at.s2gplus.ai.settings.prompts.form.PromptsForm
+import com.intellij.openapi.options.Configurable
 import javax.swing.JComponent
 
 class PromptsConfigurable : Configurable {

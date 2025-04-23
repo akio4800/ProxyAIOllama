@@ -1,10 +1,5 @@
 package at.s2gplus.ai.ui.textarea.lookup.action.docs
 
-import com.intellij.codeInsight.lookup.LookupElement
-import com.intellij.codeInsight.lookup.LookupElementPresentation
-import com.intellij.icons.AllIcons
-import com.intellij.openapi.components.service
-import com.intellij.openapi.project.Project
 import at.s2gplus.ai.settings.GeneralSettings
 import at.s2gplus.ai.settings.documentation.DocumentationSettings
 import at.s2gplus.ai.settings.service.ServiceType
@@ -12,6 +7,11 @@ import at.s2gplus.ai.ui.DocumentationDetails
 import at.s2gplus.ai.ui.textarea.UserInputPanel
 import at.s2gplus.ai.ui.textarea.header.tag.DocumentationTagDetails
 import at.s2gplus.ai.ui.textarea.lookup.action.AbstractLookupActionItem
+import com.intellij.codeInsight.lookup.LookupElement
+import com.intellij.codeInsight.lookup.LookupElementPresentation
+import com.intellij.icons.AllIcons
+import com.intellij.openapi.components.service
+import com.intellij.openapi.project.Project
 
 class DocActionItem(
     private val documentationDetails: DocumentationDetails

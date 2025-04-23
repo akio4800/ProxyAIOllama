@@ -1,5 +1,7 @@
 package at.s2gplus.ai.ui.textarea.header.tag
 
+import at.s2gplus.ai.ui.textarea.PromptTextField
+import at.s2gplus.ai.ui.textarea.header.PaintUtil
 import com.intellij.icons.AllIcons
 import com.intellij.icons.AllIcons.Actions.Close
 import com.intellij.openapi.components.service
@@ -7,8 +9,6 @@ import com.intellij.openapi.editor.colors.EditorColorsManager
 import com.intellij.ui.components.JBLabel
 import com.intellij.util.IconUtil
 import com.intellij.util.ui.JBUI
-import at.s2gplus.ai.ui.textarea.PromptTextField
-import at.s2gplus.ai.ui.textarea.header.PaintUtil
 import java.awt.*
 import javax.swing.BorderFactory
 import javax.swing.Icon

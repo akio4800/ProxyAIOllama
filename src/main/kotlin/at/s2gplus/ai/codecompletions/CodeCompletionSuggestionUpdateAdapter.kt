@@ -1,6 +1,7 @@
 package at.s2gplus.ai.codecompletions
 
 import ai.grazie.nlp.utils.takeWhitespaces
+import at.s2gplus.ai.CodeGPTKeys.REMAINING_EDITOR_COMPLETION
 import com.intellij.codeInsight.inline.completion.InlineCompletionEvent
 import com.intellij.codeInsight.inline.completion.elements.InlineCompletionGrayTextElement
 import com.intellij.codeInsight.inline.completion.suggestion.InlineCompletionSuggestionUpdateManager
@@ -9,7 +10,6 @@ import com.intellij.codeInsight.inline.completion.suggestion.InlineCompletionSug
 import com.intellij.codeInsight.inline.completion.suggestion.InlineCompletionSuggestionUpdateManager.UpdateResult.Invalidated
 import com.intellij.codeInsight.inline.completion.suggestion.InlineCompletionVariant
 import com.intellij.openapi.editor.Editor
-import at.s2gplus.ai.CodeGPTKeys.REMAINING_EDITOR_COMPLETION
 
 class CodeCompletionSuggestionUpdateAdapter :
     InlineCompletionSuggestionUpdateManager.Default() {

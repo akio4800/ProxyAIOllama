@@ -1,5 +1,6 @@
 package at.s2gplus.ai.util
 
+import at.s2gplus.ai.settings.configuration.ConfigurationSettings
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.PathManager
 import com.intellij.openapi.application.runReadAction
@@ -21,7 +22,6 @@ import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiDocumentManager
 import com.intellij.psi.codeStyle.CodeStyleManager
 import com.intellij.testFramework.LightVirtualFile
-import at.s2gplus.ai.settings.configuration.ConfigurationSettings
 import ee.carlrobert.llm.client.codegpt.request.prediction.FileDetails
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter

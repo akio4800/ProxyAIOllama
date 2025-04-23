@@ -1,12 +1,12 @@
 package at.s2gplus.ai.codecompletions
 
-import com.intellij.openapi.components.Service
-import com.intellij.openapi.components.service
 import at.s2gplus.ai.completions.CompletionClientProvider
 import at.s2gplus.ai.settings.GeneralSettings
 import at.s2gplus.ai.settings.service.ServiceType
 import at.s2gplus.ai.settings.service.ServiceType.OLLAMA
 import at.s2gplus.ai.settings.service.ollama.OllamaSettings
+import com.intellij.openapi.components.Service
+import com.intellij.openapi.components.service
 import ee.carlrobert.llm.completion.CompletionEventListener
 import okhttp3.sse.EventSource
 

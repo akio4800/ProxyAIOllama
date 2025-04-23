@@ -1,5 +1,14 @@
 package at.s2gplus.ai.codecompletions
 
+import at.s2gplus.ai.CodeGPTKeys.REMAINING_EDITOR_COMPLETION
+import at.s2gplus.ai.predictions.PredictionService
+import at.s2gplus.ai.settings.GeneralSettings
+import at.s2gplus.ai.settings.configuration.ConfigurationSettings
+import at.s2gplus.ai.settings.service.ServiceType
+import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
+import at.s2gplus.ai.settings.service.ollama.OllamaSettings
+import at.s2gplus.ai.ui.OverlayUtil
+import at.s2gplus.ai.util.StringUtil.extractUntilNewline
 import com.intellij.codeInsight.inline.completion.*
 import com.intellij.codeInsight.inline.completion.elements.InlineCompletionElement
 import com.intellij.codeInsight.inline.completion.elements.InlineCompletionGrayTextElement
@@ -11,15 +20,6 @@ import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.TextRange
-import at.s2gplus.ai.CodeGPTKeys.REMAINING_EDITOR_COMPLETION
-import at.s2gplus.ai.predictions.PredictionService
-import at.s2gplus.ai.settings.GeneralSettings
-import at.s2gplus.ai.settings.configuration.ConfigurationSettings
-import at.s2gplus.ai.settings.service.ServiceType
-import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
-import at.s2gplus.ai.settings.service.ollama.OllamaSettings
-import at.s2gplus.ai.ui.OverlayUtil
-import at.s2gplus.ai.util.StringUtil.extractUntilNewline
 import kotlinx.coroutines.channels.ProducerScope
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.channelFlow

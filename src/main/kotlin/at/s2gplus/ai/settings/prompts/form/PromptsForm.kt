@@ -1,6 +1,12 @@
 package at.s2gplus.ai.settings.prompts.form
 
 import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.settings.prompts.*
+import at.s2gplus.ai.settings.prompts.form.PromptsFormUtil.getFormState
+import at.s2gplus.ai.settings.prompts.form.PromptsFormUtil.toState
+import at.s2gplus.ai.settings.prompts.form.details.*
+import at.s2gplus.ai.ui.OverlayUtil
+import at.s2gplus.ai.util.coroutines.EdtDispatchers
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
@@ -24,12 +30,6 @@ import com.intellij.ui.treeStructure.SimpleTree
 import com.intellij.util.concurrency.AppExecutorUtil
 import com.intellij.util.ui.FormBuilder
 import com.intellij.util.ui.components.BorderLayoutPanel
-import at.s2gplus.ai.settings.prompts.*
-import at.s2gplus.ai.settings.prompts.form.PromptsFormUtil.getFormState
-import at.s2gplus.ai.settings.prompts.form.PromptsFormUtil.toState
-import at.s2gplus.ai.settings.prompts.form.details.*
-import at.s2gplus.ai.ui.OverlayUtil
-import at.s2gplus.ai.util.coroutines.EdtDispatchers
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch

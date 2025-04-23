@@ -1,15 +1,15 @@
 package at.s2gplus.ai.codecompletions
 
-import com.intellij.codeInsight.inline.completion.InlineCompletionRequest
-import com.intellij.openapi.application.readAction
-import com.intellij.openapi.components.service
-import com.intellij.refactoring.suggested.startOffset
 import at.s2gplus.ai.EncodingManager
 import at.s2gplus.ai.codecompletions.psi.CompletionContextService
 import at.s2gplus.ai.codecompletions.psi.readText
 import at.s2gplus.ai.psistructure.PsiStructureProvider
 import at.s2gplus.ai.settings.configuration.ConfigurationSettings
 import at.s2gplus.ai.util.GitUtil
+import com.intellij.codeInsight.inline.completion.InlineCompletionRequest
+import com.intellij.openapi.application.readAction
+import com.intellij.openapi.components.service
+import com.intellij.refactoring.suggested.startOffset
 
 
 object InfillRequestUtil {

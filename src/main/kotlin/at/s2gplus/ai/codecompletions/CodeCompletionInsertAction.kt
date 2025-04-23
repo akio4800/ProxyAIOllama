@@ -1,6 +1,11 @@
 package at.s2gplus.ai.codecompletions
 
 import ai.grazie.nlp.utils.takeWhitespaces
+import at.s2gplus.ai.CodeGPTKeys.REMAINING_EDITOR_COMPLETION
+import at.s2gplus.ai.predictions.PredictionService
+import at.s2gplus.ai.settings.GeneralSettings
+import at.s2gplus.ai.settings.service.ServiceType
+import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
 import com.intellij.codeInsight.hint.HintManagerImpl
 import com.intellij.codeInsight.inline.completion.InlineCompletion
 import com.intellij.codeInsight.inline.completion.InlineCompletionInsertEnvironment
@@ -16,11 +21,6 @@ import com.intellij.openapi.editor.actionSystem.EditorAction
 import com.intellij.openapi.editor.actionSystem.EditorWriteActionHandler
 import com.intellij.psi.PsiDocumentManager
 import com.intellij.util.concurrency.ThreadingAssertions
-import at.s2gplus.ai.CodeGPTKeys.REMAINING_EDITOR_COMPLETION
-import at.s2gplus.ai.predictions.PredictionService
-import at.s2gplus.ai.settings.GeneralSettings
-import at.s2gplus.ai.settings.service.ServiceType
-import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
 
 class CodeCompletionInsertAction :
     EditorAction(InsertInlineCompletionHandler()), HintManagerImpl.ActionToIgnore {

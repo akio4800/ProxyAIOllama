@@ -1,8 +1,8 @@
 package at.s2gplus.ai.settings.configuration
 
-import com.intellij.openapi.components.*
 import at.s2gplus.ai.actions.editor.EditorActionsUtil
 import at.s2gplus.ai.settings.prompts.CoreActionsState
+import com.intellij.openapi.components.*
 import kotlin.math.max
 import kotlin.math.min
 

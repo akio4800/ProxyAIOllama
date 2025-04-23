@@ -1,6 +1,7 @@
 package at.s2gplus.ai.toolwindow.ui
 
 import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.events.WebSearchEventDetails
 import com.intellij.icons.AllIcons
 import com.intellij.ide.BrowserUtil
 import com.intellij.ide.IdeBundle
@@ -16,7 +17,6 @@ import com.intellij.ui.dsl.builder.RightGap
 import com.intellij.ui.dsl.builder.panel
 import com.intellij.ui.jcef.JBCefApp
 import com.intellij.util.ui.JBUI
-import at.s2gplus.ai.events.WebSearchEventDetails
 import org.cef.browser.CefRendering
 import java.awt.*
 import java.awt.event.MouseAdapter

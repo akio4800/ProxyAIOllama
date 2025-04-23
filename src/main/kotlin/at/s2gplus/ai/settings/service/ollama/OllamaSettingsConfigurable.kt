@@ -1,10 +1,10 @@
 package at.s2gplus.ai.settings.service.ollama
 
 
-import com.intellij.openapi.components.service
-import com.intellij.openapi.options.Configurable
 import at.s2gplus.ai.settings.GeneralSettings
 import at.s2gplus.ai.settings.service.ServiceType
+import com.intellij.openapi.components.service
+import com.intellij.openapi.options.Configurable
 import javax.swing.JComponent
 
 class OllamaSettingsConfigurable : Configurable {

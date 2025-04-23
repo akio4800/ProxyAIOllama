@@ -1,5 +1,7 @@
 package at.s2gplus.ai
 
+import at.s2gplus.ai.settings.configuration.ConfigurationSettings
+import at.s2gplus.ai.ui.OverlayUtil
 import com.intellij.ide.plugins.InstalledPluginsState
 import com.intellij.notification.NotificationAction
 import com.intellij.notification.NotificationType
@@ -12,8 +14,6 @@ import com.intellij.openapi.startup.ProjectActivity
 import com.intellij.openapi.updateSettings.impl.UpdateChecker.updateAndShowResult
 import com.intellij.openapi.updateSettings.impl.UpdateSettings
 import com.intellij.util.concurrency.AppExecutorUtil
-import at.s2gplus.ai.settings.configuration.ConfigurationSettings
-import at.s2gplus.ai.ui.OverlayUtil
 import java.util.concurrent.TimeUnit
 
 class CodeGPTUpdateActivity : ProjectActivity {

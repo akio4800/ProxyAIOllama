@@ -1,5 +1,8 @@
 package at.s2gplus.ai.toolwindow.ui
 
+import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.toolwindow.chat.editor.actions.CopyAction
+import at.s2gplus.ai.ui.IconActionButton
 import com.intellij.icons.AllIcons.Actions
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
@@ -7,9 +10,6 @@ import com.intellij.openapi.actionSystem.impl.ActionButton
 import com.intellij.ui.components.JBLabel
 import com.intellij.util.ui.JBUI
 import com.intellij.util.ui.components.BorderLayoutPanel
-import at.s2gplus.ai.CodeGPTBundle
-import at.s2gplus.ai.toolwindow.chat.editor.actions.CopyAction
-import at.s2gplus.ai.ui.IconActionButton
 import java.awt.FlowLayout
 import javax.swing.Box
 import javax.swing.JComponent

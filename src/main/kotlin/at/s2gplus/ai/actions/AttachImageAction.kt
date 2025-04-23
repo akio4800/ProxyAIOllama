@@ -1,13 +1,13 @@
 package at.s2gplus.ai.actions
 
 import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.CodeGPTKeys
+import at.s2gplus.ai.toolwindow.chat.ui.textarea.AttachImageNotifier
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.fileChooser.FileChooser
 import com.intellij.openapi.fileChooser.FileChooserDescriptor
-import at.s2gplus.ai.CodeGPTKeys
-import at.s2gplus.ai.toolwindow.chat.ui.textarea.AttachImageNotifier
 
 class AttachImageAction : AnAction(
     CodeGPTBundle.get("action.attachImage"),

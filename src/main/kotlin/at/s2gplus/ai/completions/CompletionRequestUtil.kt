@@ -1,10 +1,10 @@
 package at.s2gplus.ai.completions
 
-import com.intellij.openapi.components.service
 import at.s2gplus.ai.ReferencedFile
 import at.s2gplus.ai.psistructure.ClassStructureSerializer
 import at.s2gplus.ai.psistructure.models.ClassStructure
 import at.s2gplus.ai.settings.IncludedFilesSettings
+import com.intellij.openapi.components.service
 import org.jetbrains.kotlin.utils.addToStdlib.ifNotEmpty
 import java.util.stream.Collectors
 

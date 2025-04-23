@@ -1,8 +1,8 @@
 package at.s2gplus.ai.codecompletions
 
-import com.intellij.openapi.components.service
 import at.s2gplus.ai.settings.Placeholder.*
 import at.s2gplus.ai.settings.service.ollama.OllamaSettings
+import com.intellij.openapi.components.service
 import ee.carlrobert.llm.client.ollama.completion.request.OllamaCompletionRequest
 import ee.carlrobert.llm.client.ollama.completion.request.OllamaParameters
 

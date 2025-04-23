@@ -1,12 +1,12 @@
 package at.s2gplus.ai.completions
 
-import com.intellij.openapi.components.service
 import at.s2gplus.ai.completions.factory.CodeGPTRequestFactory
 import at.s2gplus.ai.completions.factory.OllamaRequestFactory
 import at.s2gplus.ai.psistructure.ClassStructureSerializer
 import at.s2gplus.ai.settings.prompts.CoreActionsState
 import at.s2gplus.ai.settings.prompts.PromptsSettings
 import at.s2gplus.ai.settings.service.ServiceType
+import com.intellij.openapi.components.service
 import ee.carlrobert.llm.completion.CompletionRequest
 
 interface CompletionRequestFactory {

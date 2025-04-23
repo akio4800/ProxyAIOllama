@@ -1,10 +1,10 @@
 package at.s2gplus.ai.settings.prompts.form.details
 
-import com.intellij.openapi.observable.properties.AtomicBooleanProperty
 import at.s2gplus.ai.settings.prompts.ChatActionPromptDetailsState
 import at.s2gplus.ai.settings.prompts.CodeAssistantPromptDetailsState
 import at.s2gplus.ai.settings.prompts.CoreActionPromptDetailsState
 import at.s2gplus.ai.settings.prompts.PersonaPromptDetailsState
+import com.intellij.openapi.observable.properties.AtomicBooleanProperty
 import javax.swing.JComponent
 
 interface PromptDetailsPanel {

@@ -1,12 +1,12 @@
 package at.s2gplus.ai.settings.service
 
+import at.s2gplus.ai.settings.service.ollama.OllamaSettingsConfigurable
 import com.intellij.ide.DataManager
 import com.intellij.openapi.components.service
 import com.intellij.openapi.options.ex.Settings
 import com.intellij.ui.components.ActionLink
 import com.intellij.ui.components.JBLabel
 import com.intellij.util.ui.FormBuilder
-import at.s2gplus.ai.settings.service.ollama.OllamaSettingsConfigurable
 import javax.swing.JPanel
 
 class ServiceConfigurableComponent {

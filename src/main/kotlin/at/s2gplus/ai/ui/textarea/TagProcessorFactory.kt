@@ -1,13 +1,13 @@
 package at.s2gplus.ai.ui.textarea
 
-import com.intellij.openapi.components.service
-import com.intellij.openapi.progress.ProgressManager
-import com.intellij.openapi.project.Project
-import com.intellij.openapi.vfs.VirtualFile
 import at.s2gplus.ai.EncodingManager
 import at.s2gplus.ai.conversations.message.Message
 import at.s2gplus.ai.ui.textarea.header.tag.*
 import at.s2gplus.ai.util.GitUtil
+import com.intellij.openapi.components.service
+import com.intellij.openapi.progress.ProgressManager
+import com.intellij.openapi.project.Project
+import com.intellij.openapi.vfs.VirtualFile
 import git4idea.GitCommit
 
 object TagProcessorFactory {

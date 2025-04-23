@@ -1,6 +1,14 @@
 package at.s2gplus.ai.toolwindow.ui
 
 import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.Icons
+import at.s2gplus.ai.conversations.message.Message
+import at.s2gplus.ai.events.WebSearchEventDetails
+import at.s2gplus.ai.settings.GeneralSettings
+import at.s2gplus.ai.toolwindow.chat.ui.ChatMessageResponseBody
+import at.s2gplus.ai.toolwindow.chat.ui.ImageAccordion
+import at.s2gplus.ai.toolwindow.chat.ui.SelectedFilesAccordion
+import at.s2gplus.ai.ui.IconActionButton
 import com.intellij.icons.AllIcons
 import com.intellij.icons.AllIcons.Actions
 import com.intellij.openapi.Disposable
@@ -19,14 +27,6 @@ import com.intellij.util.application
 import com.intellij.util.ui.JBFont
 import com.intellij.util.ui.JBUI
 import com.intellij.util.ui.components.BorderLayoutPanel
-import at.s2gplus.ai.Icons
-import at.s2gplus.ai.conversations.message.Message
-import at.s2gplus.ai.events.WebSearchEventDetails
-import at.s2gplus.ai.settings.GeneralSettings
-import at.s2gplus.ai.toolwindow.chat.ui.ChatMessageResponseBody
-import at.s2gplus.ai.toolwindow.chat.ui.ImageAccordion
-import at.s2gplus.ai.toolwindow.chat.ui.SelectedFilesAccordion
-import at.s2gplus.ai.ui.IconActionButton
 import java.awt.Image
 import java.awt.event.ActionEvent
 import java.awt.event.ActionListener

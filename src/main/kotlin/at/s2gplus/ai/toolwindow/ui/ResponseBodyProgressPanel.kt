@@ -1,15 +1,15 @@
 package at.s2gplus.ai.toolwindow.ui
 
 import at.s2gplus.ai.Icons
+import at.s2gplus.ai.events.EventDetails
+import at.s2gplus.ai.events.ProcessContextEventDetails
+import at.s2gplus.ai.util.MarkdownUtil.convertMdToHtml
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.application.runInEdt
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.ui.components.JBLabel
 import com.intellij.util.ui.AsyncProcessIcon
 import com.intellij.util.ui.JBUI
-import at.s2gplus.ai.events.EventDetails
-import at.s2gplus.ai.events.ProcessContextEventDetails
-import at.s2gplus.ai.util.MarkdownUtil.convertMdToHtml
 import java.awt.FlowLayout
 import javax.swing.*
 

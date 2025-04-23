@@ -1,10 +1,10 @@
 package at.s2gplus.ai.toolwindow.chat
 
-import com.intellij.openapi.project.Project
 import at.s2gplus.ai.ReferencedFile
 import at.s2gplus.ai.conversations.message.Message
 import at.s2gplus.ai.ui.textarea.TagProcessorFactory
 import at.s2gplus.ai.ui.textarea.header.tag.TagDetails
+import com.intellij.openapi.project.Project
 
 class MessageBuilder(private val project: Project, private val text: String) {
     private val message = Message("")

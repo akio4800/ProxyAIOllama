@@ -1,9 +1,9 @@
 package at.s2gplus.ai.toolwindow.ui
 
-import com.intellij.ui.components.JBLabel
-import com.intellij.util.ui.JBFont
 import at.s2gplus.ai.CodeGPTBundle
 import at.s2gplus.ai.Icons
+import com.intellij.ui.components.JBLabel
+import com.intellij.util.ui.JBFont
 import javax.swing.SwingConstants
 
 open class ResponseMessagePanel : BaseMessagePanel() {

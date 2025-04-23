@@ -1,9 +1,9 @@
 package at.s2gplus.ai.util
 
+import at.s2gplus.ai.toolwindow.chat.ResponseNodeRenderer
 import com.vladsch.flexmark.html.HtmlRenderer
 import com.vladsch.flexmark.parser.Parser
 import com.vladsch.flexmark.util.data.MutableDataSet
-import at.s2gplus.ai.toolwindow.chat.ResponseNodeRenderer
 import java.util.regex.Pattern
 
 object MarkdownUtil {

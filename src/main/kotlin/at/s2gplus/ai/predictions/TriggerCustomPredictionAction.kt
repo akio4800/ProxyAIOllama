@@ -1,6 +1,8 @@
 package at.s2gplus.ai.predictions
 
 import at.s2gplus.ai.CodeGPTKeys
+import at.s2gplus.ai.settings.GeneralSettings
+import at.s2gplus.ai.settings.service.ServiceType
 import com.intellij.codeInsight.hint.HintManagerImpl
 import com.intellij.openapi.actionSystem.DataContext
 import com.intellij.openapi.application.ApplicationManager
@@ -9,8 +11,6 @@ import com.intellij.openapi.editor.Caret
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.editor.actionSystem.EditorAction
 import com.intellij.openapi.editor.actionSystem.EditorWriteActionHandler
-import at.s2gplus.ai.settings.GeneralSettings
-import at.s2gplus.ai.settings.service.ServiceType
 
 class TriggerCustomPredictionAction : EditorAction(Handler()), HintManagerImpl.ActionToIgnore {
 

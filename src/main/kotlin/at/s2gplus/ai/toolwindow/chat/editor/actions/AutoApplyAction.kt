@@ -2,6 +2,16 @@ package at.s2gplus.ai.toolwindow.chat.editor.actions
 
 import at.s2gplus.ai.CodeGPTBundle
 import at.s2gplus.ai.EncodingManager
+import at.s2gplus.ai.Icons
+import at.s2gplus.ai.actions.ActionType
+import at.s2gplus.ai.actions.TrackableAction
+import at.s2gplus.ai.completions.CompletionClientProvider
+import at.s2gplus.ai.settings.GeneralSettings
+import at.s2gplus.ai.settings.service.ServiceType
+import at.s2gplus.ai.ui.OverlayUtil
+import at.s2gplus.ai.util.EditorDiffUtil.createDiffRequest
+import at.s2gplus.ai.util.EditorUtil
+import at.s2gplus.ai.util.EditorUtil.getSelectedEditor
 import com.intellij.diff.DiffManager
 import com.intellij.diff.chains.SimpleDiffRequestChain
 import com.intellij.diff.editor.ChainDiffVirtualFile
@@ -22,16 +32,6 @@ import com.intellij.testFramework.LightVirtualFile
 import com.intellij.ui.components.ActionLink
 import com.intellij.ui.components.JBLabel
 import com.intellij.util.ui.JBUI
-import at.s2gplus.ai.Icons
-import at.s2gplus.ai.actions.ActionType
-import at.s2gplus.ai.actions.TrackableAction
-import at.s2gplus.ai.completions.CompletionClientProvider
-import at.s2gplus.ai.settings.GeneralSettings
-import at.s2gplus.ai.settings.service.ServiceType
-import at.s2gplus.ai.ui.OverlayUtil
-import at.s2gplus.ai.util.EditorDiffUtil.createDiffRequest
-import at.s2gplus.ai.util.EditorUtil
-import at.s2gplus.ai.util.EditorUtil.getSelectedEditor
 import ee.carlrobert.llm.client.codegpt.request.AutoApplyRequest
 import ee.carlrobert.llm.client.codegpt.response.CodeGPTException
 import java.awt.FlowLayout

@@ -30,10 +30,10 @@ import at.s2gplus.ai.conversations.ConversationsState;
 import at.s2gplus.ai.settings.configuration.ConfigurationSettings;
 import at.s2gplus.ai.util.EditorUtil;
 
+import static at.s2gplus.ai.Icons.Default;
 import static com.intellij.notification.NotificationType.INFORMATION;
 import static com.intellij.openapi.ui.Messages.CANCEL;
 import static com.intellij.openapi.ui.Messages.OK;
-import static at.s2gplus.ai.Icons.Default;
 import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
 

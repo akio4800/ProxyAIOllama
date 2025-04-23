@@ -1,5 +1,7 @@
 package at.s2gplus.ai.ui.textarea
 
+import at.s2gplus.ai.settings.configuration.ConfigurationSettings
+import at.s2gplus.ai.util.EditorUtil.reformatDocument
 import com.intellij.openapi.application.PathManager
 import com.intellij.openapi.application.runUndoTransparentWriteAction
 import com.intellij.openapi.components.service
@@ -12,8 +14,6 @@ import com.intellij.openapi.fileTypes.FileTypeManager
 import com.intellij.openapi.project.Project
 import com.intellij.testFramework.LightVirtualFile
 import com.intellij.ui.JBColor
-import at.s2gplus.ai.settings.configuration.ConfigurationSettings
-import at.s2gplus.ai.util.EditorUtil.reformatDocument
 import java.awt.BorderLayout
 import java.awt.Dimension
 import java.time.LocalDateTime

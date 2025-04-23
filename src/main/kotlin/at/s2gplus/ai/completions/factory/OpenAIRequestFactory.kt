@@ -1,7 +1,6 @@
 package at.s2gplus.ai.completions.factory
 
 import at.s2gplus.ai.EncodingManager
-import com.intellij.openapi.components.service
 import at.s2gplus.ai.ReferencedFile
 import at.s2gplus.ai.completions.*
 import at.s2gplus.ai.conversations.ConversationsState
@@ -12,6 +11,7 @@ import at.s2gplus.ai.settings.prompts.CoreActionsState
 import at.s2gplus.ai.settings.prompts.PromptsSettings
 import at.s2gplus.ai.settings.service.openai.OpenAISettings
 import at.s2gplus.ai.util.file.FileUtil.getImageMediaType
+import com.intellij.openapi.components.service
 import ee.carlrobert.llm.client.openai.completion.OpenAIChatCompletionModel.*
 import ee.carlrobert.llm.client.openai.completion.request.*
 import java.io.IOException

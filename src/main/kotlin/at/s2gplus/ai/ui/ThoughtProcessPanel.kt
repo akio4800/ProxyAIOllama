@@ -1,10 +1,10 @@
 package at.s2gplus.ai.ui
 
+import at.s2gplus.ai.util.MarkdownUtil
 import com.intellij.icons.AllIcons
 import com.intellij.ui.JBColor
 import com.intellij.util.ui.JBUI
 import com.intellij.util.ui.components.BorderLayoutPanel
-import at.s2gplus.ai.util.MarkdownUtil
 import java.awt.BorderLayout
 import java.awt.event.ItemEvent
 import javax.swing.*

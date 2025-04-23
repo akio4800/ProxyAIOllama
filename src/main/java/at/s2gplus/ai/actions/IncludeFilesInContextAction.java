@@ -38,10 +38,10 @@ import at.s2gplus.ai.ui.checkbox.FileCheckboxTree;
 import at.s2gplus.ai.ui.checkbox.VirtualFileCheckboxTree;
 import at.s2gplus.ai.util.file.FileUtil;
 
-import static com.intellij.openapi.actionSystem.CommonDataKeys.VIRTUAL_FILE_ARRAY;
-import static com.intellij.openapi.ui.DialogWrapper.OK_EXIT_CODE;
 import static at.s2gplus.ai.settings.IncludedFilesSettingsState.DEFAULT_PROMPT_TEMPLATE;
 import static at.s2gplus.ai.settings.IncludedFilesSettingsState.DEFAULT_REPEATABLE_CONTEXT;
+import static com.intellij.openapi.actionSystem.CommonDataKeys.VIRTUAL_FILE_ARRAY;
+import static com.intellij.openapi.ui.DialogWrapper.OK_EXIT_CODE;
 import static java.lang.String.format;
 
 public class IncludeFilesInContextAction extends AnAction {

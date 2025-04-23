@@ -1,5 +1,6 @@
 package at.s2gplus.ai.util
 
+import at.s2gplus.ai.codecompletions.truncateText
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.diff.impl.patch.IdeaTextPatchBuilder
@@ -8,7 +9,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.guessProjectDir
 import com.intellij.openapi.vcs.VcsException
 import com.intellij.openapi.vcs.changes.ChangeListManager
-import at.s2gplus.ai.codecompletions.truncateText
 import git4idea.GitCommit
 import git4idea.commands.Git
 import git4idea.commands.GitCommand

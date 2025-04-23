@@ -1,5 +1,10 @@
 package at.s2gplus.ai.ui
 
+import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.actions.editor.EditCodeSubmissionHandler
+import at.s2gplus.ai.settings.GeneralSettings
+import at.s2gplus.ai.toolwindow.chat.ui.textarea.ModelComboBoxAction
+import at.s2gplus.ai.util.ApplicationUtil
 import com.intellij.ide.IdeBundle
 import com.intellij.ide.ui.laf.darcula.ui.DarculaButtonUI
 import com.intellij.openapi.actionSystem.ActionPlaces
@@ -21,11 +26,6 @@ import com.intellij.ui.dsl.builder.panel
 import com.intellij.ui.layout.ComponentPredicate
 import com.intellij.util.ui.AsyncProcessIcon
 import com.intellij.util.ui.JBUI
-import at.s2gplus.ai.CodeGPTBundle
-import at.s2gplus.ai.actions.editor.EditCodeSubmissionHandler
-import at.s2gplus.ai.settings.GeneralSettings
-import at.s2gplus.ai.toolwindow.chat.ui.textarea.ModelComboBoxAction
-import at.s2gplus.ai.util.ApplicationUtil
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

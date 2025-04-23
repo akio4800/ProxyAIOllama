@@ -1,7 +1,7 @@
 package at.s2gplus.ai.settings.persona
 
-import com.intellij.openapi.components.*
 import at.s2gplus.ai.settings.prompts.PersonasState
+import com.intellij.openapi.components.*
 
 @Deprecated("Use PromptsSettings instead")
 @Service

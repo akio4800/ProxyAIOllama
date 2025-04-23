@@ -1,11 +1,11 @@
 package at.s2gplus.ai.ui.textarea.header.tag
 
 import at.s2gplus.ai.Icons
+import at.s2gplus.ai.settings.prompts.PersonaDetails
+import at.s2gplus.ai.ui.DocumentationDetails
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.editor.SelectionModel
 import com.intellij.openapi.vfs.VirtualFile
-import at.s2gplus.ai.settings.prompts.PersonaDetails
-import at.s2gplus.ai.ui.DocumentationDetails
 import git4idea.GitCommit
 import java.util.*
 import javax.swing.Icon

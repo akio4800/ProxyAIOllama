@@ -1,13 +1,13 @@
 package at.s2gplus.ai.actions
 
-import com.intellij.openapi.actionSystem.ActionUpdateThread
-import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.components.service
-import com.intellij.openapi.project.DumbAwareAction
 import at.s2gplus.ai.codecompletions.CodeCompletionService
 import at.s2gplus.ai.settings.GeneralSettings
 import at.s2gplus.ai.settings.service.ServiceType.OLLAMA
 import at.s2gplus.ai.settings.service.ollama.OllamaSettings
+import com.intellij.openapi.actionSystem.ActionUpdateThread
+import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.components.service
+import com.intellij.openapi.project.DumbAwareAction
 
 
 abstract class CodeCompletionFeatureToggleActions(

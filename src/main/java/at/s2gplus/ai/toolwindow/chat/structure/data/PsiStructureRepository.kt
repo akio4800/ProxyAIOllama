@@ -1,5 +1,10 @@
 package at.s2gplus.ai.toolwindow.chat.structure.data
 
+import at.s2gplus.ai.psistructure.PsiStructureProvider
+import at.s2gplus.ai.settings.configuration.ConfigurationStateListener
+import at.s2gplus.ai.ui.textarea.header.tag.*
+import at.s2gplus.ai.util.coroutines.CoroutineDispatchers
+import at.s2gplus.ai.util.coroutines.DisposableCoroutineScope
 import com.intellij.openapi.Disposable
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.ReadAction
@@ -12,11 +17,6 @@ import com.intellij.openapi.vfs.VirtualFileManager
 import com.intellij.psi.PsiFile
 import com.intellij.psi.PsiManager
 import com.intellij.util.io.await
-import at.s2gplus.ai.psistructure.PsiStructureProvider
-import at.s2gplus.ai.settings.configuration.ConfigurationStateListener
-import at.s2gplus.ai.ui.textarea.header.tag.*
-import at.s2gplus.ai.util.coroutines.CoroutineDispatchers
-import at.s2gplus.ai.util.coroutines.DisposableCoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.asExecutor
 import kotlinx.coroutines.currentCoroutineContext

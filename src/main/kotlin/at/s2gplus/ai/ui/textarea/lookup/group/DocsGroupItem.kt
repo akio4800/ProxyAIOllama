@@ -1,8 +1,6 @@
 package at.s2gplus.ai.ui.textarea.lookup.group
 
 import at.s2gplus.ai.CodeGPTBundle
-import com.intellij.icons.AllIcons
-import com.intellij.openapi.components.service
 import at.s2gplus.ai.settings.GeneralSettings
 import at.s2gplus.ai.settings.documentation.DocumentationSettings
 import at.s2gplus.ai.settings.service.ServiceType
@@ -13,6 +11,8 @@ import at.s2gplus.ai.ui.textarea.lookup.LookupActionItem
 import at.s2gplus.ai.ui.textarea.lookup.action.docs.AddDocActionItem
 import at.s2gplus.ai.ui.textarea.lookup.action.docs.DocActionItem
 import at.s2gplus.ai.ui.textarea.lookup.action.docs.ViewAllDocsActionItem
+import com.intellij.icons.AllIcons
+import com.intellij.openapi.components.service
 import java.time.Instant
 import java.time.format.DateTimeParseException
 

@@ -1,5 +1,7 @@
 package at.s2gplus.ai.settings.prompts.form.details
 
+import at.s2gplus.ai.settings.prompts.PersonasState.Companion.DEFAULT_PERSONA_PROMPT
+import at.s2gplus.ai.settings.prompts.PromptsSettings
 import com.intellij.openapi.components.service
 import com.intellij.openapi.editor.event.DocumentEvent
 import com.intellij.openapi.editor.event.DocumentListener
@@ -12,8 +14,6 @@ import com.intellij.ui.dsl.builder.panel
 import com.intellij.ui.dsl.builder.selected
 import com.intellij.ui.layout.ComponentPredicate
 import com.intellij.util.ui.components.BorderLayoutPanel
-import at.s2gplus.ai.settings.prompts.PersonasState.Companion.DEFAULT_PERSONA_PROMPT
-import at.s2gplus.ai.settings.prompts.PromptsSettings
 import javax.swing.JComponent
 import javax.swing.JPanel
 

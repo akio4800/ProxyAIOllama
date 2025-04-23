@@ -1,10 +1,10 @@
 package at.s2gplus.ai.settings.prompts
 
-import com.intellij.openapi.components.*
 import at.s2gplus.ai.actions.editor.EditorActionsUtil
 import at.s2gplus.ai.settings.configuration.ConfigurationSettings
 import at.s2gplus.ai.settings.persona.PersonaSettings
 import at.s2gplus.ai.util.file.FileUtil.getResourceContent
+import com.intellij.openapi.components.*
 
 @Service
 @State(

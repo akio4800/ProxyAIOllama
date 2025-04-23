@@ -48,34 +48,35 @@ public class ResponseEditorPanel extends JPanel implements Disposable {
   private final Editor editor;
 
   public ResponseEditorPanel(
-      Project project,
-      String code,
-      String markdownLanguage,
-      boolean readOnly,
-      Disposable disposableParent) {
+          Project project,
+          String code,
+          String markdownLanguage,
+          boolean readOnly,
+          Disposable disposableParent) {
     super(new BorderLayout());
     setBorder(JBUI.Borders.empty(8, 0));
     setOpaque(false);
 
     editor = EditorUtil.createEditor(
-        project,
-        findLanguageExtensionMapping(markdownLanguage).getValue(),
-        StringUtil.convertLineSeparators(code));
+            project,
+            findLanguageExtensionMapping(markdownLanguage).getValue(),
+            StringUtil.convertLineSeparators(code));
     var group = new DefaultActionGroup();
     group.add(new ReplaceCodeInMainEditorAction());
     String originalGroupId = ((EditorEx) editor).getContextMenuGroupId();
     if (originalGroupId != null) {
-      AnAction originalGroup = ActionManager.getInstance().getAction(originalGroupId);
+      ActionManager actionManager = ActionManager.getInstance();
+      AnAction originalGroup = actionManager.getAction(originalGroupId);
       if (originalGroup instanceof ActionGroup) {
-        group.addAll(((ActionGroup) originalGroup).getChildren(null));
+        group.addAll(((ActionGroup) originalGroup).getChildren(null, actionManager));
       }
     }
     configureEditor(
-        project,
-        (EditorEx) editor,
-        readOnly,
-        new ContextMenuPopupHandler.Simple(group),
-        findLanguageExtensionMapping(markdownLanguage).getValue());
+            project,
+            (EditorEx) editor,
+            readOnly,
+            new ContextMenuPopupHandler.Simple(group),
+            findLanguageExtensionMapping(markdownLanguage).getValue());
     add(editor.getComponent(), BorderLayout.CENTER);
 
     Disposer.register(disposableParent, this);
@@ -91,11 +92,11 @@ public class ResponseEditorPanel extends JPanel implements Disposable {
   }
 
   private void configureEditor(
-      Project project,
-      EditorEx editorEx,
-      boolean readOnly,
-      ContextMenuPopupHandler popupHandler,
-      String extension) {
+          Project project,
+          EditorEx editorEx,
+          boolean readOnly,
+          ContextMenuPopupHandler popupHandler,
+          String extension) {
     if (readOnly) {
       editorEx.setOneLineMode(true);
       editorEx.setHorizontalScrollbarVisible(false);
@@ -119,61 +120,61 @@ public class ResponseEditorPanel extends JPanel implements Disposable {
     editorEx.getContentComponent().setBorder(JBUI.Borders.emptyLeft(4));
     editorEx.setBorder(IdeBorderFactory.createBorder(ColorUtil.fromHex("#48494b")));
     editorEx.setPermanentHeaderComponent(
-        createHeaderComponent(project, editorEx, extension, readOnly));
+            createHeaderComponent(project, editorEx, extension, readOnly));
     editorEx.setHeaderComponent(null);
   }
 
   private JPanel createHeaderComponent(
-      Project project,
-      EditorEx editorEx,
-      String extension,
-      boolean readOnly) {
+          Project project,
+          EditorEx editorEx,
+          String extension,
+          boolean readOnly) {
     var headerPanel = new JPanel(new BorderLayout());
     headerPanel.setBorder(
-        JBUI.Borders.compound(
-            JBUI.Borders.customLine(ColorUtil.fromHex("#48494b"), 1, 1, 0, 1),
-            JBUI.Borders.empty(4)));
+            JBUI.Borders.compound(
+                    JBUI.Borders.customLine(ColorUtil.fromHex("#48494b"), 1, 1, 0, 1),
+                    JBUI.Borders.empty(4)));
     headerPanel.add(createExpandLink(editorEx), BorderLayout.LINE_START);
     if (!readOnly) {
       headerPanel.add(
-          createHeaderActions(project, extension, editorEx, headerPanel).getComponent(),
-          BorderLayout.LINE_END);
+              createHeaderActions(project, extension, editorEx, headerPanel).getComponent(),
+              BorderLayout.LINE_END);
     }
     return headerPanel;
   }
 
   private String getLinkText(boolean expanded) {
     return expanded
-        ? format(
-        CodeGPTBundle.get("toolwindow.chat.editor.action.expand"),
-        ((EditorEx) editor).getDocument().getLineCount() - 1)
-        : CodeGPTBundle.get("toolwindow.chat.editor.action.collapse");
+            ? format(
+            CodeGPTBundle.get("toolwindow.chat.editor.action.expand"),
+            ((EditorEx) editor).getDocument().getLineCount() - 1)
+            : CodeGPTBundle.get("toolwindow.chat.editor.action.collapse");
   }
 
   private ActionLink createExpandLink(EditorEx editorEx) {
     var linkText = getLinkText(editorEx.isOneLineMode());
     var expandLink = new ActionLink(
-        linkText,
-        event -> {
-          var oneLineMode = editorEx.isOneLineMode();
-          var source = (ActionLink) event.getSource();
-          source.setText(getLinkText(!oneLineMode));
-          source.setIcon(oneLineMode ? General.ArrowDown : General.ArrowRight);
+            linkText,
+            event -> {
+              var oneLineMode = editorEx.isOneLineMode();
+              var source = (ActionLink) event.getSource();
+              source.setText(getLinkText(!oneLineMode));
+              source.setIcon(oneLineMode ? General.ArrowDown : General.ArrowRight);
 
-          editorEx.setOneLineMode(!oneLineMode);
-          editorEx.setHorizontalScrollbarVisible(oneLineMode);
-          editorEx.getContentComponent().revalidate();
-          editorEx.getContentComponent().repaint();
-        });
+              editorEx.setOneLineMode(!oneLineMode);
+              editorEx.setHorizontalScrollbarVisible(oneLineMode);
+              editorEx.getContentComponent().revalidate();
+              editorEx.getContentComponent().repaint();
+            });
     expandLink.setIcon(editorEx.isOneLineMode() ? General.ArrowRight : General.ArrowDown);
     return expandLink;
   }
 
   private ActionToolbar createHeaderActions(
-      Project project,
-      String extension,
-      EditorEx editorEx,
-      JPanel headerPanel) {
+          Project project,
+          String extension,
+          EditorEx editorEx,
+          JPanel headerPanel) {
     var actionGroup = new DefaultActionGroup("EDITOR_TOOLBAR_ACTION_GROUP", false);
     actionGroup.add(new AutoApplyAction(project, editorEx, headerPanel));
     actionGroup.add(new InsertAtCaretAction(editorEx));
@@ -187,7 +188,7 @@ public class ResponseEditorPanel extends JPanel implements Disposable {
     menu.add(new JBMenuItem(new NewFileAction(editorEx, extension)));
 
     var toolbar = ActionManager.getInstance()
-        .createActionToolbar("NAVIGATION_BAR_TOOLBAR", actionGroup, true);
+            .createActionToolbar("NAVIGATION_BAR_TOOLBAR", actionGroup, true);
     actionGroup.add(new AnAction("Editor Actions", "Editor Actions", General.GearPlain) {
       @Override
       public void actionPerformed(@NotNull AnActionEvent e) {

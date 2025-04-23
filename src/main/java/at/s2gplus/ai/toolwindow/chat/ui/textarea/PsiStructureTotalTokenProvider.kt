@@ -1,7 +1,5 @@
 package at.s2gplus.ai.toolwindow.chat.ui.textarea
 
-import com.intellij.openapi.Disposable
-import com.intellij.openapi.util.Disposer
 import at.s2gplus.ai.EncodingManager
 import at.s2gplus.ai.psistructure.ClassStructureSerializer
 import at.s2gplus.ai.psistructure.models.ClassStructure
@@ -9,6 +7,8 @@ import at.s2gplus.ai.toolwindow.chat.structure.data.PsiStructureRepository
 import at.s2gplus.ai.toolwindow.chat.structure.data.PsiStructureState
 import at.s2gplus.ai.util.coroutines.CoroutineDispatchers
 import at.s2gplus.ai.util.coroutines.DisposableCoroutineScope
+import com.intellij.openapi.Disposable
+import com.intellij.openapi.util.Disposer
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map

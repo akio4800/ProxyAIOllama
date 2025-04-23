@@ -1,12 +1,12 @@
 package at.s2gplus.ai.settings.prompts.form
 
+import at.s2gplus.ai.settings.prompts.PromptsSettingsState
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.fasterxml.jackson.module.kotlin.readValue
-import at.s2gplus.ai.settings.prompts.PromptsSettingsState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File

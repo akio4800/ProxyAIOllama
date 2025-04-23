@@ -1,13 +1,6 @@
 package at.s2gplus.ai.psistructure
 
-import at.s2gplus.ai.psistructure.models.ClassName
-import at.s2gplus.ai.psistructure.models.ClassStructure
-import at.s2gplus.ai.psistructure.models.ClassType
-import at.s2gplus.ai.psistructure.models.ConstructorStructure
-import at.s2gplus.ai.psistructure.models.EnumEntryName
-import at.s2gplus.ai.psistructure.models.FieldStructure
-import at.s2gplus.ai.psistructure.models.MethodStructure
-import at.s2gplus.ai.psistructure.models.ParameterInfo
+import at.s2gplus.ai.psistructure.models.*
 import com.intellij.openapi.roots.PackageIndex
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiJavaFile

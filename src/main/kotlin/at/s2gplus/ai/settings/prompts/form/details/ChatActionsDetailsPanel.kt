@@ -1,5 +1,11 @@
 package at.s2gplus.ai.settings.prompts.form.details
 
+import at.s2gplus.ai.settings.prompts.ChatActionsState.Companion.DEFAULT_EXPLAIN_PROMPT
+import at.s2gplus.ai.settings.prompts.ChatActionsState.Companion.DEFAULT_FIND_BUGS_PROMPT
+import at.s2gplus.ai.settings.prompts.ChatActionsState.Companion.DEFAULT_OPTIMIZE_PROMPT
+import at.s2gplus.ai.settings.prompts.ChatActionsState.Companion.DEFAULT_REFACTOR_PROMPT
+import at.s2gplus.ai.settings.prompts.ChatActionsState.Companion.DEFAULT_WRITE_TESTS_PROMPT
+import at.s2gplus.ai.settings.prompts.PromptsSettings
 import com.intellij.openapi.components.service
 import com.intellij.openapi.editor.event.DocumentEvent
 import com.intellij.openapi.editor.event.DocumentListener
@@ -10,12 +16,6 @@ import com.intellij.ui.dsl.builder.Align
 import com.intellij.ui.dsl.builder.panel
 import com.intellij.ui.layout.ComponentPredicate
 import com.intellij.util.ui.components.BorderLayoutPanel
-import at.s2gplus.ai.settings.prompts.ChatActionsState.Companion.DEFAULT_EXPLAIN_PROMPT
-import at.s2gplus.ai.settings.prompts.ChatActionsState.Companion.DEFAULT_FIND_BUGS_PROMPT
-import at.s2gplus.ai.settings.prompts.ChatActionsState.Companion.DEFAULT_OPTIMIZE_PROMPT
-import at.s2gplus.ai.settings.prompts.ChatActionsState.Companion.DEFAULT_REFACTOR_PROMPT
-import at.s2gplus.ai.settings.prompts.ChatActionsState.Companion.DEFAULT_WRITE_TESTS_PROMPT
-import at.s2gplus.ai.settings.prompts.PromptsSettings
 import javax.swing.JComponent
 import javax.swing.JPanel
 

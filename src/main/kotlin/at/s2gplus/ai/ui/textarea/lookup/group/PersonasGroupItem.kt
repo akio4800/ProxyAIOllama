@@ -1,8 +1,6 @@
 package at.s2gplus.ai.ui.textarea.lookup.group
 
 import at.s2gplus.ai.CodeGPTBundle
-import com.intellij.icons.AllIcons
-import com.intellij.openapi.components.service
 import at.s2gplus.ai.settings.prompts.PersonaDetails
 import at.s2gplus.ai.settings.prompts.PromptsSettings
 import at.s2gplus.ai.ui.textarea.header.tag.PersonaTagDetails
@@ -10,6 +8,8 @@ import at.s2gplus.ai.ui.textarea.header.tag.TagManager
 import at.s2gplus.ai.ui.textarea.lookup.LookupActionItem
 import at.s2gplus.ai.ui.textarea.lookup.action.personas.AddPersonaActionItem
 import at.s2gplus.ai.ui.textarea.lookup.action.personas.PersonaActionItem
+import com.intellij.icons.AllIcons
+import com.intellij.openapi.components.service
 
 class PersonasGroupItem(private val tagManager: TagManager) :
     AbstractLookupGroupItem() {

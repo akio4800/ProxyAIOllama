@@ -1,6 +1,10 @@
 package at.s2gplus.ai
 
 import at.s2gplus.ai.predictions.PredictionService
+import at.s2gplus.ai.settings.GeneralSettings
+import at.s2gplus.ai.settings.service.ServiceType
+import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
+import at.s2gplus.ai.ui.OverlayUtil
 import com.intellij.codeInsight.lookup.Lookup
 import com.intellij.codeInsight.lookup.LookupEvent
 import com.intellij.codeInsight.lookup.LookupListener
@@ -11,10 +15,6 @@ import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.runReadAction
 import com.intellij.openapi.components.service
 import com.intellij.openapi.editor.EditorKind
-import at.s2gplus.ai.settings.GeneralSettings
-import at.s2gplus.ai.settings.service.ServiceType
-import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
-import at.s2gplus.ai.ui.OverlayUtil
 
 
 class CodeGPTLookupListener : LookupManagerListener {

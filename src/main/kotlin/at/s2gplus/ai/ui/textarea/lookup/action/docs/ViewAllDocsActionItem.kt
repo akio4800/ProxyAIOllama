@@ -1,14 +1,14 @@
 package at.s2gplus.ai.ui.textarea.lookup.action.docs
 
 import at.s2gplus.ai.CodeGPTBundle
-import com.intellij.openapi.components.service
-import com.intellij.openapi.options.ShowSettingsUtil
-import com.intellij.openapi.project.Project
 import at.s2gplus.ai.settings.GeneralSettings
 import at.s2gplus.ai.settings.documentation.DocumentationsConfigurable
 import at.s2gplus.ai.settings.service.ServiceType
 import at.s2gplus.ai.ui.textarea.UserInputPanel
 import at.s2gplus.ai.ui.textarea.lookup.action.AbstractLookupActionItem
+import com.intellij.openapi.components.service
+import com.intellij.openapi.options.ShowSettingsUtil
+import com.intellij.openapi.project.Project
 
 class ViewAllDocsActionItem : AbstractLookupActionItem() {
 

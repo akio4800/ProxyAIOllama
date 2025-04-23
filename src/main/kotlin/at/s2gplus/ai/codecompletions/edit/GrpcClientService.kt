@@ -2,7 +2,11 @@ package at.s2gplus.ai.codecompletions.edit
 
 import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
 import at.s2gplus.ai.credentials.CredentialsStore
+import at.s2gplus.ai.credentials.CredentialsStore.CredentialKey.CodeGptApiKey
 import at.s2gplus.ai.predictions.CodeSuggestionDiffViewer
+import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
+import at.s2gplus.ai.ui.OverlayUtil
+import at.s2gplus.ai.util.GitUtil
 import com.intellij.codeInsight.lookup.LookupManager
 import com.intellij.notification.NotificationAction.createSimpleExpiring
 import com.intellij.notification.NotificationType
@@ -16,10 +20,6 @@ import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.util.net.ssl.CertificateManager
 import com.jetbrains.rd.util.UUID
-import at.s2gplus.ai.credentials.CredentialsStore.CredentialKey.CodeGptApiKey
-import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
-import at.s2gplus.ai.ui.OverlayUtil
-import at.s2gplus.ai.util.GitUtil
 import ee.carlrobert.service.AcceptEditRequest
 import ee.carlrobert.service.NextEditRequest
 import ee.carlrobert.service.NextEditResponse

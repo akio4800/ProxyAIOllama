@@ -1,5 +1,9 @@
 package at.s2gplus.ai.predictions
 
+import at.s2gplus.ai.CodeGPTKeys
+import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
+import at.s2gplus.ai.codecompletions.edit.GrpcClientService
+import at.s2gplus.ai.util.EditorDiffUtil.createDiffRequest
 import com.intellij.diff.DiffManager
 import com.intellij.openapi.application.runInEdt
 import com.intellij.openapi.components.Service
@@ -8,10 +12,6 @@ import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.testFramework.LightVirtualFile
-import at.s2gplus.ai.CodeGPTKeys
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
-import at.s2gplus.ai.codecompletions.edit.GrpcClientService
-import at.s2gplus.ai.util.EditorDiffUtil.createDiffRequest
 import kotlin.coroutines.cancellation.CancellationException
 
 @Service

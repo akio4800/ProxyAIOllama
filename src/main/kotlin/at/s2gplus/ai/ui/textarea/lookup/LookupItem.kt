@@ -1,11 +1,11 @@
 package at.s2gplus.ai.ui.textarea.lookup
 
+import at.s2gplus.ai.ui.textarea.UserInputPanel
 import com.intellij.codeInsight.lookup.LookupElement
 import com.intellij.codeInsight.lookup.LookupElementPresentation
 import com.intellij.codeInsight.lookup.impl.LookupImpl
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.Key
-import at.s2gplus.ai.ui.textarea.UserInputPanel
 import javax.swing.Icon
 
 interface LookupItem {

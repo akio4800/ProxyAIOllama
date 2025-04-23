@@ -1,16 +1,15 @@
 package at.s2gplus.ai
 
+import at.s2gplus.ai.actions.editor.EditorActionsUtil
+import at.s2gplus.ai.settings.configuration.ConfigurationSettings
+import at.s2gplus.ai.toolwindow.chat.ui.textarea.AttachImageNotifier
+import at.s2gplus.ai.ui.OverlayUtil
 import com.intellij.notification.NotificationAction
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.ProjectActivity
-import at.s2gplus.ai.actions.editor.EditorActionsUtil
-import at.s2gplus.ai.settings.configuration.ConfigurationSettings
-
-import at.s2gplus.ai.toolwindow.chat.ui.textarea.AttachImageNotifier
-import at.s2gplus.ai.ui.OverlayUtil
 import java.nio.file.Path
 import java.nio.file.Paths
 import kotlin.io.path.absolutePathString

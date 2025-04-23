@@ -1,5 +1,8 @@
 package at.s2gplus.ai.ui.textarea.lookup.action.files
 
+import at.s2gplus.ai.ui.textarea.UserInputPanel
+import at.s2gplus.ai.ui.textarea.header.tag.EditorTagDetails
+import at.s2gplus.ai.ui.textarea.lookup.action.AbstractLookupActionItem
 import com.intellij.codeInsight.lookup.LookupElement
 import com.intellij.codeInsight.lookup.LookupElementPresentation
 import com.intellij.icons.AllIcons
@@ -7,9 +10,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.guessProjectDir
 import com.intellij.openapi.vfs.VfsUtil
 import com.intellij.openapi.vfs.VirtualFile
-import at.s2gplus.ai.ui.textarea.UserInputPanel
-import at.s2gplus.ai.ui.textarea.header.tag.EditorTagDetails
-import at.s2gplus.ai.ui.textarea.lookup.action.AbstractLookupActionItem
 
 class FileActionItem(private val project: Project, val file: VirtualFile) :
     AbstractLookupActionItem() {

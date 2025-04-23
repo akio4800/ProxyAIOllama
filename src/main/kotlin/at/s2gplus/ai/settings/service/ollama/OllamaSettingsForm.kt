@@ -1,6 +1,13 @@
 package at.s2gplus.ai.settings.service.ollama
 
 import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.credentials.CredentialsStore.CredentialKey.OllamaApikey
+import at.s2gplus.ai.credentials.CredentialsStore.getCredential
+import at.s2gplus.ai.credentials.CredentialsStore.setCredential
+import at.s2gplus.ai.settings.service.CodeCompletionConfigurationForm
+import at.s2gplus.ai.ui.OverlayUtil
+import at.s2gplus.ai.ui.UIUtil
+import at.s2gplus.ai.ui.URLTextField
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.ModalityState
@@ -15,13 +22,6 @@ import com.intellij.ui.components.JBPasswordField
 import com.intellij.ui.components.JBTextField
 import com.intellij.util.concurrency.AppExecutorUtil
 import com.intellij.util.ui.FormBuilder
-import at.s2gplus.ai.credentials.CredentialsStore.CredentialKey.OllamaApikey
-import at.s2gplus.ai.credentials.CredentialsStore.getCredential
-import at.s2gplus.ai.credentials.CredentialsStore.setCredential
-import at.s2gplus.ai.settings.service.CodeCompletionConfigurationForm
-import at.s2gplus.ai.ui.OverlayUtil
-import at.s2gplus.ai.ui.UIUtil
-import at.s2gplus.ai.ui.URLTextField
 import ee.carlrobert.llm.client.ollama.OllamaClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking

@@ -1,13 +1,13 @@
 package at.s2gplus.ai.ui.textarea.lookup.group
 
+import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.Icons
+import at.s2gplus.ai.ui.textarea.lookup.LookupActionItem
 import com.intellij.codeInsight.lookup.LookupElement
 import com.intellij.codeInsight.lookup.LookupElementPresentation
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.util.IconLoader
 import com.intellij.util.ui.JBUI
-import at.s2gplus.ai.CodeGPTBundle
-import at.s2gplus.ai.Icons
-import at.s2gplus.ai.ui.textarea.lookup.LookupActionItem
 import javax.swing.Icon
 
 class MCPGroupItem : AbstractLookupGroupItem() {

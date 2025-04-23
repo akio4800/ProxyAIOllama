@@ -1,6 +1,8 @@
 package at.s2gplus.ai.predictions
 
 import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.CodeGPTKeys
+import at.s2gplus.ai.codecompletions.edit.GrpcClientService
 import com.intellij.codeInsight.inline.completion.session.InlineCompletionContext
 import com.intellij.codeInsight.inline.completion.session.InlineCompletionSession
 import com.intellij.diff.DiffContentFactory
@@ -33,8 +35,6 @@ import com.intellij.util.application
 import com.intellij.util.concurrency.annotations.RequiresEdt
 import com.intellij.util.ui.JBUI
 import com.intellij.util.ui.components.BorderLayoutPanel
-import at.s2gplus.ai.CodeGPTKeys
-import at.s2gplus.ai.codecompletions.edit.GrpcClientService
 import ee.carlrobert.service.NextEditResponse
 import java.awt.BorderLayout
 import java.awt.Dimension

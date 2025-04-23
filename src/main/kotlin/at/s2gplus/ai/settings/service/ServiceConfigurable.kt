@@ -1,11 +1,11 @@
 package at.s2gplus.ai.settings.service
 
-import com.intellij.openapi.components.service
-import com.intellij.openapi.options.Configurable
 import at.s2gplus.ai.conversations.ConversationsState
 import at.s2gplus.ai.settings.GeneralSettings
 import at.s2gplus.ai.toolwindow.chat.ChatToolWindowContentManager
 import at.s2gplus.ai.util.ApplicationUtil.findCurrentProject
+import com.intellij.openapi.components.service
+import com.intellij.openapi.options.Configurable
 import javax.swing.JComponent
 
 class ServiceConfigurable : Configurable {

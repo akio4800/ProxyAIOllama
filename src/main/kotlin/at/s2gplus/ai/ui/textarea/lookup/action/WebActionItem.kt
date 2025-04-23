@@ -1,13 +1,13 @@
 package at.s2gplus.ai.ui.textarea.lookup.action
 
-import com.intellij.icons.AllIcons
-import com.intellij.openapi.project.Project
 import at.s2gplus.ai.CodeGPTBundle
 import at.s2gplus.ai.settings.GeneralSettings
 import at.s2gplus.ai.settings.service.ServiceType
 import at.s2gplus.ai.ui.textarea.UserInputPanel
 import at.s2gplus.ai.ui.textarea.header.tag.TagManager
 import at.s2gplus.ai.ui.textarea.header.tag.WebTagDetails
+import com.intellij.icons.AllIcons
+import com.intellij.openapi.project.Project
 
 class WebActionItem(private val tagManager: TagManager) : AbstractLookupActionItem() {
 

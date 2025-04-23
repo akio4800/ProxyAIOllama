@@ -1,6 +1,8 @@
 package at.s2gplus.ai.settings.service
 
 import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.codecompletions.InfillPromptTemplate
+import at.s2gplus.ai.codecompletions.InfillRequest
 import com.intellij.icons.AllIcons.General
 import com.intellij.ide.HelpTooltip
 import com.intellij.openapi.ui.ComboBox
@@ -9,8 +11,6 @@ import com.intellij.ui.components.JBCheckBox
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.dsl.builder.panel
 import com.intellij.util.ui.FormBuilder
-import at.s2gplus.ai.codecompletions.InfillPromptTemplate
-import at.s2gplus.ai.codecompletions.InfillRequest
 import org.apache.commons.text.StringEscapeUtils
 import java.awt.FlowLayout
 import javax.swing.Box

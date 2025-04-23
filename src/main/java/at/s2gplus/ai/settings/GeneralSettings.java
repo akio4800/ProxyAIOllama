@@ -6,11 +6,10 @@ import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
+
 import at.s2gplus.ai.conversations.Conversation;
 import at.s2gplus.ai.settings.service.ProviderChangeNotifier;
 import at.s2gplus.ai.settings.service.ServiceType;
-
-
 import at.s2gplus.ai.settings.service.ollama.OllamaSettings;
 import at.s2gplus.ai.util.ApplicationUtil;
 

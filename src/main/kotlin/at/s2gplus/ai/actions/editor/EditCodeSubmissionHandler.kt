@@ -1,5 +1,9 @@
 package at.s2gplus.ai.actions.editor
 
+import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
+import at.s2gplus.ai.completions.CompletionRequestService
+import at.s2gplus.ai.completions.EditCodeCompletionParameters
+import at.s2gplus.ai.ui.ObservableProperties
 import com.intellij.openapi.application.readAction
 import com.intellij.openapi.application.runInEdt
 import com.intellij.openapi.command.WriteCommandAction.runWriteCommandAction
@@ -8,10 +12,6 @@ import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.util.TextRange
 import com.intellij.openapi.util.text.StringUtil
 import com.jetbrains.rd.util.AtomicReference
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
-import at.s2gplus.ai.completions.CompletionRequestService
-import at.s2gplus.ai.completions.EditCodeCompletionParameters
-import at.s2gplus.ai.ui.ObservableProperties
 
 class EditCodeSubmissionHandler(
     private val editor: Editor,

@@ -1,12 +1,12 @@
 package at.s2gplus.ai.actions
 
+import at.s2gplus.ai.settings.GeneralSettings
+import at.s2gplus.ai.settings.service.ServiceType.CODEGPT
+import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.DumbAwareAction
-import at.s2gplus.ai.settings.GeneralSettings
-import at.s2gplus.ai.settings.service.ServiceType.CODEGPT
-import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
 
 abstract class CodeAssistantFeatureToggleAction(
     private val enableFeatureAction: Boolean

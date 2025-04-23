@@ -2,6 +2,8 @@ package at.s2gplus.ai.actions
 
 import at.s2gplus.ai.CodeGPTBundle
 import at.s2gplus.ai.Icons
+import at.s2gplus.ai.toolwindow.chat.ChatToolWindowContentManager
+import at.s2gplus.ai.util.GitUtil
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
@@ -10,8 +12,6 @@ import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vcs.VcsDataKeys
 import com.intellij.openapi.vcs.history.VcsRevisionNumber
-import at.s2gplus.ai.toolwindow.chat.ChatToolWindowContentManager
-import at.s2gplus.ai.util.GitUtil
 import git4idea.GitCommit
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

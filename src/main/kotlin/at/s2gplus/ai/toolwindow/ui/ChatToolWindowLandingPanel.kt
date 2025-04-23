@@ -1,11 +1,11 @@
 package at.s2gplus.ai.toolwindow.ui
 
 import at.s2gplus.ai.Icons
-import com.intellij.ui.components.ActionLink
-import com.intellij.util.ui.JBUI
 import at.s2gplus.ai.settings.GeneralSettings
 import at.s2gplus.ai.settings.prompts.ChatActionsState
 import at.s2gplus.ai.ui.UIUtil.createTextPane
+import com.intellij.ui.components.ActionLink
+import com.intellij.util.ui.JBUI
 import java.awt.BorderLayout
 import java.awt.Point
 import java.awt.event.ActionListener

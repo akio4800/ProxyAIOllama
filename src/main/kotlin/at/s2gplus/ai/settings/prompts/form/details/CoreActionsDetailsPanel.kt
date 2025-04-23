@@ -1,5 +1,12 @@
 package at.s2gplus.ai.settings.prompts.form.details
 
+import at.s2gplus.ai.settings.prompts.CommitMessageTemplate
+import at.s2gplus.ai.settings.prompts.CoreActionsState.Companion.DEFAULT_EDIT_CODE_PROMPT
+import at.s2gplus.ai.settings.prompts.CoreActionsState.Companion.DEFAULT_FIX_COMPILE_ERRORS_PROMPT
+import at.s2gplus.ai.settings.prompts.CoreActionsState.Companion.DEFAULT_GENERATE_COMMIT_MESSAGE_PROMPT
+import at.s2gplus.ai.settings.prompts.CoreActionsState.Companion.DEFAULT_GENERATE_NAME_LOOKUPS_PROMPT
+import at.s2gplus.ai.settings.prompts.CoreActionsState.Companion.DEFAULT_REVIEW_CHANGES_PROMPT
+import at.s2gplus.ai.settings.prompts.PromptsSettings
 import com.intellij.openapi.components.service
 import com.intellij.openapi.editor.event.DocumentEvent
 import com.intellij.openapi.editor.event.DocumentListener
@@ -8,13 +15,6 @@ import com.intellij.ui.dsl.builder.Align
 import com.intellij.ui.dsl.builder.panel
 import com.intellij.ui.layout.ComponentPredicate
 import com.intellij.util.ui.components.BorderLayoutPanel
-import at.s2gplus.ai.settings.prompts.CommitMessageTemplate
-import at.s2gplus.ai.settings.prompts.CoreActionsState.Companion.DEFAULT_EDIT_CODE_PROMPT
-import at.s2gplus.ai.settings.prompts.CoreActionsState.Companion.DEFAULT_FIX_COMPILE_ERRORS_PROMPT
-import at.s2gplus.ai.settings.prompts.CoreActionsState.Companion.DEFAULT_GENERATE_COMMIT_MESSAGE_PROMPT
-import at.s2gplus.ai.settings.prompts.CoreActionsState.Companion.DEFAULT_GENERATE_NAME_LOOKUPS_PROMPT
-import at.s2gplus.ai.settings.prompts.CoreActionsState.Companion.DEFAULT_REVIEW_CHANGES_PROMPT
-import at.s2gplus.ai.settings.prompts.PromptsSettings
 import javax.swing.JComponent
 import javax.swing.JPanel
 

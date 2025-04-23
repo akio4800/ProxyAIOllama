@@ -1,9 +1,6 @@
 package at.s2gplus.ai.ui.textarea.lookup.group
 
 import at.s2gplus.ai.CodeGPTBundle
-import com.intellij.codeInsight.lookup.impl.LookupImpl
-import com.intellij.openapi.application.runInEdt
-import com.intellij.openapi.project.Project
 import at.s2gplus.ai.Icons
 import at.s2gplus.ai.ui.textarea.lookup.DynamicLookupGroupItem
 import at.s2gplus.ai.ui.textarea.lookup.LookupActionItem
@@ -11,6 +8,9 @@ import at.s2gplus.ai.ui.textarea.lookup.LookupUtil
 import at.s2gplus.ai.ui.textarea.lookup.action.git.GitCommitActionItem
 import at.s2gplus.ai.ui.textarea.lookup.action.git.IncludeCurrentChangesActionItem
 import at.s2gplus.ai.util.GitUtil
+import com.intellij.codeInsight.lookup.impl.LookupImpl
+import com.intellij.openapi.application.runInEdt
+import com.intellij.openapi.project.Project
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.swing.Icon

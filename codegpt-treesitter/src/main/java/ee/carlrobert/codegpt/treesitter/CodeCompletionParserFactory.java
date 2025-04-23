@@ -1,38 +1,6 @@
 package ee.carlrobert.codegpt.treesitter;
 
-import org.treesitter.TSLanguage;
-import org.treesitter.TreeSitterCSharp;
-import org.treesitter.TreeSitterCpp;
-import org.treesitter.TreeSitterCss;
-import org.treesitter.TreeSitterDart;
-import org.treesitter.TreeSitterDockerfile;
-import org.treesitter.TreeSitterElixir;
-import org.treesitter.TreeSitterErlang;
-import org.treesitter.TreeSitterFortran;
-import org.treesitter.TreeSitterGitattributes;
-import org.treesitter.TreeSitterGo;
-import org.treesitter.TreeSitterGraphql;
-import org.treesitter.TreeSitterHtml;
-import org.treesitter.TreeSitterJava;
-import org.treesitter.TreeSitterJavascript;
-import org.treesitter.TreeSitterJson;
-import org.treesitter.TreeSitterKotlin;
-import org.treesitter.TreeSitterLatex;
-import org.treesitter.TreeSitterLua;
-import org.treesitter.TreeSitterM68k;
-import org.treesitter.TreeSitterMarkdown;
-import org.treesitter.TreeSitterObjc;
-import org.treesitter.TreeSitterPerl;
-import org.treesitter.TreeSitterPhp;
-import org.treesitter.TreeSitterPython;
-import org.treesitter.TreeSitterRuby;
-import org.treesitter.TreeSitterRust;
-import org.treesitter.TreeSitterScala;
-import org.treesitter.TreeSitterScss;
-import org.treesitter.TreeSitterSvelte;
-import org.treesitter.TreeSitterSwift;
-import org.treesitter.TreeSitterTypescript;
-import org.treesitter.TreeSitterYaml;
+import org.treesitter.*;
 
 public class CodeCompletionParserFactory {
 

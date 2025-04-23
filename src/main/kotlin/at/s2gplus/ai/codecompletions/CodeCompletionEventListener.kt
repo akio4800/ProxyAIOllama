@@ -1,5 +1,12 @@
 package at.s2gplus.ai.codecompletions
 
+import at.s2gplus.ai.CodeGPTKeys.REMAINING_EDITOR_COMPLETION
+import at.s2gplus.ai.codecompletions.CompletionUtil.formatCompletion
+import at.s2gplus.ai.settings.GeneralSettings
+import at.s2gplus.ai.settings.service.ServiceType
+import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
+import at.s2gplus.ai.ui.OverlayUtil.showNotification
+import at.s2gplus.ai.util.EditorUtil.adjustWhitespaces
 import com.intellij.codeInsight.inline.completion.InlineCompletionRequest
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.application.runInEdt
@@ -8,13 +15,6 @@ import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.util.TextRange
-import at.s2gplus.ai.CodeGPTKeys.REMAINING_EDITOR_COMPLETION
-import at.s2gplus.ai.codecompletions.CompletionUtil.formatCompletion
-import at.s2gplus.ai.settings.GeneralSettings
-import at.s2gplus.ai.settings.service.ServiceType
-import at.s2gplus.ai.settings.service.codegpt.CodeGPTServiceSettings
-import at.s2gplus.ai.ui.OverlayUtil.showNotification
-import at.s2gplus.ai.util.EditorUtil.adjustWhitespaces
 import ee.carlrobert.llm.client.openai.completion.ErrorDetails
 import ee.carlrobert.llm.completion.CompletionEventListener
 import okhttp3.sse.EventSource

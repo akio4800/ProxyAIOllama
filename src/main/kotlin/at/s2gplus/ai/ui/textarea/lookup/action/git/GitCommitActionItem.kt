@@ -1,10 +1,10 @@
 package at.s2gplus.ai.ui.textarea.lookup.action.git
 
-import com.intellij.icons.AllIcons
-import com.intellij.openapi.project.Project
 import at.s2gplus.ai.ui.textarea.UserInputPanel
 import at.s2gplus.ai.ui.textarea.header.tag.GitCommitTagDetails
 import at.s2gplus.ai.ui.textarea.lookup.action.AbstractLookupActionItem
+import com.intellij.icons.AllIcons
+import com.intellij.openapi.project.Project
 import git4idea.GitCommit
 
 class GitCommitActionItem(

@@ -1,10 +1,10 @@
 package at.s2gplus.ai.actions.editor
 
+import at.s2gplus.ai.toolwindow.chat.ChatToolWindowContentManager
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.components.service
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
-import at.s2gplus.ai.toolwindow.chat.ChatToolWindowContentManager
 
 class AddSelectionToContextAction : BaseEditorAction(AllIcons.General.Add) {
 

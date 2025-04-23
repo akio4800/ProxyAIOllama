@@ -1,6 +1,15 @@
 package at.s2gplus.ai.ui.textarea.header
 
 import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.EditorNotifier
+import at.s2gplus.ai.toolwindow.chat.ui.textarea.TotalTokensPanel
+import at.s2gplus.ai.ui.WrapLayout
+import at.s2gplus.ai.ui.textarea.PromptTextField
+import at.s2gplus.ai.ui.textarea.TagDetailsComparator
+import at.s2gplus.ai.ui.textarea.header.tag.*
+import at.s2gplus.ai.util.EditorUtil
+import at.s2gplus.ai.util.EditorUtil.getSelectedEditor
+import at.s2gplus.ai.util.file.FileUtil
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.application.runInEdt
 import com.intellij.openapi.application.runUndoTransparentWriteAction
@@ -16,15 +25,6 @@ import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.ui.components.JBLabel
 import com.intellij.util.IconUtil
 import com.intellij.util.ui.JBUI
-import at.s2gplus.ai.EditorNotifier
-import at.s2gplus.ai.toolwindow.chat.ui.textarea.TotalTokensPanel
-import at.s2gplus.ai.ui.WrapLayout
-import at.s2gplus.ai.ui.textarea.PromptTextField
-import at.s2gplus.ai.ui.textarea.TagDetailsComparator
-import at.s2gplus.ai.ui.textarea.header.tag.*
-import at.s2gplus.ai.util.EditorUtil
-import at.s2gplus.ai.util.EditorUtil.getSelectedEditor
-import at.s2gplus.ai.util.file.FileUtil
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

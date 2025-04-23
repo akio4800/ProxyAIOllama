@@ -1,5 +1,9 @@
 package at.s2gplus.ai.actions.editor
 
+import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
+import at.s2gplus.ai.toolwindow.chat.ThinkingOutputParser
+import at.s2gplus.ai.ui.ObservableProperties
+import at.s2gplus.ai.ui.OverlayUtil
 import com.intellij.ide.BrowserUtil
 import com.intellij.notification.NotificationAction
 import com.intellij.notification.NotificationType
@@ -14,10 +18,6 @@ import com.intellij.openapi.util.text.StringUtil
 import com.intellij.psi.PsiDocumentManager
 import com.intellij.psi.codeStyle.CodeStyleManager
 import com.intellij.ui.JBColor
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
-import at.s2gplus.ai.toolwindow.chat.ThinkingOutputParser
-import at.s2gplus.ai.ui.ObservableProperties
-import at.s2gplus.ai.ui.OverlayUtil
 import ee.carlrobert.llm.client.openai.completion.ErrorDetails
 import ee.carlrobert.llm.completion.CompletionEventListener
 import okhttp3.sse.EventSource

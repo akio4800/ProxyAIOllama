@@ -1,6 +1,8 @@
 package at.s2gplus.ai.ui
 
 import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.settings.documentation.DocumentationDetailsState
+import at.s2gplus.ai.settings.documentation.DocumentationSettings
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.intellij.openapi.components.service
@@ -11,8 +13,6 @@ import com.intellij.ui.components.JBTextField
 import com.intellij.ui.dsl.builder.LabelPosition
 import com.intellij.ui.dsl.builder.TopGap
 import com.intellij.ui.dsl.builder.panel
-import at.s2gplus.ai.settings.documentation.DocumentationDetailsState
-import at.s2gplus.ai.settings.documentation.DocumentationSettings
 import javax.swing.JComponent
 
 class AddDocumentationDialog(project: Project) : DialogWrapper(project) {

@@ -1,5 +1,12 @@
 package at.s2gplus.ai.actions
 
+import at.s2gplus.ai.EncodingManager
+import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
+import at.s2gplus.ai.completions.CompletionRequestService
+import at.s2gplus.ai.toolwindow.chat.ThinkingOutputParser
+import at.s2gplus.ai.ui.OverlayUtil
+import at.s2gplus.ai.util.CommitWorkflowChanges
+import at.s2gplus.ai.util.GitUtil.getProjectRepository
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationType
 import com.intellij.notification.Notifications
@@ -17,13 +24,6 @@ import com.intellij.openapi.ui.Messages
 import com.intellij.openapi.vcs.VcsDataKeys
 import com.intellij.openapi.vcs.changes.Change
 import com.intellij.vcs.commit.CommitWorkflowUi
-import at.s2gplus.ai.EncodingManager
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
-import at.s2gplus.ai.completions.CompletionRequestService
-import at.s2gplus.ai.toolwindow.chat.ThinkingOutputParser
-import at.s2gplus.ai.ui.OverlayUtil
-import at.s2gplus.ai.util.CommitWorkflowChanges
-import at.s2gplus.ai.util.GitUtil.getProjectRepository
 import ee.carlrobert.llm.client.openai.completion.ErrorDetails
 import ee.carlrobert.llm.completion.CompletionEventListener
 import git4idea.repo.GitRepository

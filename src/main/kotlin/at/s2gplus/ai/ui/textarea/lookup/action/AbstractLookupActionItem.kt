@@ -1,9 +1,9 @@
 package at.s2gplus.ai.ui.textarea.lookup.action
 
-import com.intellij.codeInsight.lookup.LookupElement
-import com.intellij.codeInsight.lookup.LookupElementPresentation
 import at.s2gplus.ai.ui.textarea.lookup.AbstractLookupItem
 import at.s2gplus.ai.ui.textarea.lookup.LookupActionItem
+import com.intellij.codeInsight.lookup.LookupElement
+import com.intellij.codeInsight.lookup.LookupElementPresentation
 
 abstract class AbstractLookupActionItem : AbstractLookupItem(), LookupActionItem {
 

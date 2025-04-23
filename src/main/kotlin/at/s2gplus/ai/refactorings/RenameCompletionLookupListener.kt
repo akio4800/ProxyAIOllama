@@ -1,5 +1,11 @@
 package at.s2gplus.ai.refactorings
 
+import at.s2gplus.ai.CodeGPTKeys.IS_PROMPT_TEXT_FIELD_DOCUMENT
+import at.s2gplus.ai.Icons
+import at.s2gplus.ai.completions.CompletionRequestService
+import at.s2gplus.ai.completions.LookupCompletionParameters
+import at.s2gplus.ai.settings.configuration.ConfigurationSettings
+import at.s2gplus.ai.ui.OverlayUtil
 import com.intellij.codeInsight.completion.PrefixMatcher
 import com.intellij.codeInsight.completion.PrioritizedLookupElement
 import com.intellij.codeInsight.lookup.Lookup
@@ -11,12 +17,6 @@ import com.intellij.openapi.application.runInEdt
 import com.intellij.openapi.application.runReadAction
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
-import at.s2gplus.ai.CodeGPTKeys.IS_PROMPT_TEXT_FIELD_DOCUMENT
-import at.s2gplus.ai.Icons
-import at.s2gplus.ai.completions.CompletionRequestService
-import at.s2gplus.ai.completions.LookupCompletionParameters
-import at.s2gplus.ai.settings.configuration.ConfigurationSettings
-import at.s2gplus.ai.ui.OverlayUtil
 import ee.carlrobert.llm.client.codegpt.response.CodeGPTException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

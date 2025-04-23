@@ -1,6 +1,7 @@
 package ee.carlrobert.codegpt.treesitter;
 
 import java.nio.charset.StandardCharsets;
+
 import org.treesitter.TSInputEdit;
 import org.treesitter.TSLanguage;
 import org.treesitter.TSParser;

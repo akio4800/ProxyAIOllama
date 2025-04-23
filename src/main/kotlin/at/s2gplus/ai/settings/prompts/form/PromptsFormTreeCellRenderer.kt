@@ -1,8 +1,8 @@
 package at.s2gplus.ai.settings.prompts.form
 
 import at.s2gplus.ai.Icons
-import com.intellij.ui.render.LabelBasedRenderer
 import at.s2gplus.ai.settings.prompts.form.details.PersonaPromptDetails
+import com.intellij.ui.render.LabelBasedRenderer
 import java.awt.Component
 import java.awt.Font
 import javax.swing.JTree

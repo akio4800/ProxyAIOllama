@@ -1,11 +1,11 @@
 package at.s2gplus.ai.actions
 
-import com.intellij.openapi.project.Project
-import com.intellij.openapi.ui.Messages
-import com.intellij.vcs.commit.CommitWorkflowUi
 import at.s2gplus.ai.completions.CommitMessageCompletionParameters
 import at.s2gplus.ai.completions.CompletionRequestService
 import at.s2gplus.ai.settings.prompts.CommitMessageTemplate
+import com.intellij.openapi.project.Project
+import com.intellij.openapi.ui.Messages
+import com.intellij.vcs.commit.CommitWorkflowUi
 
 class GenerateCommitMessageWithAdditionalInputAction : BaseCommitWorkflowAction() {
 

@@ -1,10 +1,10 @@
 package at.s2gplus.ai.settings.service.ollama
 
+import at.s2gplus.ai.codecompletions.InfillPromptTemplate
 import com.intellij.openapi.components.BaseState
 import com.intellij.openapi.components.SimplePersistentStateComponent
 import com.intellij.openapi.components.State
 import com.intellij.openapi.components.Storage
-import at.s2gplus.ai.codecompletions.InfillPromptTemplate
 
 @State(name = "CodeGPT_OllamaSettings_210", storages = [Storage("CodeGPT_OllamaSettings_210.xml")])
 class OllamaSettings :

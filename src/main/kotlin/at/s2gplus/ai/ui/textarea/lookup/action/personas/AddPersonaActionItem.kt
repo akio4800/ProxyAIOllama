@@ -1,13 +1,13 @@
 package at.s2gplus.ai.ui.textarea.lookup.action.personas
 
 import at.s2gplus.ai.CodeGPTBundle
+import at.s2gplus.ai.settings.prompts.PromptsConfigurable
+import at.s2gplus.ai.ui.textarea.UserInputPanel
+import at.s2gplus.ai.ui.textarea.lookup.action.AbstractLookupActionItem
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.components.service
 import com.intellij.openapi.options.ShowSettingsUtil
 import com.intellij.openapi.project.Project
-import at.s2gplus.ai.settings.prompts.PromptsConfigurable
-import at.s2gplus.ai.ui.textarea.UserInputPanel
-import at.s2gplus.ai.ui.textarea.lookup.action.AbstractLookupActionItem
 
 class AddPersonaActionItem : AbstractLookupActionItem() {
 

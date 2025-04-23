@@ -1,5 +1,6 @@
 package at.s2gplus.ai.predictions
 
+import at.s2gplus.ai.CodeGPTKeys.EDITOR_PREDICTION_DIFF_VIEWER
 import com.intellij.codeInsight.hint.HintManagerImpl
 import com.intellij.openapi.actionSystem.DataContext
 import com.intellij.openapi.application.runInEdt
@@ -8,7 +9,6 @@ import com.intellij.openapi.editor.Caret
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.editor.actionSystem.EditorAction
 import com.intellij.openapi.editor.actionSystem.EditorWriteActionHandler
-import at.s2gplus.ai.CodeGPTKeys.EDITOR_PREDICTION_DIFF_VIEWER
 
 class OpenPredictionAction : EditorAction(Handler()), HintManagerImpl.ActionToIgnore {
 

@@ -1,13 +1,13 @@
 package at.s2gplus.ai.ui.textarea.lookup.action.files
 
 import at.s2gplus.ai.CodeGPTBundle
-import com.intellij.openapi.components.service
-import com.intellij.openapi.fileEditor.FileEditorManager
-import com.intellij.openapi.project.Project
 import at.s2gplus.ai.Icons
 import at.s2gplus.ai.ui.textarea.UserInputPanel
 import at.s2gplus.ai.ui.textarea.header.tag.FileTagDetails
 import at.s2gplus.ai.ui.textarea.lookup.action.AbstractLookupActionItem
+import com.intellij.openapi.components.service
+import com.intellij.openapi.fileEditor.FileEditorManager
+import com.intellij.openapi.project.Project
 import javax.swing.Icon
 
 class IncludeOpenFilesActionItem : AbstractLookupActionItem() {
