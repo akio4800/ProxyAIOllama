@@ -7,7 +7,7 @@ import at.s2g.ai.completions.factory.OpenAIRequestFactory.Companion.buildOpenAIM
 import at.s2g.ai.settings.configuration.ConfigurationSettings
 import at.s2g.ai.settings.service.codegpt.CodeGPTServiceSettings
 import at.s2g.ai.util.file.FileUtil
-import at.s2gplus.ai.psistructure.ClassStructureSerializer
+import at.s2g.ai.psistructure.ClassStructureSerializer
 import com.intellij.openapi.application.ApplicationInfo
 import com.intellij.openapi.components.service
 import com.intellij.openapi.vfs.LocalFileSystem

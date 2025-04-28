@@ -1,6 +1,6 @@
 package at.s2g.ai.psistructure
 
-import at.s2gplus.ai.psistructure.models.*
+import at.s2g.ai.psistructure.models.*
 import com.intellij.openapi.roots.PackageIndex
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiJavaFile

@@ -6,7 +6,7 @@ import at.s2g.ai.toolwindow.chat.ThinkingOutputParser
 import at.s2g.ai.ui.OverlayUtil
 import at.s2g.ai.util.CommitWorkflowChanges
 import at.s2g.ai.util.GitUtil.getProjectRepository
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
+import at.s2g.ai.codecompletions.CompletionProgressNotifier
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationType
 import com.intellij.notification.Notifications

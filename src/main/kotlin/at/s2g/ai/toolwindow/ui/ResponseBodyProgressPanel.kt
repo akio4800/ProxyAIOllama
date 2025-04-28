@@ -2,8 +2,8 @@ package at.s2g.ai.toolwindow.ui
 
 import at.s2g.ai.Icons
 import at.s2g.ai.util.MarkdownUtil.convertMdToHtml
-import at.s2gplus.ai.events.EventDetails
-import at.s2gplus.ai.events.ProcessContextEventDetails
+import at.s2g.ai.events.EventDetails
+import at.s2g.ai.events.ProcessContextEventDetails
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.application.runInEdt
 import com.intellij.openapi.diagnostic.thisLogger

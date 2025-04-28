@@ -4,7 +4,7 @@ import at.s2g.ai.settings.GeneralSettings
 import at.s2g.ai.settings.service.ServiceType
 import at.s2g.ai.settings.service.codegpt.CodeGPTServiceSettings
 import at.s2g.ai.ui.OverlayUtil
-import at.s2gplus.ai.predictions.PredictionService
+import at.s2g.ai.predictions.PredictionService
 import com.intellij.codeInsight.lookup.Lookup
 import com.intellij.codeInsight.lookup.LookupEvent
 import com.intellij.codeInsight.lookup.LookupListener

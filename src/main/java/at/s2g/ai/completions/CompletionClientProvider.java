@@ -11,13 +11,13 @@ import com.intellij.util.net.ssl.CertificateManager;
 
 import at.s2g.ai.settings.advanced.AdvancedSettings;
 import at.s2g.ai.settings.service.ollama.OllamaSettings;
-import at.s2gplus.ai.credentials.CredentialsStore.CredentialKey;
+import at.s2g.ai.credentials.CredentialsStore.CredentialKey;
 import ee.carlrobert.llm.client.codegpt.CodeGPTClient;
 import ee.carlrobert.llm.client.ollama.OllamaClient;
 import okhttp3.Credentials;
 import okhttp3.OkHttpClient;
 
-import static at.s2gplus.ai.credentials.CredentialsStore.getCredential;
+import static at.s2g.ai.credentials.CredentialsStore.getCredential;
 
 public class CompletionClientProvider {
 

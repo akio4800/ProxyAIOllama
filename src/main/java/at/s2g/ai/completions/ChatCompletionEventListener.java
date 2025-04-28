@@ -4,8 +4,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.intellij.openapi.project.Project;
 
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier;
-import at.s2gplus.ai.events.CodeGPTEvent;
+import at.s2g.ai.codecompletions.CompletionProgressNotifier;
+import at.s2g.ai.events.CodeGPTEvent;
 import ee.carlrobert.llm.client.openai.completion.ErrorDetails;
 import ee.carlrobert.llm.completion.CompletionEventListener;
 import okhttp3.sse.EventSource;

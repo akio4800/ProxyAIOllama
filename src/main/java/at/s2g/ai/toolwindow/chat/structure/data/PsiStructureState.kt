@@ -1,7 +1,7 @@
 package at.s2g.ai.toolwindow.chat.structure.data
 
+import at.s2g.ai.psistructure.models.ClassStructure
 import at.s2g.ai.ui.textarea.header.tag.TagDetails
-import at.s2gplus.ai.psistructure.models.ClassStructure
 
 sealed class PsiStructureState {
 

@@ -1,6 +1,6 @@
 package at.s2g.ai.codecompletions
 
-import at.s2gplus.ai.psistructure.ClassStructureSerializer
+import at.s2g.ai.psistructure.ClassStructureSerializer
 import org.jetbrains.kotlin.utils.addToStdlib.ifNotEmpty
 
 enum class InfillPromptTemplate(val label: String, val stopTokens: List<String>? = listOf("\n\n")) {

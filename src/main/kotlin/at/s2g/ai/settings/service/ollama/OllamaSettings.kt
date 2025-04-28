@@ -1,6 +1,6 @@
 package at.s2g.ai.settings.service.ollama
 
-import at.s2gplus.ai.codecompletions.InfillPromptTemplate
+import at.s2g.ai.codecompletions.InfillPromptTemplate
 import com.intellij.openapi.components.BaseState
 import com.intellij.openapi.components.SimplePersistentStateComponent
 import com.intellij.openapi.components.State

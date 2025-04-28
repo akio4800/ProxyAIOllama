@@ -8,7 +8,7 @@ import at.s2g.ai.settings.service.codegpt.CodeGPTServiceSettings
 import at.s2g.ai.settings.service.ollama.OllamaSettings
 import at.s2g.ai.ui.OverlayUtil
 import at.s2g.ai.util.StringUtil.extractUntilNewline
-import at.s2gplus.ai.predictions.PredictionService
+import at.s2g.ai.predictions.PredictionService
 import com.intellij.codeInsight.inline.completion.*
 import com.intellij.codeInsight.inline.completion.elements.InlineCompletionElement
 import com.intellij.codeInsight.inline.completion.elements.InlineCompletionGrayTextElement

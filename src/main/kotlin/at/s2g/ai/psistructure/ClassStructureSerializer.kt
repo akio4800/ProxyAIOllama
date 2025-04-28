@@ -1,6 +1,6 @@
 package at.s2g.ai.psistructure
 
-import at.s2gplus.ai.psistructure.models.*
+import at.s2g.ai.psistructure.models.*
 import org.jetbrains.kotlin.utils.addToStdlib.ifNotEmpty
 
 object ClassStructureSerializer {

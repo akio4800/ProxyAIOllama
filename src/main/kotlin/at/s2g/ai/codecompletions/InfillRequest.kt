@@ -1,9 +1,9 @@
 package at.s2g.ai.codecompletions
 
 import at.s2g.ai.EncodingManager
-import at.s2gplus.ai.codecompletions.psi.filePath
-import at.s2gplus.ai.codecompletions.psi.readText
-import at.s2gplus.ai.psistructure.models.ClassStructure
+import at.s2g.ai.codecompletions.psi.filePath
+import at.s2g.ai.codecompletions.psi.readText
+import at.s2g.ai.psistructure.models.ClassStructure
 import com.intellij.openapi.components.service
 import com.intellij.openapi.editor.Document
 import com.intellij.openapi.util.TextRange

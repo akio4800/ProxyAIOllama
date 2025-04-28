@@ -2,7 +2,7 @@ package at.s2g.ai.completions;
 
 import at.s2g.ai.conversations.Conversation;
 import at.s2g.ai.conversations.message.Message;
-import at.s2gplus.ai.events.CodeGPTEvent;
+import at.s2g.ai.events.CodeGPTEvent;
 import ee.carlrobert.llm.client.openai.completion.ErrorDetails;
 
 public interface CompletionResponseEventListener {

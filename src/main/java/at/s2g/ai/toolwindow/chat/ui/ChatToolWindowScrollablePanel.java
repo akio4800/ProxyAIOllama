@@ -19,8 +19,8 @@ import at.s2g.ai.settings.service.ollama.OllamaSettingsConfigurable;
 import at.s2g.ai.toolwindow.ui.ResponseMessagePanel;
 import at.s2g.ai.ui.UIUtil;
 import at.s2g.ai.util.ApplicationUtil;
-import at.s2gplus.ai.credentials.CredentialsStore;
-import at.s2gplus.ai.credentials.CredentialsStore.CredentialKey;
+import at.s2g.ai.credentials.CredentialsStore;
+import at.s2g.ai.credentials.CredentialsStore.CredentialKey;
 
 import static javax.swing.event.HyperlinkEvent.EventType.ACTIVATED;
 

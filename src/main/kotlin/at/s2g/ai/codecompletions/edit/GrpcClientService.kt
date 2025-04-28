@@ -3,10 +3,10 @@ package at.s2g.ai.codecompletions.edit
 import at.s2g.ai.settings.service.codegpt.CodeGPTServiceSettings
 import at.s2g.ai.ui.OverlayUtil
 import at.s2g.ai.util.GitUtil
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
-import at.s2gplus.ai.credentials.CredentialsStore
-import at.s2gplus.ai.credentials.CredentialsStore.CredentialKey.CodeGptApiKey
-import at.s2gplus.ai.predictions.CodeSuggestionDiffViewer
+import at.s2g.ai.codecompletions.CompletionProgressNotifier
+import at.s2g.ai.credentials.CredentialsStore
+import at.s2g.ai.credentials.CredentialsStore.CredentialKey.CodeGptApiKey
+import at.s2g.ai.predictions.CodeSuggestionDiffViewer
 import com.intellij.codeInsight.lookup.LookupManager
 import com.intellij.notification.NotificationAction.createSimpleExpiring
 import com.intellij.notification.NotificationType

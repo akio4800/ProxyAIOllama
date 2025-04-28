@@ -1,7 +1,7 @@
 package at.s2g.ai.codecompletions.psi
 
-import at.s2gplus.ai.codecompletions.ContextElement
-import at.s2gplus.ai.codecompletions.InfillContext
+import at.s2g.ai.codecompletions.ContextElement
+import at.s2g.ai.codecompletions.InfillContext
 import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiRecursiveElementWalkingVisitor

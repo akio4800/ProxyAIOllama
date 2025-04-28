@@ -1,9 +1,9 @@
 package at.s2g.ai.actions
 
-import at.s2gplus.ai.codecompletions.AcceptNextLineInlayAction
-import at.s2gplus.ai.codecompletions.AcceptNextWordInlayAction
-import at.s2gplus.ai.predictions.OpenPredictionAction
-import at.s2gplus.ai.predictions.TriggerCustomPredictionAction
+import at.s2g.ai.codecompletions.AcceptNextLineInlayAction
+import at.s2g.ai.codecompletions.AcceptNextWordInlayAction
+import at.s2g.ai.predictions.OpenPredictionAction
+import at.s2g.ai.predictions.TriggerCustomPredictionAction
 import com.intellij.codeInsight.inline.completion.session.InlineCompletionContext
 import com.intellij.openapi.actionSystem.ActionPromoter
 import com.intellij.openapi.actionSystem.AnAction

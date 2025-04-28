@@ -8,7 +8,7 @@ import at.s2g.ai.toolwindow.chat.ui.ChatMessageResponseBody
 import at.s2g.ai.toolwindow.chat.ui.ImageAccordion
 import at.s2g.ai.toolwindow.chat.ui.SelectedFilesAccordion
 import at.s2g.ai.ui.IconActionButton
-import at.s2gplus.ai.events.WebSearchEventDetails
+import at.s2g.ai.events.WebSearchEventDetails
 import com.intellij.icons.AllIcons
 import com.intellij.icons.AllIcons.Actions
 import com.intellij.openapi.Disposable

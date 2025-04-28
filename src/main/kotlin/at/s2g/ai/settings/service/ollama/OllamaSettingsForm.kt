@@ -5,9 +5,9 @@ import at.s2g.ai.settings.service.CodeCompletionConfigurationForm
 import at.s2g.ai.ui.OverlayUtil
 import at.s2g.ai.ui.UIUtil
 import at.s2g.ai.ui.URLTextField
-import at.s2gplus.ai.credentials.CredentialsStore.CredentialKey.OllamaApikey
-import at.s2gplus.ai.credentials.CredentialsStore.getCredential
-import at.s2gplus.ai.credentials.CredentialsStore.setCredential
+import at.s2g.ai.credentials.CredentialsStore.CredentialKey.OllamaApikey
+import at.s2g.ai.credentials.CredentialsStore.getCredential
+import at.s2g.ai.credentials.CredentialsStore.setCredential
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.ModalityState

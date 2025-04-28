@@ -5,8 +5,8 @@ import at.s2g.ai.toolwindow.chat.structure.data.PsiStructureRepository
 import at.s2g.ai.toolwindow.chat.structure.data.PsiStructureState
 import at.s2g.ai.util.coroutines.CoroutineDispatchers
 import at.s2g.ai.util.coroutines.DisposableCoroutineScope
-import at.s2gplus.ai.psistructure.ClassStructureSerializer
-import at.s2gplus.ai.psistructure.models.ClassStructure
+import at.s2g.ai.psistructure.ClassStructureSerializer
+import at.s2g.ai.psistructure.models.ClassStructure
 import com.intellij.openapi.Disposable
 import com.intellij.openapi.util.Disposer
 import kotlinx.coroutines.flow.flowOn

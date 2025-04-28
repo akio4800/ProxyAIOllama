@@ -3,7 +3,7 @@ package at.s2g.ai.actions.editor
 import at.s2g.ai.toolwindow.chat.ThinkingOutputParser
 import at.s2g.ai.ui.ObservableProperties
 import at.s2g.ai.ui.OverlayUtil
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
+import at.s2g.ai.codecompletions.CompletionProgressNotifier
 import com.intellij.ide.BrowserUtil
 import com.intellij.notification.NotificationAction
 import com.intellij.notification.NotificationType

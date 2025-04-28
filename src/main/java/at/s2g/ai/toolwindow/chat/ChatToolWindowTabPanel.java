@@ -56,8 +56,8 @@ import at.s2g.ai.ui.textarea.header.tag.TagManager;
 import at.s2g.ai.util.EditorUtil;
 import at.s2g.ai.util.coroutines.CoroutineDispatchers;
 import at.s2g.ai.util.file.FileUtil;
-import at.s2gplus.ai.psistructure.PsiStructureProvider;
-import at.s2gplus.ai.psistructure.models.ClassStructure;
+import at.s2g.ai.psistructure.PsiStructureProvider;
+import at.s2g.ai.psistructure.models.ClassStructure;
 import git4idea.GitCommit;
 import kotlin.Unit;
 

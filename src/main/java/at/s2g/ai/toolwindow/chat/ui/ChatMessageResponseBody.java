@@ -45,11 +45,11 @@ import at.s2g.ai.ui.ThoughtProcessPanel;
 import at.s2g.ai.ui.UIUtil;
 import at.s2g.ai.util.EditorUtil;
 import at.s2g.ai.util.MarkdownUtil;
-import at.s2gplus.ai.events.AnalysisCompletedEventDetails;
-import at.s2gplus.ai.events.AnalysisFailedEventDetails;
-import at.s2gplus.ai.events.CodeGPTEvent;
-import at.s2gplus.ai.events.EventDetails;
-import at.s2gplus.ai.events.WebSearchEventDetails;
+import at.s2g.ai.events.AnalysisCompletedEventDetails;
+import at.s2g.ai.events.AnalysisFailedEventDetails;
+import at.s2g.ai.events.CodeGPTEvent;
+import at.s2g.ai.events.EventDetails;
+import at.s2g.ai.events.WebSearchEventDetails;
 
 import static at.s2g.ai.toolwindow.chat.StreamResponseType.CODE;
 import static at.s2g.ai.util.MarkdownUtil.convertMdToHtml;

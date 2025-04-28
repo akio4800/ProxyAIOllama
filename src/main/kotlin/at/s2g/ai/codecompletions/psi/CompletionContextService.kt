@@ -1,7 +1,7 @@
 package at.s2g.ai.codecompletions.psi
 
 import at.s2g.ai.EncodingManager
-import at.s2gplus.ai.codecompletions.InfillContext
+import at.s2g.ai.codecompletions.InfillContext
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.ReadAction
 import com.intellij.openapi.components.Service

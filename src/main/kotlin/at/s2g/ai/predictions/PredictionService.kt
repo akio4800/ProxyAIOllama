@@ -2,8 +2,8 @@ package at.s2g.ai.predictions
 
 import at.s2g.ai.CodeGPTKeys
 import at.s2g.ai.util.EditorDiffUtil.createDiffRequest
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
-import at.s2gplus.ai.codecompletions.edit.GrpcClientService
+import at.s2g.ai.codecompletions.CompletionProgressNotifier
+import at.s2g.ai.codecompletions.edit.GrpcClientService
 import com.intellij.diff.DiffManager
 import com.intellij.openapi.application.runInEdt
 import com.intellij.openapi.components.Service

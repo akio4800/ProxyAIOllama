@@ -5,7 +5,7 @@ import at.s2g.ai.completions.factory.OllamaRequestFactory
 import at.s2g.ai.settings.prompts.CoreActionsState
 import at.s2g.ai.settings.prompts.PromptsSettings
 import at.s2g.ai.settings.service.ServiceType
-import at.s2gplus.ai.psistructure.ClassStructureSerializer
+import at.s2g.ai.psistructure.ClassStructureSerializer
 import com.intellij.openapi.components.service
 import ee.carlrobert.llm.completion.CompletionRequest
 

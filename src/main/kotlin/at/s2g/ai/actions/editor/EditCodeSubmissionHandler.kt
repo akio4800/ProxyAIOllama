@@ -3,7 +3,7 @@ package at.s2g.ai.actions.editor
 import at.s2g.ai.completions.CompletionRequestService
 import at.s2g.ai.completions.EditCodeCompletionParameters
 import at.s2g.ai.ui.ObservableProperties
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
+import at.s2g.ai.codecompletions.CompletionProgressNotifier
 import com.intellij.openapi.application.readAction
 import com.intellij.openapi.application.runInEdt
 import com.intellij.openapi.command.WriteCommandAction.runWriteCommandAction

@@ -2,7 +2,7 @@ package at.s2g.ai.predictions
 
 import at.s2g.ai.CodeGPTBundle
 import at.s2g.ai.CodeGPTKeys
-import at.s2gplus.ai.codecompletions.edit.GrpcClientService
+import at.s2g.ai.codecompletions.edit.GrpcClientService
 import com.intellij.codeInsight.inline.completion.session.InlineCompletionContext
 import com.intellij.codeInsight.inline.completion.session.InlineCompletionSession
 import com.intellij.diff.DiffContentFactory

@@ -1,8 +1,8 @@
 package at.s2g.ai.settings.service
 
 import at.s2g.ai.CodeGPTBundle
-import at.s2gplus.ai.codecompletions.InfillPromptTemplate
-import at.s2gplus.ai.codecompletions.InfillRequest
+import at.s2g.ai.codecompletions.InfillPromptTemplate
+import at.s2g.ai.codecompletions.InfillRequest
 import com.intellij.icons.AllIcons.General
 import com.intellij.ide.HelpTooltip
 import com.intellij.openapi.ui.ComboBox

@@ -1,7 +1,7 @@
 package at.s2g.ai.toolwindow.ui
 
 import at.s2g.ai.CodeGPTBundle
-import at.s2gplus.ai.events.WebSearchEventDetails
+import at.s2g.ai.events.WebSearchEventDetails
 import com.intellij.icons.AllIcons
 import com.intellij.ide.BrowserUtil
 import com.intellij.ide.IdeBundle

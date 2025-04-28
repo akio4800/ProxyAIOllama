@@ -1,7 +1,7 @@
 package at.s2g.ai.codecompletions.psi
 
-import at.s2gplus.ai.codecompletions.ContextElement
-import at.s2gplus.ai.codecompletions.InfillContext
+import at.s2g.ai.codecompletions.ContextElement
+import at.s2g.ai.codecompletions.InfillContext
 import com.intellij.openapi.roots.JdkUtils
 import com.intellij.psi.*
 import com.intellij.psi.impl.source.PsiClassReferenceType

@@ -1,6 +1,6 @@
 package at.s2g.ai.util
 
-import at.s2gplus.ai.codecompletions.truncateText
+import at.s2g.ai.codecompletions.truncateText
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.diff.impl.patch.IdeaTextPatchBuilder

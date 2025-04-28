@@ -5,7 +5,7 @@ import at.s2g.ai.conversations.Conversation
 import at.s2g.ai.conversations.message.Message
 import at.s2g.ai.settings.prompts.PersonaDetails
 import at.s2g.ai.util.file.FileUtil
-import at.s2gplus.ai.psistructure.models.ClassStructure
+import at.s2g.ai.psistructure.models.ClassStructure
 import java.nio.file.Files
 import java.nio.file.Path
 import java.util.*

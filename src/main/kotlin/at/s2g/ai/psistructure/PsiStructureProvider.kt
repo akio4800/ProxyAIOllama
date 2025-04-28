@@ -1,6 +1,6 @@
 package at.s2g.ai.psistructure
 
-import at.s2gplus.ai.psistructure.models.ClassStructure
+import at.s2g.ai.psistructure.models.ClassStructure
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.ReadAction
 import com.intellij.psi.PsiFile

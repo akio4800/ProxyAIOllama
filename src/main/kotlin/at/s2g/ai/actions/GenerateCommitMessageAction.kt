@@ -3,7 +3,7 @@ package at.s2g.ai.actions
 import at.s2g.ai.completions.CommitMessageCompletionParameters
 import at.s2g.ai.completions.CompletionRequestService
 import at.s2g.ai.settings.prompts.CommitMessageTemplate
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier
+import at.s2g.ai.codecompletions.CompletionProgressNotifier
 import com.intellij.openapi.project.Project
 import com.intellij.vcs.commit.CommitWorkflowUi
 

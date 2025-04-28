@@ -3,7 +3,7 @@ package at.s2g.ai.actions
 import at.s2g.ai.settings.GeneralSettings
 import at.s2g.ai.settings.service.ServiceType.OLLAMA
 import at.s2g.ai.settings.service.ollama.OllamaSettings
-import at.s2gplus.ai.codecompletions.CodeCompletionService
+import at.s2g.ai.codecompletions.CodeCompletionService
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.components.service

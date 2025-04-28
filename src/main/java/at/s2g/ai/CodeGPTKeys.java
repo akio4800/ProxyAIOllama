@@ -2,7 +2,7 @@ package at.s2g.ai;
 
 import com.intellij.openapi.util.Key;
 
-import at.s2gplus.ai.predictions.CodeSuggestionDiffViewer;
+import at.s2g.ai.predictions.CodeSuggestionDiffViewer;
 import ee.carlrobert.llm.client.codegpt.CodeGPTUserDetails;
 
 public class CodeGPTKeys {

@@ -10,7 +10,7 @@ import at.s2g.ai.settings.prompts.CoreActionsState
 import at.s2g.ai.settings.prompts.PromptsSettings
 import at.s2g.ai.settings.service.openai.OpenAISettings
 import at.s2g.ai.util.file.FileUtil.getImageMediaType
-import at.s2gplus.ai.psistructure.models.ClassStructure
+import at.s2g.ai.psistructure.models.ClassStructure
 import com.intellij.openapi.components.service
 import ee.carlrobert.llm.client.openai.completion.OpenAIChatCompletionModel.*
 import ee.carlrobert.llm.client.openai.completion.request.*

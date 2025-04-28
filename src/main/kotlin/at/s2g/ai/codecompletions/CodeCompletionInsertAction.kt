@@ -5,7 +5,7 @@ import at.s2g.ai.CodeGPTKeys.REMAINING_EDITOR_COMPLETION
 import at.s2g.ai.settings.GeneralSettings
 import at.s2g.ai.settings.service.ServiceType
 import at.s2g.ai.settings.service.codegpt.CodeGPTServiceSettings
-import at.s2gplus.ai.predictions.PredictionService
+import at.s2g.ai.predictions.PredictionService
 import com.intellij.codeInsight.hint.HintManagerImpl
 import com.intellij.codeInsight.inline.completion.InlineCompletion
 import com.intellij.codeInsight.inline.completion.InlineCompletionInsertEnvironment

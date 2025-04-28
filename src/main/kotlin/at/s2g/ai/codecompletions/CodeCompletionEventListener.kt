@@ -6,7 +6,7 @@ import at.s2g.ai.settings.service.ServiceType
 import at.s2g.ai.settings.service.codegpt.CodeGPTServiceSettings
 import at.s2g.ai.ui.OverlayUtil.showNotification
 import at.s2g.ai.util.EditorUtil.adjustWhitespaces
-import at.s2gplus.ai.codecompletions.CompletionUtil.formatCompletion
+import at.s2g.ai.codecompletions.CompletionUtil.formatCompletion
 import com.intellij.codeInsight.inline.completion.InlineCompletionRequest
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.application.runInEdt

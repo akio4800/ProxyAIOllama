@@ -9,7 +9,7 @@ import at.s2g.ai.ui.textarea.header.tag.*
 import at.s2g.ai.util.EditorUtil
 import at.s2g.ai.util.EditorUtil.getSelectedEditor
 import at.s2g.ai.util.file.FileUtil
-import at.s2gplus.ai.EditorNotifier
+import at.s2g.ai.EditorNotifier
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.application.runInEdt
 import com.intellij.openapi.application.runUndoTransparentWriteAction

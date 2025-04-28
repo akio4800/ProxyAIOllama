@@ -20,8 +20,8 @@ import at.s2g.ai.toolwindow.ui.ResponseMessagePanel;
 import at.s2g.ai.toolwindow.ui.UserMessagePanel;
 import at.s2g.ai.ui.OverlayUtil;
 import at.s2g.ai.ui.textarea.UserInputPanel;
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier;
-import at.s2gplus.ai.events.CodeGPTEvent;
+import at.s2g.ai.codecompletions.CompletionProgressNotifier;
+import at.s2g.ai.events.CodeGPTEvent;
 import ee.carlrobert.llm.client.openai.completion.ErrorDetails;
 
 import static com.intellij.openapi.ui.Messages.OK;

@@ -3,8 +3,9 @@ package at.s2g.ai.codecompletions
 import at.s2g.ai.EncodingManager
 import at.s2g.ai.settings.configuration.ConfigurationSettings
 import at.s2g.ai.util.GitUtil
-import at.s2gplus.ai.codecompletions.psi.CompletionContextService
-import at.s2gplus.ai.psistructure.PsiStructureProvider
+import at.s2g.ai.codecompletions.psi.CompletionContextService
+import at.s2g.ai.codecompletions.psi.readText
+import at.s2g.ai.psistructure.PsiStructureProvider
 import com.intellij.codeInsight.inline.completion.InlineCompletionRequest
 import com.intellij.openapi.application.readAction
 import com.intellij.openapi.components.service

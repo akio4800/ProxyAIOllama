@@ -4,7 +4,7 @@ import at.s2g.ai.settings.configuration.ConfigurationStateListener
 import at.s2g.ai.ui.textarea.header.tag.*
 import at.s2g.ai.util.coroutines.CoroutineDispatchers
 import at.s2g.ai.util.coroutines.DisposableCoroutineScope
-import at.s2gplus.ai.psistructure.PsiStructureProvider
+import at.s2g.ai.psistructure.PsiStructureProvider
 import com.intellij.openapi.Disposable
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.ReadAction

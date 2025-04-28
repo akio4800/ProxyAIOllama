@@ -19,7 +19,7 @@ import com.intellij.openapi.wm.impl.status.EditorBasedStatusBarPopup;
 
 import at.s2g.ai.CodeGPTBundle;
 import at.s2g.ai.Icons;
-import at.s2gplus.ai.codecompletions.CompletionProgressNotifier;
+import at.s2g.ai.codecompletions.CompletionProgressNotifier;
 
 import static at.s2g.ai.CodeGPTKeys.COMPLETION_IN_PROGRESS;
 

@@ -31,7 +31,7 @@ import at.s2g.ai.settings.configuration.ConfigurationSettings;
 import at.s2g.ai.settings.prompts.PromptsSettings;
 import at.s2g.ai.toolwindow.chat.structure.data.PsiStructureRepository;
 import at.s2g.ai.util.coroutines.CoroutineDispatchers;
-import at.s2gplus.ai.psistructure.ClassStructureSerializer;
+import at.s2g.ai.psistructure.ClassStructureSerializer;
 import kotlin.Unit;
 
 import static com.intellij.openapi.editor.EditorKind.MAIN_EDITOR;
