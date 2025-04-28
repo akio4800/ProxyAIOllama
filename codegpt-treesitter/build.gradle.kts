@@ -38,3 +38,13 @@ dependencies {
     implementation("io.github.bonede:tree-sitter-typescript:0.21.1")
     implementation("io.github.bonede:tree-sitter-query:0.3.0")
 }
+
+
+tasks {
+    checkstyleMain {
+        enabled = false
+    }
+    checkstyleTest {
+        enabled = false
+    }
+}

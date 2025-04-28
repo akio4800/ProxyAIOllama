@@ -1,7 +1,7 @@
 <idea-plugin>
-    <id>at.s2gplus</id>
+    <id>at.s2g</id>
     <name>Proxy AI Ollama</name>
-    <vendor email="philipp.krainer@s2g.at">Philipp Krainer</vendor>
+    <vendor>s2G</vendor>
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
     <depends optional="true" config-file="plugin-kotlin.xml">org.jetbrains.kotlin</depends>
@@ -17,54 +17,54 @@
 
     <projectListeners>
         <listener topic="com.intellij.codeInsight.lookup.LookupManagerListener"
-                  class="at.s2gplus.ai.refactorings.RenameCompletionLookupListener"/>
+                  class="at.s2g.ai.refactorings.RenameCompletionLookupListener"/>
         <listener topic="com.intellij.codeInsight.lookup.LookupManagerListener"
-                  class="at.s2gplus.ai.CodeGPTLookupListener"/>
+                  class="at.s2g.ai.CodeGPTLookupListener"/>
         <listener topic="com.intellij.openapi.wm.ex.ToolWindowManagerListener"
-                  class="at.s2gplus.ai.toolwindow.chat.ChatToolWindowListener"/>
+                  class="at.s2g.ai.toolwindow.chat.ChatToolWindowListener"/>
     </projectListeners>
 
     <extensions defaultExtensionNs="com.intellij">
-        <postStartupActivity implementation="at.s2gplus.ai.CodeGPTProjectActivity"/>
-        <postStartupActivity implementation="at.s2gplus.ai.CodeGPTUpdateActivity"/>
-        <editorFactoryListener implementation="at.s2gplus.ai.CodeGPTEditorFactoryListener"/>
+        <postStartupActivity implementation="at.s2g.ai.CodeGPTProjectActivity"/>
+        <postStartupActivity implementation="at.s2g.ai.CodeGPTUpdateActivity"/>
+        <editorFactoryListener implementation="at.s2g.ai.CodeGPTEditorFactoryListener"/>
         <applicationConfigurable id="settings.codegpt" parentId="tools" displayName="ProxyAI"
-            instance="at.s2gplus.ai.settings.GeneralSettingsConfigurable"/>
+            instance="at.s2g.ai.settings.GeneralSettingsConfigurable"/>
         <applicationConfigurable id="settings.codegpt.services" parentId="settings.codegpt" displayName="Providers"
-          instance="at.s2gplus.ai.settings.service.ServiceConfigurable"/>
+          instance="at.s2g.ai.settings.service.ServiceConfigurable"/>
         <applicationConfigurable id="settings.codegpt.services.ollama" parentId="settings.codegpt.services" displayName="Ollama (Local)"
-          instance="at.s2gplus.ai.settings.service.ollama.OllamaSettingsConfigurable"/>
+          instance="at.s2g.ai.settings.service.ollama.OllamaSettingsConfigurable"/>
         <applicationConfigurable id="settings.codegpt.prompts" parentId="settings.codegpt" displayName="Prompts"
-          instance="at.s2gplus.ai.settings.prompts.PromptsConfigurable"/>
+          instance="at.s2g.ai.settings.prompts.PromptsConfigurable"/>
         <applicationConfigurable id="settings.codegpt.documentations" parentId="settings.codegpt" displayName="Documentations"
-          instance="at.s2gplus.ai.settings.documentation.DocumentationsConfigurable"/>
+          instance="at.s2g.ai.settings.documentation.DocumentationsConfigurable"/>
         <applicationConfigurable id="settings.codegpt.configuration" parentId="settings.codegpt" displayName="Configuration"
-            instance="at.s2gplus.ai.settings.configuration.ConfigurationConfigurable"/>
+            instance="at.s2g.ai.settings.configuration.ConfigurationConfigurable"/>
         <applicationConfigurable id="settings.codegpt.advanced" parentId="settings.codegpt" displayName="Advanced Settings"
-            instance="at.s2gplus.ai.settings.advanced.AdvancedSettingsConfigurable"/>
-        <actionPromoter implementation="at.s2gplus.ai.actions.InlayActionPromoter"/>
-        <applicationService serviceImplementation="at.s2gplus.ai.settings.GeneralSettings"/>
-        <applicationService serviceImplementation="at.s2gplus.ai.settings.service.ollama.OllamaSettings"/>
-        <applicationService serviceImplementation="at.s2gplus.ai.settings.service.openai.OpenAISettings"/>
-        <applicationService serviceImplementation="at.s2gplus.ai.settings.IncludedFilesSettings"/>
-        <applicationService serviceImplementation="at.s2gplus.ai.settings.advanced.AdvancedSettings"/>
-        <applicationService serviceImplementation="at.s2gplus.ai.conversations.ConversationsState"/>
+            instance="at.s2g.ai.settings.advanced.AdvancedSettingsConfigurable"/>
+        <actionPromoter implementation="at.s2g.ai.actions.InlayActionPromoter"/>
+        <applicationService serviceImplementation="at.s2g.ai.settings.GeneralSettings"/>
+        <applicationService serviceImplementation="at.s2g.ai.settings.service.ollama.OllamaSettings"/>
+        <applicationService serviceImplementation="at.s2g.ai.settings.service.openai.OpenAISettings"/>
+        <applicationService serviceImplementation="at.s2g.ai.settings.IncludedFilesSettings"/>
+        <applicationService serviceImplementation="at.s2g.ai.settings.advanced.AdvancedSettings"/>
+        <applicationService serviceImplementation="at.s2g.ai.conversations.ConversationsState"/>
         <inline.completion.provider
           id="CodeGPTInlineCompletionProvider"
-          implementation="at.s2gplus.ai.codecompletions.DebouncedCodeCompletionProvider"/>
-        <toolWindow id="ProxyAI Ollama" icon="at.s2gplus.ai.Icons.DefaultSmall" anchor="right"
-            factoryClass="at.s2gplus.ai.toolwindow.ProjectToolWindowFactory"/>
+          implementation="at.s2g.ai.codecompletions.DebouncedCodeCompletionProvider"/>
+        <toolWindow id="ProxyAI Ollama" icon="at.s2g.ai.Icons.DefaultSmall" anchor="right"
+            factoryClass="at.s2g.ai.toolwindow.ProjectToolWindowFactory"/>
         <notificationGroup id="proxyai.notification.group" displayType="BALLOON" key="notification.group.name"/>
         <notificationGroup id="proxyai.notification.sticky.group" displayType="STICKY_BALLOON" key="notification.group.sticky.name"/>
-        <statusBarWidgetFactory order="first" id="at.s2gplus.ai.statusbar.widget"
-          implementation="at.s2gplus.ai.statusbar.CodeGPTStatusBarWidgetFactory"/>
-        <nameSuggestionProvider implementation="at.s2gplus.ai.refactorings.DefaultNameSuggestionProvider"/>
+        <statusBarWidgetFactory order="first" id="at.s2g.ai.statusbar.widget"
+          implementation="at.s2g.ai.statusbar.CodeGPTStatusBarWidgetFactory"/>
+        <nameSuggestionProvider implementation="at.s2g.ai.refactorings.DefaultNameSuggestionProvider"/>
     </extensions>
 
     <resource-bundle>messages.codegpt</resource-bundle>
 
     <actions>
-        <action id="InsertInlineCompletionAction" class="at.s2gplus.ai.codecompletions.CodeCompletionInsertAction">
+        <action id="InsertInlineCompletionAction" class="at.s2g.ai.codecompletions.CodeCompletionInsertAction">
             <add-to-group group-id="InlineCompletion" anchor="first"/>
             <keyboard-shortcut first-keystroke="TAB" keymap="$default"/>
         </action>
@@ -72,21 +72,21 @@
         <action
           id="codegpt.acceptNextPrediction"
           text="Accept Prediction"
-          class="at.s2gplus.ai.predictions.AcceptNextPredictionRevisionAction">
+          class="at.s2g.ai.predictions.AcceptNextPredictionRevisionAction">
             <keyboard-shortcut first-keystroke="TAB" keymap="$default"/>
         </action>
 
         <action
           id="codegpt.triggerCustomPrediction"
           text="Trigger Prediction Manually"
-          class="at.s2gplus.ai.predictions.TriggerCustomPredictionAction">
+          class="at.s2g.ai.predictions.TriggerCustomPredictionAction">
             <keyboard-shortcut first-keystroke="ctrl ENTER" keymap="$default"/>
         </action>
 
         <action
           id="codegpt.openPrediction"
           text="Open Prediction"
-          class="at.s2gplus.ai.predictions.OpenPredictionAction">
+          class="at.s2g.ai.predictions.OpenPredictionAction">
             <keyboard-shortcut first-keystroke="ctrl shift ENTER" keymap="$default"/>
         </action>
 
@@ -94,23 +94,23 @@
           id="codegpt.acceptNextInlayWord"
           text="Apply next word"
           use-shortcut-of="EditorNextWord"
-          class="at.s2gplus.ai.codecompletions.AcceptNextWordInlayAction"/>
+          class="at.s2g.ai.codecompletions.AcceptNextWordInlayAction"/>
 
         <action
           id="codegpt.acceptNextInlayLine"
           text="Apply next line"
           use-shortcut-of="EditorLineEnd"
-          class="at.s2gplus.ai.codecompletions.AcceptNextLineInlayAction"/>
+          class="at.s2g.ai.codecompletions.AcceptNextLineInlayAction"/>
 
         <group id="CodeGPTEditorPopup">
             <group id="action.editor.group.EditorActionGroup"
                 text="ProxyAI"
                 class="com.intellij.openapi.actionSystem.DefaultActionGroup"
                 popup="true"
-                icon="at.s2gplus.ai.Icons.DefaultSmall">
+                icon="at.s2g.ai.Icons.DefaultSmall">
                 <action
                   id="CodeGPT.NewChat"
-                  class="at.s2gplus.ai.actions.editor.OpenNewChatAction"
+                  class="at.s2g.ai.actions.editor.OpenNewChatAction"
                   text="New Chat"
                   description="Creates a new chat session">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift N" replace-all="true"/>
@@ -119,13 +119,13 @@
                   id="CodeGPT.ContextMenuEditCodeAction"
                   text="Edit Code"
                   description="Edit code from editor's context menu"
-                  class="at.s2gplus.ai.actions.editor.EditCodeContextMenuAction">
+                  class="at.s2g.ai.actions.editor.EditCodeContextMenuAction">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift K" replace-all="true"/>
                 </action>
                 <action
                   id="CodeGPT.AskQuestion"
                   text="Ask Question"
-                  class="at.s2gplus.ai.actions.editor.AskQuestionAction">
+                  class="at.s2g.ai.actions.editor.AskQuestionAction">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift Q" replace-all="true"/>
                 </action>
                 <separator/>
@@ -138,7 +138,7 @@
             <separator/>
         </group>
         <action id="CodeGPT.TriggerEditorPopup"
-          class="at.s2gplus.ai.actions.editor.ShowEditorActionGroupAction"
+          class="at.s2g.ai.actions.editor.ShowEditorActionGroupAction"
           text="Show ProxyAI Actions">
             <keyboard-shortcut first-keystroke="ctrl shift alt m" keymap="$default"/>
         </action>
@@ -147,11 +147,11 @@
               text="ProxyAI"
               class="com.intellij.openapi.actionSystem.DefaultActionGroup"
               popup="true"
-              icon="at.s2gplus.ai.Icons.DefaultSmall">
+              icon="at.s2g.ai.Icons.DefaultSmall">
                 <action
                   id="CodeGPT.IncludeFilesInContextAction"
                   text="Include Files In Prompt"
-                  class="at.s2gplus.ai.actions.IncludeFilesInContextAction" />
+                  class="at.s2g.ai.actions.IncludeFilesInContextAction" />
             </group>
             <add-to-group
               group-id="ProjectViewPopupMenu"
@@ -164,7 +164,7 @@
             <separator/>
             <action
               id="CodeGPT.ExplainGitCommitAction"
-              class="at.s2gplus.ai.actions.ExplainGitCommitAction"/>
+              class="at.s2g.ai.actions.ExplainGitCommitAction"/>
             <add-to-group
               group-id="Vcs.Log.ContextMenu"
               relative-to-action="Vcs.Log.CompareRevisions"
@@ -177,7 +177,7 @@
               id="CodeGPT.FloatingMenuEditCodeAction"
               text="Edit Code"
               description="Edit code from editor's floating menu"
-              class="at.s2gplus.ai.actions.editor.EditCodeFloatingMenuAction">
+              class="at.s2g.ai.actions.editor.EditCodeFloatingMenuAction">
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift K" replace-all="true"/>
             </action>
             <add-to-group
@@ -189,7 +189,7 @@
 
         <action
           id="CodeGPT.AddSelectionToContext"
-          class="at.s2gplus.ai.actions.editor.AddSelectionToContextAction"
+          class="at.s2g.ai.actions.editor.AddSelectionToContextAction"
           text="Include Selection in Prompt"
           description="Adds the selected text to the ProxyAI context">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift I" replace-all="true"/>
@@ -201,13 +201,13 @@
         <action
           id="codegpt.openSettings"
           text="Open Settings"
-          class="at.s2gplus.ai.actions.OpenSettingsAction">
+          class="at.s2g.ai.actions.OpenSettingsAction">
             <override-text place="MainMenu" text="Open Settings"/>
             <override-text place="popup" use-text-of-place="MainMenu"/>
         </action>
         <action
           id="statusbar.enableCompletions"
-          class="at.s2gplus.ai.actions.EnableCompletionsAction">
+          class="at.s2g.ai.actions.EnableCompletionsAction">
             <keyboard-shortcut first-keystroke="ctrl shift alt c" keymap="$default"/>
 
             <override-text place="MainMenu"/>
@@ -215,7 +215,7 @@
         </action>
         <action
           id="statusbar.disableCompletions"
-          class="at.s2gplus.ai.actions.DisableCompletionsAction">
+          class="at.s2g.ai.actions.DisableCompletionsAction">
             <keyboard-shortcut first-keystroke="ctrl shift alt c" keymap="$default"/>
 
             <override-text place="MainMenu"/>
@@ -223,7 +223,7 @@
         </action>
         <action
           id="statusbar.enableNextEdits"
-          class="at.s2gplus.ai.actions.EnableNextEditsAction">
+          class="at.s2g.ai.actions.EnableNextEditsAction">
             <keyboard-shortcut first-keystroke="ctrl shift alt a" keymap="$default"/>
 
             <override-text place="MainMenu"/>
@@ -231,7 +231,7 @@
         </action>
         <action
           id="statusbar.disableNextEdits"
-          class="at.s2gplus.ai.actions.DisableNextEditsAction">
+          class="at.s2g.ai.actions.DisableNextEditsAction">
             <keyboard-shortcut first-keystroke="ctrl shift alt a" keymap="$default"/>
 
             <override-text place="MainMenu"/>
@@ -250,21 +250,21 @@
         <group id="CodeGPT.GenerateGitCommitMessageGroup"
                text="ProxyAI"
                popup="true"
-               icon="at.s2gplus.ai.Icons.DefaultSmall">
+               icon="at.s2g.ai.Icons.DefaultSmall">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
             <action
                 id="CodeGPT.GenerateGitCommitMessage"
                 text="Generate Commit Message"
-                class="at.s2gplus.ai.actions.GenerateCommitMessageAction"/>
+                class="at.s2g.ai.actions.GenerateCommitMessageAction"/>
             <action
                 id="CodeGPT.GenerateGitCommitMessageWithAdditionalInput"
                 text="Generate Commit Message with Additional Input"
-                class="at.s2gplus.ai.actions.GenerateCommitMessageWithAdditionalInputAction"/>
+                class="at.s2g.ai.actions.GenerateCommitMessageWithAdditionalInputAction"/>
             <separator/>
             <action
               id="CodeGPT.ReviewChanges"
               text="Review Changes"
-              class="at.s2gplus.ai.actions.ReviewChangesAction"/>
+              class="at.s2g.ai.actions.ReviewChangesAction"/>
         </group>
     </actions>
 </idea-plugin>

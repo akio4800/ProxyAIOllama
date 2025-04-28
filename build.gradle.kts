@@ -40,9 +40,6 @@ plugins {
 group = properties("pluginGroup").get()
 version = properties("pluginVersion").get() + "-" + properties("pluginSinceBuild").get()
 
-checkstyle {
-  toolVersion = libs.versions.checkstyle.get()
-}
 
 repositories {
   mavenCentral()
@@ -123,6 +120,13 @@ tasks {
     enabled = true
   }
 
+  checkstyleMain {
+    enabled = false
+  }
+  checkstyleTest {
+    enabled = false
+  }
+
   patchPluginXml {
     enabled = true
     version.set(properties("pluginVersion").get() + "-" + properties("pluginSinceBuild").get())
@@ -178,9 +182,6 @@ tasks {
   }
 
 
-  checkstyleMain {
-    enabled = false
-  }
 
   runIde {
     enabled = true
