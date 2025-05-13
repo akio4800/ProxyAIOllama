@@ -64,7 +64,7 @@
     <resource-bundle>messages.codegpt</resource-bundle>
 
     <actions>
-        <action id="InsertInlineCompletionAction" class="at.s2g.ai.codecompletions.CodeCompletionInsertAction">
+        <action id="codegpt.InsertInlineCompletionAction" class="at.s2g.ai.codecompletions.CodeCompletionInsertAction">
             <add-to-group group-id="InlineCompletion" anchor="first"/>
             <keyboard-shortcut first-keystroke="TAB" keymap="$default"/>
         </action>
